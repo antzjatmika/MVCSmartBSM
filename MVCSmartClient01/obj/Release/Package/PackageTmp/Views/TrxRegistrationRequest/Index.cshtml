@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MVCSmartClient01.Models.trxRegistrationRequest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Registration Request</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NamaLengkap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomorKTP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomorNPWP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlamatEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFollowedUp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FollowedUpDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamaLengkap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomorKTP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomorNPWP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlamatEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFollowedUp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FollowedUpDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdRegRequest }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdRegRequest })
+        </td>
+    </tr>
+}
+
+</table>

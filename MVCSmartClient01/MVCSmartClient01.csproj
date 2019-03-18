@@ -1,0 +1,1539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69354FDF-883F-4A44-8CCA-54B1787EA32D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCSmartClient01</RootNamespace>
+    <AssemblyName>MVCSmartClient01</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Charts.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Dashboard.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Web">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Dashboard.v14.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v14.1.Web.Mvc5">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Dashboard.v14.1.Web.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Data.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.DataAccess.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DemoReports.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.DemoReports.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Office.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.PivotGrid.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Printing.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.RichEdit.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.SpellChecker.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Spreadsheet.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Utils.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGauges.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxGauges.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxHtmlEditor.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxPivotGrid.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxScheduler.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxSpellChecker.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxSpreadsheet.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.ASPxTreeList.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc5.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.Mvc5.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Web.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Web.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Xpo.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraCharts.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.Web">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraCharts.v14.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraGauges.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Presets">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraGauges.v14.1.Presets.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraPivotGrid.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraReports.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Web">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraReports.v14.1.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Core">
+      <HintPath>..\DevExpress.v14.1\DevExpress.XtraScheduler.v14.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.0.0\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.0.0\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.0.0\lib\net45\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiInfrastructure\ApiExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\ApiModels\LoginApiModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\ApiModels\RegisterApiModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\Client\LoginClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\Client\ILoginClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\HttpClientInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\Responses\RegisterResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\Responses\TokenResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApiInfrastructure\TokenContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Attributes\AuthenticationAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Dashboard\DashboardController.cs" />
+    <Compile Include="Controllers\GridSettingHelper.cs" />
+    <Compile Include="Controllers\ATest1Controller.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\DataOrganisasiController.cs" />
+    <Compile Include="Controllers\ImportXLSHelper.cs" />
+    <Compile Include="Controllers\MstKategoriResikoController.cs" />
+    <Compile Include="Controllers\TrxKonsolidasiController.cs" />
+    <Compile Include="Controllers\TrxPertanyaanNilaiController.cs" />
+    <Compile Include="Controllers\TrxManagementP2PKController.cs" />
+    <Compile Include="Controllers\MstSubRegionController.cs" />
+    <Compile Include="Controllers\MstRegionController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanBLGController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanAS_3MController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanAS_1MController.cs" />
+    <Compile Include="Controllers\MstPengumumanController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanHeaderController.cs" />
+    <Compile Include="Controllers\TrxBranchOfficeHeaderController.cs" />
+    <Compile Include="Controllers\TrxTenagaAhliUploadController.cs" />
+    <Compile Include="Controllers\UploadImageHelperNewController.cs" />
+    <Compile Include="Controllers\UploadImageHelperController.cs" />
+    <Compile Include="Controllers\TrxTenagaAhliHeaderController.cs" />
+    <Compile Include="Controllers\TrxTenagaAhliTetapImpController.cs" />
+    <Compile Include="Controllers\TrxTenagaPendukungController.cs" />
+    <Compile Include="Controllers\TrxAsistenController.cs" />
+    <Compile Include="Controllers\TrxManagementController.cs" />
+    <Compile Include="Controllers\Reports\RptAsuransiController.cs" />
+    <Compile Include="Controllers\TrxDashboardController.cs" />
+    <Compile Include="Controllers\EmlNotificationController.cs" />
+    <Compile Include="Controllers\EmlNotificationLogController.cs" />
+    <Compile Include="Controllers\EmlTemplateController.cs" />
+    <Compile Include="Controllers\HomeRekananController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MstContactController.cs" />
+    <Compile Include="Controllers\MstKecamatanController.cs" />
+    <Compile Include="Controllers\MstReferenceController.cs" />
+    <Compile Include="Controllers\MstRekananController.cs" />
+    <Compile Include="Controllers\MstTemplateDokRekananController.cs" />
+    <Compile Include="Controllers\MstTypeOfBadanUsahaController.cs" />
+    <Compile Include="Controllers\MstTypeOfDocumentController.cs" />
+    <Compile Include="Controllers\MstTypeOfRegionController.cs" />
+    <Compile Include="Controllers\MstTypeOfRekananController.cs" />
+    <Compile Include="Controllers\MstWilayahController.cs" />
+    <Compile Include="Controllers\TrxAuditLogController.cs" />
+    <Compile Include="Controllers\TrxBranchOfficeController.cs" />
+    <Compile Include="Controllers\TrxDataOrganisasiController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanController.cs" />
+    <Compile Include="Controllers\TrxDocMandatoryFileController.cs" />
+    <Compile Include="Controllers\TrxDocMandatoryDetailController.cs" />
+    <Compile Include="Controllers\TrxDocumentMandatoryController.cs" />
+    <Compile Include="Controllers\TrxFileDataPekerjaanController.cs" />
+    <Compile Include="Controllers\TrxMonitoringFeeBasedController.cs" />
+    <Compile Include="Controllers\TrxNotarisController.cs" />
+    <Compile Include="Controllers\TrxNotificationContentController.cs" />
+    <Compile Include="Controllers\TrxNotificationDetailController.cs" />
+    <Compile Include="Controllers\TrxNotificationHeaderController.cs" />
+    <Compile Include="Controllers\TrxOwnershipController.cs" />
+    <Compile Include="Controllers\TrxRegistrationRequestController.cs" />
+    <Compile Include="Controllers\TrxRekananDocumentController.cs" />
+    <Compile Include="Controllers\TrxSanksiEksternalController.cs" />
+    <Compile Include="Controllers\TrxSanksiInternalController.cs" />
+    <Compile Include="Controllers\TrxTenagaAhliController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\CustomCriteriaToLinqWhereParser.cs" />
+    <Compile Include="Models\Dashboard\fDashPekerjaanByRekanan_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashNilaiPenutupanByRekanan_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashFeeByRekanan_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashFeeByRekanan_Seg_Bulan_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashFeeByRekanan_Seg_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashNilaiPenutupanByRekanan_Bulan_Result.cs" />
+    <Compile Include="Models\Dashboard\fDashFeeByRekanan_Bulan_Result.cs" />
+    <Compile Include="Models\DataMasterProvider.cs" />
+    <Compile Include="Models\fGetLapAS1MByRekanan_Result.cs" />
+    <Compile Include="Models\fDataOrganisasiByRek_Type_Result.cs" />
+    <Compile Include="Models\fDataOrganisasiByRek_Result.cs" />
+    <Compile Include="Models\fGetPekerjaan3MByIdTypeOfRekanan_Result.cs" />
+    <Compile Include="Models\FormEdit\mstContactForm.cs" />
+    <Compile Include="Models\FormEdit\trxAsistenForm.cs" />
+    <Compile Include="Models\FormEdit\trxBranchOfficeHeaderForm.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanHeaderForm.cs" />
+    <Compile Include="Models\FormEdit\trxNotarisItemForm.cs" />
+    <Compile Include="Models\FormEdit\trxManagementForm.cs" />
+    <Compile Include="Models\FormEdit\trxNotarisFormNew.cs" />
+    <Compile Include="Models\FormEdit\trxOwnershipForm.cs" />
+    <Compile Include="Models\FormEdit\trxTenagaAhliHeaderForm.cs" />
+    <Compile Include="Models\fPekerjaanAS_1MByTypeOfRekanan_Result.cs" />
+    <Compile Include="Models\fPekerjaanAS_3MByTypeOfRekanan_Result.cs" />
+    <Compile Include="Models\fPekerjaanBLGByTypeOfRekanan_Result.cs" />
+    <Compile Include="Models\fPekerjaanByTypeOfRekanan_Result.cs" />
+    <Compile Include="Models\Notification\AddEditTDraftCaptionForm.cs" />
+    <Compile Include="Models\Notification\draftCaptionForm.cs" />
+    <Compile Include="Models\Notification\draftDetailForm.cs" />
+    <Compile Include="Models\Notification\fGetNotiByIdNotification_Result.cs" />
+    <Compile Include="Models\Notification\fGetSentByIdNotification_Result.cs" />
+    <Compile Include="Models\Notification\fGetTInboxDetailBySubjectTo_Result.cs" />
+    <Compile Include="Models\Notification\fGetTInboxCaptionBySubjectTo_Result.cs" />
+    <Compile Include="Models\Notification\fGetTDraftDetailBySubjectFrom_Result.cs" />
+    <Compile Include="Models\Notification\fGetTDraftCaptionBySubjectFrom_Result.cs" />
+    <Compile Include="Models\Notification\fGetTSentCaptionBySubjectFrom_Result.cs" />
+    <Compile Include="Models\Notification\fGetTSentDetailBySubjectFrom_Result.cs" />
+    <Compile Include="Models\Notification\fReadInfoByIdNotification_Result.cs" />
+    <Compile Include="Models\Notification\inboxCaptionForm.cs" />
+    <Compile Include="Models\Notification\readInfoByIdNotiForm.cs" />
+    <Compile Include="Models\Notification\sentCaptionForm.cs" />
+    <Compile Include="Models\Notification\sentDetailForm.cs" />
+    <Compile Include="Models\Reports\dshTest.cs" />
+    <Compile Include="Models\Reports\rptAsuransi.cs" />
+    <Compile Include="Models\Reports\rptBalaiLelang.cs" />
+    <Compile Include="Models\Reports\rptKAP.cs" />
+    <Compile Include="Models\Reports\rptKJPP.cs" />
+    <Compile Include="Models\Reports\rptKonsultanManageman.cs" />
+    <Compile Include="Models\Reports\rptNotari.cs" />
+    <Compile Include="Models\ErrorMessage.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaanBLG.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaanAS_3M.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaanAS_1M.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaanHeader.cs" />
+    <Compile Include="Models\fGetRekananByIdSupervisor_Result.cs" />
+    <Compile Include="Models\SimpleRef.cs" />
+    <Compile Include="Models\Tables\mstKategoriResiko.cs" />
+    <Compile Include="Models\Tables\trxKonsolidasi.cs" />
+    <Compile Include="Models\Tables\mstPengumuman.cs" />
+    <Compile Include="Models\Tables\trxPertanyaanNilai.cs" />
+    <Compile Include="Models\Tables\trxManagementP2PK.cs" />
+    <Compile Include="Models\Tables\trxNotarisItem.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhliUpload.cs" />
+    <Compile Include="Models\Tables\trxUploadedFile.cs" />
+    <Compile Include="Models\Tables\trxManagementBlackListHistory.cs" />
+    <Compile Include="Models\Tables\vwRekManagemenBL.cs" />
+    <Compile Include="Models\Tables\trxNotarisDetail.cs" />
+    <Compile Include="Models\Tables\trxNotarisTabular.cs" />
+    <Compile Include="Models\Tables\emlNotification.cs" />
+    <Compile Include="Models\Tables\emlNotificationLog.cs" />
+    <Compile Include="Models\Tables\emlTemplate.cs" />
+    <Compile Include="Models\FormEdit\mstRekananForm.cs" />
+    <Compile Include="Models\FormEdit\trxBranchOfficeForm.cs" />
+    <Compile Include="Models\FormEdit\trxDataOrganisasiForm.cs" />
+    <Compile Include="Models\FormEdit\trxNotarisForm.cs" />
+    <Compile Include="Models\FormEdit\trxRekananDocumentForm.cs" />
+    <Compile Include="Models\FullAndPartialViewModel.cs" />
+    <Compile Include="Models\HeaderViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\Tables\mstRegionAdmin.cs" />
+    <Compile Include="Models\Tables\mstSubRegion.cs" />
+    <Compile Include="Models\Tables\trxBranchOfficeHeader.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhliTMP.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhliHeader.cs" />
+    <Compile Include="Models\Tables\trxTenagaPendukungTMP.cs" />
+    <Compile Include="Models\Tables\trxTenagaPendukungImp.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhliTidakTetapImp.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhliTetapImp.cs" />
+    <Compile Include="Models\Tables\mstContact.cs" />
+    <Compile Include="Models\Tables\mstContact_ARC.cs" />
+    <Compile Include="Models\Tables\mstKecamatan.cs" />
+    <Compile Include="Models\Tables\mstReference.cs" />
+    <Compile Include="Models\Tables\mstRekanan.cs" />
+    <Compile Include="Models\Tables\mstRekanan_ARC.cs" />
+    <Compile Include="Models\Tables\mstSegmentasi.cs" />
+    <Compile Include="Models\Tables\mstTemplateDokRekanan.cs" />
+    <Compile Include="Models\Tables\mstTypeOfBadanUsaha.cs" />
+    <Compile Include="Models\Tables\mstTypeOfDocument.cs" />
+    <Compile Include="Models\Tables\mstTypeOfRegion.cs" />
+    <Compile Include="Models\Tables\mstTypeOfRekanan.cs" />
+    <Compile Include="Models\Tables\mstWilayah.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Tables\trxAsisten.cs" />
+    <Compile Include="Models\Tables\trxAuditLog.cs" />
+    <Compile Include="Models\Tables\trxBranchOffice.cs" />
+    <Compile Include="Models\Tables\trxBranchOffice_ARC.cs" />
+    <Compile Include="Models\Tables\trxDataOrganisasi.cs" />
+    <Compile Include="Models\Tables\trxDataOrganisasi_ARC.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaan.cs" />
+    <Compile Include="Models\Reports\trxDetailPekerjaan_ARC.cs" />
+    <Compile Include="Models\Tables\trxDocMandatoryDetail.cs" />
+    <Compile Include="Models\Tables\trxDocMandatoryFile.cs" />
+    <Compile Include="Models\Tables\trxDocumentMandatory.cs" />
+    <Compile Include="Models\Tables\trxFileDataPekerjaan.cs" />
+    <Compile Include="Models\Tables\trxManagement.cs" />
+    <Compile Include="Models\Tables\trxMonitoringFeeBased.cs" />
+    <Compile Include="Models\Tables\trxMonitoringFeeBased_ARC.cs" />
+    <Compile Include="Models\Tables\trxNotaris.cs" />
+    <Compile Include="Models\Tables\trxNotaris_ARC.cs" />
+    <Compile Include="Models\Tables\trxNotificationContent.cs" />
+    <Compile Include="Models\Tables\trxNotificationDetail.cs" />
+    <Compile Include="Models\Tables\trxNotificationHeader.cs" />
+    <Compile Include="Models\Tables\trxNotificationOld.cs" />
+    <Compile Include="Models\Tables\trxOwnership.cs" />
+    <Compile Include="Models\Tables\trxOwnership_ARC.cs" />
+    <Compile Include="Models\Tables\trxRegistrationRequest.cs" />
+    <Compile Include="Models\Tables\trxRekananDocument.cs" />
+    <Compile Include="Models\Tables\trxRekananDocumentTrack.cs" />
+    <Compile Include="Models\Tables\trxSanksiEksternal.cs" />
+    <Compile Include="Models\Tables\trxSanksiEksternal_ARC.cs" />
+    <Compile Include="Models\Tables\trxSanksiInternal.cs" />
+    <Compile Include="Models\Tables\trxSanksiInternal_ARC.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhli.cs" />
+    <Compile Include="Models\Tables\trxTenagaAhli_ARC.cs" />
+    <Compile Include="Models\Tables\trxTenagaPendukung.cs" />
+    <Compile Include="Models\ViewModel\fResumeRoaByPeriode_Result.cs" />
+    <Compile Include="Models\ViewModel\scoringResumeMulti.cs" />
+    <Compile Include="Models\ViewModel\fScoringResumeByRek_Result.cs" />
+    <Compile Include="Models\ViewModel\fKategoriResiko_Result.cs" />
+    <Compile Include="Models\ViewModel\fScoringByPeriode.cs" />
+    <Compile Include="Models\ViewModel\fKonsoResumeByPeriode.cs" />
+    <Compile Include="Models\ViewModel\fKonsoByPeriode.cs" />
+    <Compile Include="Models\ViewModel\dashFeeByRekanan.cs" />
+    <Compile Include="Models\ViewModel\dashPekerjaanByRekanan.cs" />
+    <Compile Include="Models\ViewModel\fInfo2LastModifiedByRek.cs" />
+    <Compile Include="Models\ViewModel\fManagementRekanan_Result.cs" />
+    <Compile Include="Models\ViewModel\fXLS_RekByIdSupervisor_Result.cs" />
+    <Compile Include="Models\ViewModel\fGetPengumumanByTypeOfRekanan.cs" />
+    <Compile Include="Models\ViewModel\mstPengumumanSingle.cs" />
+    <Compile Include="Models\ViewModel\mstPengumumanMulti.cs" />
+    <Compile Include="Models\ViewModel\trxManagemenBLTab.cs" />
+    <Compile Include="Models\ViewModel\mstRekananMap.cs" />
+    <Compile Include="Models\ViewModel\mstDataMaster.cs" />
+    <Compile Include="Models\ViewModel\mstRekananMulti.cs" />
+    <Compile Include="Models\ViewModel\fTotDocumentDetailByRek_Result.cs" />
+    <Compile Include="Models\ViewModel\mstSubRegionMulti.cs" />
+    <Compile Include="Models\ViewModel\mstSubRegionForm.cs" />
+    <Compile Include="Models\ViewModel\trxBranchOfficeMulti.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanAS_1MMulti.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanBLGSingle.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanExt.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanSingle.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanMulti.cs" />
+    <Compile Include="Models\ViewModel\TrxDMDTenagaAhliTetap.cs" />
+    <Compile Include="Models\ViewModel\trxRekananDocumentMulti.cs" />
+    <Compile Include="Models\ViewModel\fInfoLastModifiedByRek.cs" />
+    <Compile Include="Models\ViewModel\PertanyaanNilaiMulti.cs" />
+    <Compile Include="Models\ViewModel\vwPertanyaanNilaiAkhir.cs" />
+    <Compile Include="Models\ViewModel\vwPertanyaanNilai.cs" />
+    <Compile Include="Models\ViewModel\vwNotarisTabular.cs" />
+    <Compile Include="Models\ViewModel\VmNotiBySubject.cs" />
+    <Compile Include="Models\Tables\vwUserRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\bootstrap-custom.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Command.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\Blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\CommandIcons.png" />
+    <Content Include="Content\Images\CommandIconsHover.png" />
+    <Content Include="Content\Images\foto smart-051ASJ.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051ASK.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051BLG.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051KAP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051KJP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051KMG.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-051NOT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\foto smart-dalam.jpg" />
+    <Content Include="Content\Images\front01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\front02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\front03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\front04.png" />
+    <Content Include="Content\Images\gplaypattern.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Grey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\haldepan01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Home_AdminSistem.jpg" />
+    <Content Include="Content\Images\Home_KAR.jpg" />
+    <Content Include="Content\Images\Home_PCP.jpg" />
+    <Content Include="Content\Images\Home_PCPKAR.jpg" />
+    <Content Include="Content\Images\Home_Portfolio.jpg" />
+    <Content Include="Content\Images\Home_Rekanan.jpg" />
+    <Content Include="Content\Images\LatarDepan.jpg" />
+    <Content Include="Content\Images\Liquid Gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Logo on white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\logoBSM1.png" />
+    <Content Include="Content\Images\panel02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\panel03.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\panel11.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\panel22.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\panel33.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\policies-and-procedures.jpg" />
+    <Content Include="Content\Images\Red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Temp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Yellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Pengumuman.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\SmartApps.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Js\LddCommon.js" />
+    <Content Include="Js\pdn_lib.js" />
+    <Content Include="Js\settings_reference.js" />
+    <Content Include="Scripts\app.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="log4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\FileDownload\ListTenagaAhli.xlsx" />
+    <Content Include="Content\FileDownload\ListTenagaPendukung.xlsx" />
+    <Content Include="Content\FileDownload\TemplateA.xlsx" />
+    <Content Include="Content\FileDownload\TemplateB.xlsx" />
+    <Content Include="Content\FileDownload\ListCabang.xlsx" />
+    <Content Include="Content\FileDownload\ListAsuransiBulanan.xlsx" />
+    <Content Include="Content\FileDownload\ListPekerjaanBulanan.xlsx" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Smart.pubxml" />
+    <None Include="Scripts\jquery-1.11.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.1.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.map" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-029.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-GB.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-IE.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-IN.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-JM.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-MY.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-NZ.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-PH.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-SG.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-TT.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.culture.en-US.js" />
+    <Content Include="Scripts\jquery.globalize\cultures\globalize.cultures.js" />
+    <Content Include="Scripts\jquery.globalize\globalize.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.0.0.debug.js" />
+    <Content Include="Scripts\knockout-3.0.0.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\SmartApps.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\HomeRekanan\Index_main.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\EmlNotification\GridViewPartial.cshtml" />
+    <Content Include="Views\MstRekanan\GridViewPartial.cshtml" />
+    <Content Include="Views\MstTemplateDokRekanan\Create.cshtml" />
+    <Content Include="Views\MstTemplateDokRekanan\Delete.cshtml" />
+    <Content Include="Views\MstTemplateDokRekanan\Edit.cshtml" />
+    <Content Include="Views\MstTemplateDokRekanan\Index.cshtml" />
+    <Content Include="Views\TrxNotificationContent\Create.cshtml" />
+    <Content Include="Views\TrxNotificationContent\Delete.cshtml" />
+    <Content Include="Views\TrxNotificationContent\Edit.cshtml" />
+    <Content Include="Views\TrxNotificationContent\Index.cshtml" />
+    <Content Include="Views\TrxOwnershipDetail\Create.cshtml" />
+    <Content Include="Views\TrxOwnershipDetail\Delete.cshtml" />
+    <Content Include="Views\TrxOwnershipDetail\Edit.cshtml" />
+    <Content Include="Views\TrxOwnershipDetail\Index.cshtml" />
+    <Content Include="Views\TrxOwnershipHeader\Create.cshtml" />
+    <Content Include="Views\TrxOwnershipHeader\Delete.cshtml" />
+    <Content Include="Views\TrxOwnershipHeader\Edit.cshtml" />
+    <Content Include="Views\TrxOwnershipHeader\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Logout.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\HomeRekanan\Index.cshtml" />
+    <Content Include="Views\TrxNotificationHeader\Create.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\Delete.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\Edit.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\HomeRekanan\Index_roundMenu.cshtml" />
+    <Content Include="Views\HomeRekanan\Index_Tab.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan.cshtml" />
+    <Content Include="Views\HomeRekanan\Index_SideMenu.cshtml" />
+    <Content Include="Views\ATest1\Index.cshtml" />
+    <Content Include="Views\ATest1\CategoryResults.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Shared\_SideMenu.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_SideMenu - Copy.cshtml" />
+    <Content Include="Views\TrxDashboard\Index.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_AdminSistem.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_PCPKAR.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Porfolio.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit.cshtml" />
+    <Content Include="Views\MstRekanan\GetBySupervisorId.cshtml" />
+    <Content Include="Views\TrxNotificationHeader\GetNotificationBySubjectKritikal.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_NotificationKritikal.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_NotificationNormal.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_NotificationPenting.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotaris\CreateEdit.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\CreateEdit.cshtml" />
+    <Content Include="Views\TrxRekananDocument\GetByRekanan.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDocByRek.cshtml" />
+    <Content Include="Views\TrxOwnership\_OwnershipByRek.cshtml" />
+    <Content Include="Views\TrxOwnership\GetByRekanan.cshtml" />
+    <Content Include="Views\TrxTenagaAhli\_TenagaAhliByRek.cshtml" />
+    <Content Include="Views\TrxTenagaAhli\GetByRekanan.cshtml" />
+    <Content Include="Views\MstContact\_ContactByRek.cshtml" />
+    <Content Include="Views\MstContact\GetByRekanan.cshtml" />
+    <Content Include="Views\TrxBranchOffice\_BranchByIdOrganisasi.cshtml" />
+    <Content Include="Views\TrxBranchOffice\GetByIdOrganisasi.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_EditRekDocument.cshtml" />
+    <Content Include="Views\TrxRekananDocument\EditRekDocument.cshtml" />
+    <Content Include="Views\MstReference\GetEmailConfig.cshtml" />
+    <Content Include="Views\MstReference\_GetReport01Config.cshtml" />
+    <Content Include="Views\MstReference\GetReport01Config.cshtml" />
+    <Content Include="Views\MstReference\GetDashboard01Config.cshtml" />
+    <Content Include="Views\MstReference\_GetEmailConfig.cshtml" />
+    <Content Include="Views\MstReference\_GetDashboard01Config.cshtml" />
+    <Content Include="Views\MstReference\_ListReference.cshtml" />
+    <Content Include="Views\RptAsuransi\_GetByRekanan_Rek.cshtml" />
+    <Content Include="Views\RptAsuransi\Create.cshtml" />
+    <Content Include="Views\RptAsuransi\Edit.cshtml" />
+    <Content Include="Views\RptAsuransi\GetByRekanan_Rek.cshtml" />
+    <Content Include="Views\RptAsuransi\Index.cshtml" />
+    <Content Include="Views\RptAsuransi\GetByRekanan_Asp.cshtml" />
+    <Content Include="Views\RptAsuransi\_GetByRekanan_Asp.cshtml" />
+    <Content Include="Views\RptAsuransi\_Edit_Rek.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptKJPP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptNotaris.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptKonsultanM.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptAsuransiJiwa.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptAsuransiKerugian.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_RptBalai.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptNotaris.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptKonsultanM.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptBalai.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptAsuransiJiwa.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptAsuransiKerugian.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\RptKJPP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxRekananDocument\_RekananDocDetailByRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDocDetail.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\Edit.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDocFileByRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryFile\Edit.cshtml" />
+    <Content Include="Views\DataOrganisasi\Index.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\GetByRekanan.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_GetByRekanan.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_ManagementByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_BranchByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_OwnershipByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AsistenByRek.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\_TenagaByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_ContactByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_PendukungByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditManagement.cshtml" />
+    <Content Include="Views\MstRekanan\View.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_KJP.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_KAP.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_KMG.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_ASJ.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_ASK.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_BLG.cshtml" />
+    <Content Include="Views\HomeRekanan\_Home_Rekanan_NOT.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_Read.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_Edit.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekanan_ASR.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekanan_ASR.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDataOrganisasi\_AddEditCabang.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditOwnership.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditAsisten.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditContact.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditPendukung.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_3.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_32.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_2.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_38.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_33.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_27.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_15.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_5.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_25.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_24.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_16.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_10.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_1.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_36.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_31.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_3.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_32.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_2.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_38.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_33.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_27.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_28.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_29.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_15.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_25.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_24.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_16.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_10.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_1.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_36.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_31.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_ReadBL.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_EditBL.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_28.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_29.cshtml" />
+    <Content Include="Views\TrxTenagaAhliTetapImp\_TenagaAhliTetapImpByRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_8.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_8.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\_AddEditTAHeader.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_GetByGuidHeader.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\AddEditTAHeader.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\_AddEditTPHeader.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\AddEditTPHeader.cshtml" />
+    <Content Include="Views\TrxBranchOffice\_BranchByRekanan.cshtml" />
+    <Content Include="Views\TrxBranchOffice\_AddEditBranchOld.cshtml" />
+    <Content Include="Views\TrxBranchOffice\_AddEditBranch.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_BranchByRekanan.cshtml" />
+    <Content Include="Views\trxDetailPekerjaanHeader\GetByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\AddEditPekerjaanHeader.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\_AddEditPekerjaanHeader.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\PekerjaanByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailOTH.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananKJP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananKJP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananAS.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananBLG.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananNOT.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailAS_3M.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailBLG.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailKJP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananNOT.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananBLG.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_AddEditDetailNOT.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananAS.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananAS_1M.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\_AddEditPekerjaanAS_1MHeader.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\AddEditPekerjaanAS_1MHeader.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDataOrganisasi\_AddEditManagementMin.cshtml" />
+    <Content Include="Views\MstRekanan\_InfoLastModifiedByRek.cshtml" />
+    <Content Include="Views\MstRekanan\RekananDetailedInfo.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeKJP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeKAP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeKMG.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeASJ.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeASK.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeBLG.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeNOT.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDataOrganisasi\_AddEditManagementKJP.cshtml" />
+    <Content Include="Views\MstRegion\CreateEdit.cshtml" />
+    <Content Include="Views\MstRegion\Index.cshtml" />
+    <Content Include="Views\MstSubRegion\Index.cshtml" />
+    <Content Include="Views\MstSubRegion\CreateEdit.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\GetByRekananTab.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_BranchHeaderByRek.cshtml" />
+    <Content Include="Views\TrxBranchOfficeHeader\GetByRekanan.cshtml" />
+    <Content Include="Views\TrxBranchOfficeHeader\AddEditBranchHeader.cshtml" />
+    <Content Include="Views\TrxBranchOfficeHeader\_BranchByGuidHeader.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_ReadTab.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_EditTab.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeASK1M.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\GetNotiInboxSentDraft.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TrayInboxCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TraySentCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TrayDraftCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_AddEditTDraft.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_AddEditTDraftContainer.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_GridSubjectTo.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TrayDraftDetail.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TraySentDetail.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_ReadInfoByIdNotification.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TraySentDetail4Rek.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_TrayDraftDetail4Rek.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetByRekananAS_PCP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_AddEditTDraftPCP.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_54.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_54.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_41.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_41.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_50.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_50.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\GetTenagaAhliByRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_GetTenagaAhliByRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_40.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_ReadAJ.cshtml" />
+    <Content Include="Views\MstRekanan\CreateEdit_EditAJ.cshtml" />
+    <Content Include="Views\TrxNotificationHeader\_AddEditTDraftReply.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Dashboard\_FeeByRekananKJP.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Dashboard\_FeeByRekananKAP.cshtml" />
+    <Content Include="Views\Dashboard\IndexKJP.cshtml" />
+    <Content Include="Views\Dashboard\_FeeByRekanan.cshtml" />
+    <Content Include="Views\Dashboard\_JumlahPekerjaanByRekanan.cshtml" />
+    <Content Include="Views\Dashboard\_LatLongByRekanan.cshtml" />
+    <Content Include="Views\Dashboard\_LatLongByRekananContoh.cshtml" />
+    <Content Include="Views\TrxNotaris\CreateEditTabular.cshtml" />
+    <Content Include="Views\TrxNotaris\CreateEditDetail.cshtml" />
+    <Content Include="Views\TrxNotaris\_GetNotarisDetailAll.cshtml" />
+    <Content Include="Views\TrxNotaris\GetNotarisDetailAll.cshtml" />
+    <Content Include="Views\TrxManagement\GetManagementPCP.cshtml" />
+    <Content Include="Views\TrxManagement\_RekManagemenBL.cshtml" />
+    <Content Include="Views\TrxManagement\_ManagemenBL.cshtml" />
+    <Content Include="Views\TrxManagement\BLByRekanan.cshtml" />
+    <Content Include="Views\TrxManagement\BLByPartner.cshtml" />
+    <Content Include="Views\Account\AfterRegister.cshtml" />
+    <Content Include="Views\Shared\_DaftarFile.cshtml" />
+    <Content Include="Views\MstPengumuman\GetAllPengumuman.cshtml" />
+    <Content Include="Views\MstPengumuman\_AddEditPengumuman.cshtml" />
+    <Content Include="Views\MstPengumuman\_GetAllPengumuman.cshtml" />
+    <Content Include="Views\TrxManagement\_BLByRekanan.cshtml" />
+    <Content Include="Views\TrxManagement\_BLByPartner.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\_TenagaUploadByRek.cshtml" />
+    <Content Include="Views\TrxTenagaAhliHeader\_AddEditTAUpload.cshtml" />
+    <Content Include="Views\Dashboard\_FeeByRekananReg.cshtml" />
+    <Content Include="Views\Dashboard\Index - Copy.cshtml" />
+    <Content Include="Views\Dashboard\_FeeByRekananMap.cshtml" />
+    <Content Include="Views\Dashboard\_FeeByRekananTri.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_57.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditManagementAS.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_GetTenagaAhliTTByRek.cshtml" />
+    <Content Include="Views\trxDetailPekerjaanHeader\_GetByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\trxDetailPekerjaanHeader\GetByRekanan - Copy.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\GetByRekananAS_1M.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\MstRekanan\_GetManagementRek.cshtml" />
+    <Content Include="Views\MstRekanan\GetManagementRekanan.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_NotarisItemByRek.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\_AddEditNotarisItem.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\GetByTypeASJ1M.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDataOrganisasi\_AddEditManagementKAP.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan\GetAS_1MByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_GetAS_1MByRekanan.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxManagementP2PK\_GetManagementP2PK.cshtml" />
+    <Content Include="Views\TrxManagementP2PK\AddEditManagementP2PK.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxManagementP2PK\GetManagementP2PK_Backup1.cshtml" />
+    <Content Include="Views\TrxManagementP2PK\GetManagementP2PK.cshtml" />
+    <Content Include="Views\TrxNotificationHeader\_EmailSentCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_WhatsappSentCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_AlertByEmailSentCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxNotificationHeader\_AlertByWhatsappSentCaption.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Account\RegisterByKiosk.cshtml" />
+    <Content Include="Views\TrxPertanyaanNilai\GetNilaiByPenilai.cshtml" />
+    <Content Include="Views\TrxPertanyaanNilai\_GetNilaiByPenilai.cshtml" />
+    <Content Include="Views\TrxPertanyaanNilai\GetNilaiAkhir.cshtml" />
+    <Content Include="Views\TrxPertanyaanNilai\_GetNilaiAkhir.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetKonsoByPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetKonsoByPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetKonsoResumeByPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetKonsoResumeByPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetKategoriResikoByPenambah.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetKategoriResikoByPenambah.cshtml" />
+    <Content Include="Views\MstKategoriResiko\GetByIdTypeOfRekanan.cshtml" />
+    <Content Include="Views\MstKategoriResiko\_GetByIdTypeOfRekanan.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetScoringByRekPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetScoringByRekPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetScoringMultiByRekPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetScoringMultiByRekPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\GetResumeRoaByRekPeriode.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetResumeRoaByRekPeriode.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Components\" />
+    <Folder Include="Content\DocumentImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EmlNotification\Create.cshtml" />
+    <Content Include="Views\EmlNotification\Delete.cshtml" />
+    <Content Include="Views\EmlNotification\Edit.cshtml" />
+    <Content Include="Views\EmlNotification\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout_LoadMenu.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EmlNotificationLog\Create.cshtml" />
+    <Content Include="Views\EmlNotificationLog\Delete.cshtml" />
+    <Content Include="Views\EmlNotificationLog\Edit.cshtml" />
+    <Content Include="Views\EmlNotificationLog\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EmlTemplate\Create.cshtml" />
+    <Content Include="Views\EmlTemplate\Delete.cshtml" />
+    <Content Include="Views\EmlTemplate\Edit.cshtml" />
+    <Content Include="Views\EmlTemplate\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstContact\Create.cshtml" />
+    <Content Include="Views\MstContact\Delete.cshtml" />
+    <Content Include="Views\MstContact\Edit.cshtml" />
+    <Content Include="Views\MstContact\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstContact_ARC\Create.cshtml" />
+    <Content Include="Views\MstContact_ARC\Delete.cshtml" />
+    <Content Include="Views\MstContact_ARC\Edit.cshtml" />
+    <Content Include="Views\MstContact_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstKecamatan\Create.cshtml" />
+    <Content Include="Views\MstKecamatan\Delete.cshtml" />
+    <Content Include="Views\MstKecamatan\Edit.cshtml" />
+    <Content Include="Views\MstKecamatan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstReference\Create.cshtml" />
+    <Content Include="Views\MstReference\Delete.cshtml" />
+    <Content Include="Views\MstReference\Edit.cshtml" />
+    <Content Include="Views\MstReference\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstRekanan\Delete.cshtml" />
+    <Content Include="Views\MstRekanan\Edit.cshtml" />
+    <Content Include="Views\MstRekanan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstRekanan_ARC\Create.cshtml" />
+    <Content Include="Views\MstRekanan_ARC\Delete.cshtml" />
+    <Content Include="Views\MstRekanan_ARC\Edit.cshtml" />
+    <Content Include="Views\MstRekanan_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstTypeOfBadanUsaha\Create.cshtml" />
+    <Content Include="Views\MstTypeOfBadanUsaha\Delete.cshtml" />
+    <Content Include="Views\MstTypeOfBadanUsaha\Edit.cshtml" />
+    <Content Include="Views\MstTypeOfBadanUsaha\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstTypeOfDocument\Create.cshtml" />
+    <Content Include="Views\MstTypeOfDocument\Delete.cshtml" />
+    <Content Include="Views\MstTypeOfDocument\Edit.cshtml" />
+    <Content Include="Views\MstTypeOfDocument\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstTypeOfRegion\Create.cshtml" />
+    <Content Include="Views\MstTypeOfRegion\Delete.cshtml" />
+    <Content Include="Views\MstTypeOfRegion\Edit.cshtml" />
+    <Content Include="Views\MstTypeOfRegion\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstTypeOfRekanan\Create.cshtml" />
+    <Content Include="Views\MstTypeOfRekanan\Delete.cshtml" />
+    <Content Include="Views\MstTypeOfRekanan\Edit.cshtml" />
+    <Content Include="Views\MstTypeOfRekanan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MstWilayah\Create.cshtml" />
+    <Content Include="Views\MstWilayah\Delete.cshtml" />
+    <Content Include="Views\MstWilayah\Edit.cshtml" />
+    <Content Include="Views\MstWilayah\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxAuditLog\Create.cshtml" />
+    <Content Include="Views\TrxAuditLog\Delete.cshtml" />
+    <Content Include="Views\TrxAuditLog\Edit.cshtml" />
+    <Content Include="Views\TrxAuditLog\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxBranchOffice\Create.cshtml" />
+    <Content Include="Views\TrxBranchOffice\Delete.cshtml" />
+    <Content Include="Views\TrxBranchOffice\Edit.cshtml" />
+    <Content Include="Views\TrxBranchOffice\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxBranchOffice_ARC\Create.cshtml" />
+    <Content Include="Views\TrxBranchOffice_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxBranchOffice_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxBranchOffice_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxDataOrganisasi\Create.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\Delete.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\Edit.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxDataOrganisasi_ARC\Create.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxDataOrganisasi_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxDetailPekerjaan\Create.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\Delete.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\_Edit.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\TrxDetailPekerjaan\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxDetailPekerjaan_ARC\Create.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxDetailPekerjaan_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxDocumentMandatory\Create.cshtml" />
+    <Content Include="Views\TrxDocumentMandatory\Delete.cshtml" />
+    <Content Include="Views\TrxDocumentMandatory\Edit.cshtml" />
+    <Content Include="Views\TrxDocumentMandatory\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxFileDataPekerjaan\Create.cshtml" />
+    <Content Include="Views\TrxFileDataPekerjaan\Delete.cshtml" />
+    <Content Include="Views\TrxFileDataPekerjaan\Edit.cshtml" />
+    <Content Include="Views\TrxFileDataPekerjaan\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxMonitoringFeeBased\Create.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased\Delete.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased\Edit.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxMonitoringFeeBased_ARC\Create.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxMonitoringFeeBased_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxNotaris\Create.cshtml" />
+    <Content Include="Views\TrxNotaris\Delete.cshtml" />
+    <Content Include="Views\TrxNotaris\Edit.cshtml" />
+    <Content Include="Views\TrxNotaris\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxNotaris_ARC\Create.cshtml" />
+    <Content Include="Views\TrxNotaris_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxNotaris_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxNotaris_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxOwnership\Create.cshtml" />
+    <Content Include="Views\TrxOwnership\Delete.cshtml" />
+    <Content Include="Views\TrxOwnership\Edit.cshtml" />
+    <Content Include="Views\TrxOwnership\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxOwnership_ARC\Create.cshtml" />
+    <Content Include="Views\TrxOwnership_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxOwnership_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxOwnership_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxRegistrationRequest\Create.cshtml" />
+    <Content Include="Views\TrxRegistrationRequest\Delete.cshtml" />
+    <Content Include="Views\TrxRegistrationRequest\Edit.cshtml" />
+    <Content Include="Views\TrxRegistrationRequest\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxRekananDocument\Create.cshtml" />
+    <Content Include="Views\TrxRekananDocument\Delete.cshtml" />
+    <Content Include="Views\TrxRekananDocument\Edit.cshtml" />
+    <Content Include="Views\TrxRekananDocument\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxRekananDocumentTrack\Create.cshtml" />
+    <Content Include="Views\TrxRekananDocumentTrack\Delete.cshtml" />
+    <Content Include="Views\TrxRekananDocumentTrack\Edit.cshtml" />
+    <Content Include="Views\TrxRekananDocumentTrack\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxSanksiEksternal\Create.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal\Delete.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal\Edit.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxSanksiEksternal_ARC\Create.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxSanksiEksternal_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxSanksiInternal\Create.cshtml" />
+    <Content Include="Views\TrxSanksiInternal\Delete.cshtml" />
+    <Content Include="Views\TrxSanksiInternal\Edit.cshtml" />
+    <Content Include="Views\TrxSanksiInternal\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxSanksiInternal_ARC\Create.cshtml" />
+    <Content Include="Views\TrxSanksiInternal_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxSanksiInternal_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxSanksiInternal_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxTenagaAhli\Create.cshtml" />
+    <Content Include="Views\TrxTenagaAhli\Delete.cshtml" />
+    <Content Include="Views\TrxTenagaAhli\Edit.cshtml" />
+    <Content Include="Views\TrxTenagaAhli\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TrxTenagaAhli_ARC\Create.cshtml" />
+    <Content Include="Views\TrxTenagaAhli_ARC\Delete.cshtml" />
+    <Content Include="Views\TrxTenagaAhli_ARC\Edit.cshtml" />
+    <Content Include="Views\TrxTenagaAhli_ARC\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiHelper\ApiHelper.csproj">
+      <Project>{1d4d93e1-3602-42e6-a7fa-33707d6106f5}</Project>
+      <Name>ApiHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3382</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3383/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>DEL "$(SolutionDir)\MVCSmartClient01\Properties\licenses.licx"
+COPY "$(SolutionDir)\MVCSmartClient01\Properties\MAP.licx" "$(SolutionDir)\MVCSmartClient01\Properties\licenses.licx"</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

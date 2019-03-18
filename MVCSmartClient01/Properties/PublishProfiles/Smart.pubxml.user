@@ -1,0 +1,2383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\ProjectOuput\SmartBSM\Smart_BSM</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/23/2017 18:36:03</publishTime>
+    </File>
+    <File Include="bin/Content/FileDownload/DaftarTenagaAhliTetap.xlsx">
+      <publishTime>07/27/2017 01:53:29</publishTime>
+    </File>
+    <File Include="bin/Content/FileDownload/DaftarTenagaAhliTidakTetap.xlsx">
+      <publishTime>07/27/2017 01:56:41</publishTime>
+    </File>
+    <File Include="bin/Content/FileDownload/DaftarTenagaPendukung.xlsx">
+      <publishTime>07/27/2017 01:57:39</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Blue.png">
+      <publishTime>05/20/2018 09:06:49</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051ASJ.png">
+      <publishTime>08/04/2017 10:14:14</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051ASK.png">
+      <publishTime>08/11/2017 11:10:03</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051BLG.png">
+      <publishTime>08/04/2017 11:06:54</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051KAP.png">
+      <publishTime>08/04/2017 09:45:50</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051KJP.png">
+      <publishTime>08/04/2017 10:02:24</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051KMG.png">
+      <publishTime>08/04/2017 10:00:40</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-051NOT.png">
+      <publishTime>08/04/2017 10:06:32</publishTime>
+    </File>
+    <File Include="bin/Content/Images/foto smart-dalam.png">
+      <publishTime>02/08/2019 16:24:23</publishTime>
+    </File>
+    <File Include="bin/Content/Images/front01.png">
+      <publishTime>07/17/2017 11:45:26</publishTime>
+    </File>
+    <File Include="bin/Content/Images/front02.png">
+      <publishTime>07/17/2017 09:37:22</publishTime>
+    </File>
+    <File Include="bin/Content/Images/front03.png">
+      <publishTime>07/17/2017 10:17:16</publishTime>
+    </File>
+    <File Include="bin/Content/Images/gplaypattern.png">
+      <publishTime>06/14/2012 21:19:04</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Green.png">
+      <publishTime>05/20/2018 09:08:49</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Grey.png">
+      <publishTime>05/20/2018 09:11:10</publishTime>
+    </File>
+    <File Include="bin/Content/Images/haldepan01.jpg">
+      <publishTime>07/17/2017 09:37:22</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Liquid Gold.png">
+      <publishTime>07/14/2017 11:00:21</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Logo on white.png">
+      <publishTime>07/14/2017 05:33:13</publishTime>
+    </File>
+    <File Include="bin/Content/Images/panel02.jpg">
+      <publishTime>05/31/2017 09:50:35</publishTime>
+    </File>
+    <File Include="bin/Content/Images/panel03.jpg">
+      <publishTime>05/31/2017 09:51:00</publishTime>
+    </File>
+    <File Include="bin/Content/Images/panel11.jpg">
+      <publishTime>05/31/2017 10:09:07</publishTime>
+    </File>
+    <File Include="bin/Content/Images/panel22.jpg">
+      <publishTime>05/31/2017 10:09:22</publishTime>
+    </File>
+    <File Include="bin/Content/Images/panel33.jpg">
+      <publishTime>05/31/2017 10:08:53</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Red.png">
+      <publishTime>05/20/2018 09:09:33</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Temp.png">
+      <publishTime>05/20/2018 07:42:05</publishTime>
+    </File>
+    <File Include="bin/Content/Images/Yellow.png">
+      <publishTime>05/20/2018 09:10:32</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:13:42</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:11:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v14.1.Web.dll">
+      <publishTime>10/24/2014 11:11:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v14.1.Web.Mvc5.dll">
+      <publishTime>10/24/2014 11:11:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v14.1.dll">
+      <publishTime>10/24/2014 11:11:57</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v14.1.dll">
+      <publishTime>10/24/2014 11:12:05</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DemoReports.v14.1.dll">
+      <publishTime>12/26/2014 15:31:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:17:04</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:17:06</publishTime>
+    </File>
+    <File Include="bin/DevExpress.SpellChecker.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:13:31</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Spreadsheet.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:17:09</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v14.1.dll">
+      <publishTime>10/24/2014 11:13:35</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxGauges.v14.1.dll">
+      <publishTime>10/24/2014 11:10:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxHtmlEditor.v14.1.dll">
+      <publishTime>10/24/2014 11:10:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxPivotGrid.v14.1.dll">
+      <publishTime>10/24/2014 11:10:37</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxScheduler.v14.1.dll">
+      <publishTime>10/24/2014 11:10:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpellChecker.v14.1.dll">
+      <publishTime>10/24/2014 11:11:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpreadsheet.v14.1.dll">
+      <publishTime>10/24/2014 11:13:32</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxTreeList.v14.1.dll">
+      <publishTime>10/24/2014 11:11:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Mvc5.v14.1.dll">
+      <publishTime>10/24/2014 11:13:21</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v14.1.dll">
+      <publishTime>10/24/2014 11:10:35</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v14.1.dll">
+      <publishTime>10/24/2014 11:13:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v14.1.dll">
+      <publishTime>10/24/2014 11:13:42</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v14.1.Web.dll">
+      <publishTime>10/24/2014 11:10:32</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:17:02</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v14.1.Presets.dll">
+      <publishTime>10/24/2014 11:17:02</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPivotGrid.v14.1.dll">
+      <publishTime>10/24/2014 11:17:04</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v14.1.dll">
+      <publishTime>10/24/2014 11:17:05</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v14.1.Web.dll">
+      <publishTime>10/24/2014 11:17:06</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraScheduler.v14.1.Core.dll">
+      <publishTime>10/24/2014 11:17:08</publishTime>
+    </File>
+    <File Include="bin/Levelnis.Learning.CallingWebApiFromMvc.ApiHelper.dll">
+      <publishTime>03/08/2019 16:33:07</publishTime>
+    </File>
+    <File Include="bin/log4net.config">
+      <publishTime>05/10/2017 09:30:37</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>11/09/2015 15:35:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/24/2017 05:37:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/24/2017 05:37:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.IdentityModel.dll">
+      <publishTime>04/26/2017 12:31:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/24/2017 05:37:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/24/2017 05:37:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>04/24/2017 05:37:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/24/2017 05:37:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>04/24/2017 05:37:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Helpers.dll">
+      <publishTime>04/23/2017 18:28:57</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/29/2017 12:58:18</publishTime>
+    </File>
+    <File Include="bin/MVCSmartClient01.dll">
+      <publishTime>03/14/2019 14:19:51</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/24/2017 15:17:37</publishTime>
+    </File>
+    <File Include="bin/Omu.ValueInjecter.dll">
+      <publishTime>05/15/2017 08:49:32</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/24/2017 05:37:47</publishTime>
+    </File>
+    <File Include="bin/Scripts/app.js">
+      <publishTime>04/26/2017 09:40:02</publishTime>
+    </File>
+    <File Include="bin/Scripts/SmartApps.js">
+      <publishTime>01/29/2019 17:03:17</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/24/2017 15:17:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/23/2017 18:31:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/24/2017 15:17:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/23/2017 18:31:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/23/2017 18:33:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/23/2017 18:31:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/23/2017 18:31:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/23/2017 18:31:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/23/2017 18:31:23</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/Create.cshtml">
+      <publishTime>04/03/2017 09:23:50</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/Delete.cshtml">
+      <publishTime>04/03/2017 09:18:43</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetAS_1MByRekanan.cshtml">
+      <publishTime>02/03/2019 21:35:00</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekanan.cshtml">
+      <publishTime>09/04/2017 17:03:21</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananAS.cshtml">
+      <publishTime>06/24/2018 23:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananAS_1M.cshtml">
+      <publishTime>01/28/2019 17:22:22</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananBLG.cshtml">
+      <publishTime>09/07/2017 12:11:41</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananKAP.cshtml">
+      <publishTime>09/30/2017 14:05:12</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananKJP.cshtml">
+      <publishTime>09/07/2017 11:20:08</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekananNOT.cshtml">
+      <publishTime>09/07/2017 12:11:09</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByRekanan_ASR.cshtml">
+      <publishTime>07/18/2017 00:32:48</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeASJ.cshtml">
+      <publishTime>09/07/2017 09:25:23</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeASJ1M.cshtml">
+      <publishTime>02/03/2019 03:38:07</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeASK.cshtml">
+      <publishTime>09/29/2017 12:34:39</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeASK1M.cshtml">
+      <publishTime>02/03/2019 03:38:09</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeBLG.cshtml">
+      <publishTime>09/07/2017 09:24:52</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeKAP.cshtml">
+      <publishTime>09/07/2017 09:36:25</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeKJP.cshtml">
+      <publishTime>09/06/2017 12:47:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeKMG.cshtml">
+      <publishTime>09/07/2017 09:24:22</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/GetByTypeNOT.cshtml">
+      <publishTime>09/07/2017 09:26:03</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/Index.cshtml">
+      <publishTime>04/03/2017 09:09:56</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptAsuransiJiwa.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptAsuransiKerugian.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptBalai.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptKAP.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptKJPP.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptKonsultanM.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/RptNotaris.cshtml">
+      <publishTime>06/07/2017 16:16:52</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailAS_3M.cshtml">
+      <publishTime>01/28/2019 17:22:22</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailBLG.cshtml">
+      <publishTime>05/14/2018 05:05:17</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailKAP.cshtml">
+      <publishTime>01/27/2019 21:29:54</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailKJP.cshtml">
+      <publishTime>01/21/2019 07:10:06</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailNOT.cshtml">
+      <publishTime>05/06/2018 05:18:14</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_AddEditDetailOTH.cshtml">
+      <publishTime>09/04/2017 17:03:21</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_Edit.cshtml">
+      <publishTime>06/07/2017 16:53:10</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetAS_1MByRekanan.cshtml">
+      <publishTime>02/06/2019 00:30:25</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekanan.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananAS.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananAS_1M.cshtml">
+      <publishTime>02/03/2019 03:31:32</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananAS_PCP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananBLG.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananKAP.cshtml">
+      <publishTime>01/27/2019 21:17:48</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananKJP.cshtml">
+      <publishTime>01/27/2019 21:17:59</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekananNOT.cshtml">
+      <publishTime>01/27/2019 21:09:40</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_GetByRekanan_ASR.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptAsuransiJiwa.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptAsuransiKerugian.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptBalai.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptKAP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptKJPP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptKonsultanM.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/TrxDetailPekerjaan/_RptNotaris.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/AddEditPekerjaanAS_1MHeader.cshtml">
+      <publishTime>09/06/2017 18:16:24</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/AddEditPekerjaanHeader.cshtml">
+      <publishTime>09/06/2017 18:15:17</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/GetByRekanan - Copy.cshtml">
+      <publishTime>11/11/2018 21:11:37</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/GetByRekanan.cshtml">
+      <publishTime>11/11/2018 21:24:33</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/PekerjaanByRekanan.cshtml">
+      <publishTime>09/29/2017 17:48:39</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/_AddEditPekerjaanAS_1MHeader.cshtml">
+      <publishTime>01/28/2019 17:22:47</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/_AddEditPekerjaanHeader.cshtml">
+      <publishTime>06/27/2018 14:28:52</publishTime>
+    </File>
+    <File Include="bin/Views/trxDetailPekerjaanHeader/_GetByRekanan.cshtml">
+      <publishTime>02/05/2019 21:20:12</publishTime>
+    </File>
+    <File Include="bin/Views/TrxManagementP2PK/AddEditManagementP2PK.cshtml">
+      <publishTime>02/10/2019 02:28:05</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/Create.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/Delete.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/Edit.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/GetNotificationBySubjectKritikal.cshtml">
+      <publishTime>05/14/2017 10:18:02</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/GetNotiInboxSentDraft.cshtml">
+      <publishTime>02/12/2019 18:19:52</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/Index.cshtml">
+      <publishTime>05/03/2017 15:24:57</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AddEditTDraft.cshtml">
+      <publishTime>02/11/2019 19:44:44</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AddEditTDraftContainer.cshtml">
+      <publishTime>09/17/2017 23:11:08</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AddEditTDraftPCP.cshtml">
+      <publishTime>02/11/2019 19:44:02</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AddEditTDraftReply.cshtml">
+      <publishTime>09/10/2018 13:35:17</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AlertByEmailSentCaption.cshtml">
+      <publishTime>02/12/2019 18:28:17</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_AlertByWhatsappSentCaption.cshtml">
+      <publishTime>02/12/2019 18:28:23</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_EmailSentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_GridSubjectTo.cshtml">
+      <publishTime>02/03/2019 11:43:30</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_NotificationKritikal.cshtml">
+      <publishTime>05/13/2017 21:55:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_NotificationNormal.cshtml">
+      <publishTime>05/13/2017 22:10:38</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_NotificationPenting.cshtml">
+      <publishTime>05/13/2017 22:10:10</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_ReadInfoByIdNotification.cshtml">
+      <publishTime>01/14/2019 04:23:01</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TrayDraftCaption.cshtml">
+      <publishTime>01/14/2019 03:41:25</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TrayDraftDetail.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TrayDraftDetail4Rek.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TrayInboxCaption.cshtml">
+      <publishTime>11/08/2017 06:58:38</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TraySentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TraySentDetail.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_TraySentDetail4Rek.cshtml">
+      <publishTime>09/22/2017 17:17:21</publishTime>
+    </File>
+    <File Include="bin/Views/TrxNotificationHeader/_WhatsappSentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="bin/Web.config">
+      <publishTime>03/04/2019 07:31:23</publishTime>
+    </File>
+    <File Include="bin/Web.Debug.config">
+      <publishTime>03/29/2017 15:26:34</publishTime>
+    </File>
+    <File Include="bin/Web.Release.config">
+      <publishTime>03/29/2017 15:26:34</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/23/2017 18:36:03</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>04/23/2017 18:28:57</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>04/23/2017 18:28:57</publishTime>
+    </File>
+    <File Include="Content/bootstrap-custom.css">
+      <publishTime>11/09/2015 15:34:33</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>05/04/2017 10:45:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>05/04/2017 10:45:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/04/2017 10:45:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap-theme.css">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap-theme.min.css">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap.css">
+      <publishTime>05/04/2017 10:16:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap.min.css">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/Command.css">
+      <publishTime>11/09/2015 15:34:30</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>09/10/2018 10:33:07</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>09/10/2018 10:33:07</publishTime>
+    </File>
+    <File Include="Content/FileDownload/DaftarTenagaAhliTetap.xlsx">
+      <publishTime>07/27/2017 01:53:29</publishTime>
+    </File>
+    <File Include="Content/FileDownload/DaftarTenagaAhliTidakTetap.xlsx">
+      <publishTime>07/27/2017 01:56:41</publishTime>
+    </File>
+    <File Include="Content/FileDownload/DaftarTenagaPendukung.xlsx">
+      <publishTime>07/27/2017 01:57:39</publishTime>
+    </File>
+    <File Include="Content/FileDownload/ListAsuransiBulanan.xlsx">
+      <publishTime>01/25/2019 08:00:39</publishTime>
+    </File>
+    <File Include="Content/FileDownload/ListCabang.xlsx">
+      <publishTime>08/31/2017 12:50:50</publishTime>
+    </File>
+    <File Include="Content/FileDownload/ListPekerjaanBulanan.xlsx">
+      <publishTime>08/10/2017 10:35:39</publishTime>
+    </File>
+    <File Include="Content/FileDownload/ListTenagaAhli.xlsx">
+      <publishTime>08/08/2017 07:42:59</publishTime>
+    </File>
+    <File Include="Content/FileDownload/ListTenagaPendukung.xlsx">
+      <publishTime>08/08/2017 07:44:50</publishTime>
+    </File>
+    <File Include="Content/FileDownload/TemplateA.xlsx">
+      <publishTime>07/18/2017 07:46:01</publishTime>
+    </File>
+    <File Include="Content/FileDownload/TemplateB.xlsx">
+      <publishTime>07/18/2017 07:45:42</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>09/10/2018 10:33:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>09/10/2018 10:33:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>09/10/2018 10:33:06</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>09/10/2018 10:33:06</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>09/10/2018 10:33:06</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/04/2017 10:16:12</publishTime>
+    </File>
+    <File Include="Content/Images/Blue.png">
+      <publishTime>05/20/2018 09:06:49</publishTime>
+    </File>
+    <File Include="Content/Images/CommandIcons.png">
+      <publishTime>11/09/2015 15:34:33</publishTime>
+    </File>
+    <File Include="Content/Images/CommandIconsHover.png">
+      <publishTime>11/09/2015 15:34:33</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051ASJ.png">
+      <publishTime>08/04/2017 10:14:14</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051ASK.png">
+      <publishTime>08/11/2017 11:10:03</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051BLG.png">
+      <publishTime>08/04/2017 11:06:54</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051KAP.png">
+      <publishTime>08/04/2017 09:45:50</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051KJP.png">
+      <publishTime>08/04/2017 10:02:24</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051KMG.png">
+      <publishTime>08/04/2017 10:00:40</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-051NOT.png">
+      <publishTime>08/04/2017 10:06:32</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-dalam.jpg">
+      <publishTime>02/13/2019 16:51:09</publishTime>
+    </File>
+    <File Include="Content/Images/foto smart-dalam.png">
+      <publishTime>02/08/2019 16:24:23</publishTime>
+    </File>
+    <File Include="Content/Images/front01.png">
+      <publishTime>07/17/2017 11:45:26</publishTime>
+    </File>
+    <File Include="Content/Images/front02.png">
+      <publishTime>07/17/2017 09:37:22</publishTime>
+    </File>
+    <File Include="Content/Images/front03.png">
+      <publishTime>07/17/2017 10:17:16</publishTime>
+    </File>
+    <File Include="Content/Images/front04.png">
+      <publishTime>07/26/2017 09:12:12</publishTime>
+    </File>
+    <File Include="Content/Images/gplaypattern.png">
+      <publishTime>06/14/2012 21:19:04</publishTime>
+    </File>
+    <File Include="Content/Images/Green.png">
+      <publishTime>05/20/2018 09:08:49</publishTime>
+    </File>
+    <File Include="Content/Images/Grey.png">
+      <publishTime>05/20/2018 09:11:10</publishTime>
+    </File>
+    <File Include="Content/Images/haldepan01.jpg">
+      <publishTime>07/17/2017 09:37:22</publishTime>
+    </File>
+    <File Include="Content/Images/Home_AdminSistem.jpg">
+      <publishTime>05/10/2017 12:17:50</publishTime>
+    </File>
+    <File Include="Content/Images/Home_KAR.jpg">
+      <publishTime>05/10/2017 12:19:10</publishTime>
+    </File>
+    <File Include="Content/Images/Home_PCP.jpg">
+      <publishTime>05/10/2017 12:18:52</publishTime>
+    </File>
+    <File Include="Content/Images/Home_PCPKAR.jpg">
+      <publishTime>05/10/2017 12:17:10</publishTime>
+    </File>
+    <File Include="Content/Images/Home_Portfolio.jpg">
+      <publishTime>05/10/2017 12:18:23</publishTime>
+    </File>
+    <File Include="Content/Images/Home_Rekanan.jpg">
+      <publishTime>05/10/2017 12:16:38</publishTime>
+    </File>
+    <File Include="Content/Images/LatarDepan.jpg">
+      <publishTime>03/11/2019 05:28:00</publishTime>
+    </File>
+    <File Include="Content/Images/Liquid Gold.png">
+      <publishTime>07/14/2017 11:00:21</publishTime>
+    </File>
+    <File Include="Content/Images/Logo on white.png">
+      <publishTime>07/14/2017 05:33:13</publishTime>
+    </File>
+    <File Include="Content/Images/logoBSM1.png">
+      <publishTime>03/11/2019 05:31:42</publishTime>
+    </File>
+    <File Include="Content/Images/panel02.jpg">
+      <publishTime>05/31/2017 09:50:35</publishTime>
+    </File>
+    <File Include="Content/Images/panel03.jpg">
+      <publishTime>05/31/2017 09:51:00</publishTime>
+    </File>
+    <File Include="Content/Images/panel11.jpg">
+      <publishTime>05/31/2017 10:09:07</publishTime>
+    </File>
+    <File Include="Content/Images/panel22.jpg">
+      <publishTime>05/31/2017 10:09:22</publishTime>
+    </File>
+    <File Include="Content/Images/panel33.jpg">
+      <publishTime>05/31/2017 10:08:53</publishTime>
+    </File>
+    <File Include="Content/Images/policies-and-procedures.jpg">
+      <publishTime>05/04/2017 16:22:49</publishTime>
+    </File>
+    <File Include="Content/Images/Red.png">
+      <publishTime>05/20/2018 09:09:33</publishTime>
+    </File>
+    <File Include="Content/Images/Temp.png">
+      <publishTime>05/20/2018 07:42:05</publishTime>
+    </File>
+    <File Include="Content/Images/Yellow.png">
+      <publishTime>05/20/2018 09:10:32</publishTime>
+    </File>
+    <File Include="Content/Pengumuman.css">
+      <publishTime>05/07/2018 20:25:36</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/06/2018 15:03:44</publishTime>
+    </File>
+    <File Include="Content/SmartApps.css">
+      <publishTime>05/07/2018 20:12:44</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/29/2017 15:26:33</publishTime>
+    </File>
+    <File Include="Js/LddCommon.js">
+      <publishTime>11/09/2015 15:34:33</publishTime>
+    </File>
+    <File Include="Js/pdn_lib.js">
+      <publishTime>12/14/2015 17:18:42</publishTime>
+    </File>
+    <File Include="Js/settings_reference.js">
+      <publishTime>11/09/2015 15:34:33</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>05/10/2017 09:30:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/10/2018 10:33:07</publishTime>
+    </File>
+    <File Include="Scripts/app.js">
+      <publishTime>04/26/2017 09:40:02</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/04/2017 10:45:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/25/2017 18:25:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/25/2017 18:25:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/25/2017 18:25:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.js">
+      <publishTime>05/04/2017 11:21:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.min.js">
+      <publishTime>05/04/2017 11:21:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.min.map">
+      <publishTime>05/04/2017 11:21:05</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.map">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-029.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-GB.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-IE.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-IN.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-JM.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-MY.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-NZ.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-PH.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-SG.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-TT.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.en-US.js">
+      <publishTime>11/09/2015 15:34:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.cultures.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/globalize.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.0.0.debug.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/knockout-3.0.0.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>11/09/2015 15:34:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.min.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>11/09/2015 15:34:10</publishTime>
+    </File>
+    <File Include="Scripts/SmartApps.js">
+      <publishTime>01/29/2019 17:03:17</publishTime>
+    </File>
+    <File Include="Views/Account/AfterRegister.cshtml">
+      <publishTime>02/11/2018 11:30:04</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>03/11/2019 05:15:50</publishTime>
+    </File>
+    <File Include="Views/Account/Logout.cshtml">
+      <publishTime>04/27/2017 13:55:17</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>02/13/2019 15:18:21</publishTime>
+    </File>
+    <File Include="Views/Account/RegisterByKiosk.cshtml">
+      <publishTime>02/13/2019 15:17:13</publishTime>
+    </File>
+    <File Include="Views/ATest1/CategoryResults.cshtml">
+      <publishTime>05/05/2017 16:54:27</publishTime>
+    </File>
+    <File Include="Views/ATest1/Index.cshtml">
+      <publishTime>05/08/2017 16:03:55</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Index - Copy.cshtml">
+      <publishTime>07/03/2018 05:19:32</publishTime>
+    </File>
+    <File Include="Views/Dashboard/Index.cshtml">
+      <publishTime>10/02/2018 04:11:25</publishTime>
+    </File>
+    <File Include="Views/Dashboard/IndexKJP.cshtml">
+      <publishTime>12/07/2017 05:20:59</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekanan.cshtml">
+      <publishTime>10/02/2018 02:20:24</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekananKAP.cshtml">
+      <publishTime>12/07/2017 07:04:55</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekananKJP.cshtml">
+      <publishTime>12/07/2017 06:59:23</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekananMap.cshtml">
+      <publishTime>12/16/2018 22:17:29</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekananReg.cshtml">
+      <publishTime>07/03/2018 06:34:00</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_FeeByRekananTri.cshtml">
+      <publishTime>07/18/2018 01:31:51</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_JumlahPekerjaanByRekanan.cshtml">
+      <publishTime>05/15/2018 05:24:50</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_LatLongByRekanan.cshtml">
+      <publishTime>05/20/2018 09:48:59</publishTime>
+    </File>
+    <File Include="Views/Dashboard/_LatLongByRekananContoh.cshtml">
+      <publishTime>12/11/2017 02:39:09</publishTime>
+    </File>
+    <File Include="Views/DataOrganisasi/Index.cshtml">
+      <publishTime>06/16/2017 14:56:49</publishTime>
+    </File>
+    <File Include="Views/EmlNotification/Create.cshtml">
+      <publishTime>04/20/2017 13:45:30</publishTime>
+    </File>
+    <File Include="Views/EmlNotification/Delete.cshtml">
+      <publishTime>03/31/2017 15:17:37</publishTime>
+    </File>
+    <File Include="Views/EmlNotification/Edit.cshtml">
+      <publishTime>03/29/2017 16:00:54</publishTime>
+    </File>
+    <File Include="Views/EmlNotification/GridViewPartial.cshtml">
+      <publishTime>04/23/2017 22:10:21</publishTime>
+    </File>
+    <File Include="Views/EmlNotification/Index.cshtml">
+      <publishTime>04/26/2017 12:10:52</publishTime>
+    </File>
+    <File Include="Views/EmlNotificationLog/Create.cshtml">
+      <publishTime>04/20/2017 13:44:55</publishTime>
+    </File>
+    <File Include="Views/EmlNotificationLog/Delete.cshtml">
+      <publishTime>03/31/2017 15:13:24</publishTime>
+    </File>
+    <File Include="Views/EmlNotificationLog/Edit.cshtml">
+      <publishTime>03/31/2017 14:29:34</publishTime>
+    </File>
+    <File Include="Views/EmlNotificationLog/Index.cshtml">
+      <publishTime>03/31/2017 14:29:49</publishTime>
+    </File>
+    <File Include="Views/EmlTemplate/Create.cshtml">
+      <publishTime>04/20/2017 13:48:42</publishTime>
+    </File>
+    <File Include="Views/EmlTemplate/Delete.cshtml">
+      <publishTime>03/31/2017 15:11:47</publishTime>
+    </File>
+    <File Include="Views/EmlTemplate/Edit.cshtml">
+      <publishTime>03/31/2017 14:39:54</publishTime>
+    </File>
+    <File Include="Views/EmlTemplate/Index.cshtml">
+      <publishTime>03/31/2017 14:35:05</publishTime>
+    </File>
+    <File Include="Views/Home/Index - Copy.cshtml">
+      <publishTime>05/08/2017 10:09:10</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/11/2019 05:23:22</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/Index.cshtml">
+      <publishTime>05/07/2018 20:40:43</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/Index_main.cshtml">
+      <publishTime>05/05/2017 12:52:21</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/Index_roundMenu.cshtml">
+      <publishTime>05/04/2017 11:52:57</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/Index_SideMenu.cshtml">
+      <publishTime>05/05/2017 09:53:11</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/Index_Tab.cshtml">
+      <publishTime>05/04/2017 13:11:46</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_AdminSistem.cshtml">
+      <publishTime>05/10/2017 12:26:17</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_PCPKAR.cshtml">
+      <publishTime>02/08/2019 16:26:41</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Porfolio.cshtml">
+      <publishTime>05/10/2017 12:25:53</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan.cshtml">
+      <publishTime>05/07/2018 20:31:58</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_ASJ.cshtml">
+      <publishTime>02/13/2019 17:12:58</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_ASK.cshtml">
+      <publishTime>02/13/2019 17:16:15</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_BLG.cshtml">
+      <publishTime>07/17/2017 14:37:18</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_KAP.cshtml">
+      <publishTime>07/17/2017 14:37:06</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_KJP.cshtml">
+      <publishTime>07/17/2017 14:36:48</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_KMG.cshtml">
+      <publishTime>07/17/2017 14:36:32</publishTime>
+    </File>
+    <File Include="Views/HomeRekanan/_Home_Rekanan_NOT.cshtml">
+      <publishTime>05/07/2018 20:17:21</publishTime>
+    </File>
+    <File Include="Views/MstContact/Create.cshtml">
+      <publishTime>04/20/2017 13:48:06</publishTime>
+    </File>
+    <File Include="Views/MstContact/Delete.cshtml">
+      <publishTime>03/31/2017 15:19:50</publishTime>
+    </File>
+    <File Include="Views/MstContact/Edit.cshtml">
+      <publishTime>03/31/2017 15:23:46</publishTime>
+    </File>
+    <File Include="Views/MstContact/GetByRekanan.cshtml">
+      <publishTime>05/17/2017 09:19:52</publishTime>
+    </File>
+    <File Include="Views/MstContact/Index.cshtml">
+      <publishTime>03/31/2017 15:21:55</publishTime>
+    </File>
+    <File Include="Views/MstContact/_ContactByRek.cshtml">
+      <publishTime>05/06/2018 15:09:37</publishTime>
+    </File>
+    <File Include="Views/MstContact_ARC/Create.cshtml">
+      <publishTime>03/31/2017 15:35:24</publishTime>
+    </File>
+    <File Include="Views/MstContact_ARC/Delete.cshtml">
+      <publishTime>03/31/2017 15:34:03</publishTime>
+    </File>
+    <File Include="Views/MstContact_ARC/Edit.cshtml">
+      <publishTime>03/31/2017 15:33:03</publishTime>
+    </File>
+    <File Include="Views/MstContact_ARC/Index.cshtml">
+      <publishTime>03/31/2017 15:31:54</publishTime>
+    </File>
+    <File Include="Views/MstKategoriResiko/GetByIdTypeOfRekanan.cshtml">
+      <publishTime>03/07/2019 17:26:56</publishTime>
+    </File>
+    <File Include="Views/MstKategoriResiko/_GetByIdTypeOfRekanan.cshtml">
+      <publishTime>03/08/2019 03:02:34</publishTime>
+    </File>
+    <File Include="Views/MstKecamatan/Create.cshtml">
+      <publishTime>04/20/2017 13:50:18</publishTime>
+    </File>
+    <File Include="Views/MstKecamatan/Delete.cshtml">
+      <publishTime>03/31/2017 15:40:13</publishTime>
+    </File>
+    <File Include="Views/MstKecamatan/Edit.cshtml">
+      <publishTime>03/31/2017 15:39:39</publishTime>
+    </File>
+    <File Include="Views/MstKecamatan/Index.cshtml">
+      <publishTime>03/31/2017 15:39:03</publishTime>
+    </File>
+    <File Include="Views/MstPengumuman/GetAllPengumuman.cshtml">
+      <publishTime>05/06/2018 21:40:12</publishTime>
+    </File>
+    <File Include="Views/MstPengumuman/_AddEditPengumuman.cshtml">
+      <publishTime>09/10/2018 13:39:41</publishTime>
+    </File>
+    <File Include="Views/MstPengumuman/_GetAllPengumuman.cshtml">
+      <publishTime>09/09/2018 20:04:26</publishTime>
+    </File>
+    <File Include="Views/MstReference/Create.cshtml">
+      <publishTime>04/20/2017 13:51:13</publishTime>
+    </File>
+    <File Include="Views/MstReference/Delete.cshtml">
+      <publishTime>03/31/2017 15:48:04</publishTime>
+    </File>
+    <File Include="Views/MstReference/Edit.cshtml">
+      <publishTime>03/31/2017 15:48:04</publishTime>
+    </File>
+    <File Include="Views/MstReference/GetDashboard01Config.cshtml">
+      <publishTime>05/22/2017 11:41:21</publishTime>
+    </File>
+    <File Include="Views/MstReference/GetEmailConfig.cshtml">
+      <publishTime>05/22/2017 11:41:21</publishTime>
+    </File>
+    <File Include="Views/MstReference/GetReport01Config.cshtml">
+      <publishTime>05/22/2017 11:41:19</publishTime>
+    </File>
+    <File Include="Views/MstReference/Index.cshtml">
+      <publishTime>03/31/2017 15:47:35</publishTime>
+    </File>
+    <File Include="Views/MstReference/_GetDashboard01Config.cshtml">
+      <publishTime>05/22/2017 15:20:19</publishTime>
+    </File>
+    <File Include="Views/MstReference/_GetEmailConfig.cshtml">
+      <publishTime>05/22/2017 15:15:01</publishTime>
+    </File>
+    <File Include="Views/MstReference/_GetReport01Config.cshtml">
+      <publishTime>05/22/2017 15:20:27</publishTime>
+    </File>
+    <File Include="Views/MstReference/_ListReference.cshtml">
+      <publishTime>09/09/2018 20:04:13</publishTime>
+    </File>
+    <File Include="Views/MstRegion/CreateEdit.cshtml">
+      <publishTime>09/04/2017 16:57:09</publishTime>
+    </File>
+    <File Include="Views/MstRegion/Index.cshtml">
+      <publishTime>09/09/2018 20:04:13</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/Create.cshtml">
+      <publishTime>04/21/2017 11:43:00</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit.cshtml">
+      <publishTime>12/25/2017 18:59:57</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_Edit.cshtml">
+      <publishTime>11/10/2017 05:14:11</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_EditAJ.cshtml">
+      <publishTime>03/08/2019 14:00:32</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_EditBL.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_EditTab.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_Read.cshtml">
+      <publishTime>11/10/2017 05:14:11</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_ReadAJ.cshtml">
+      <publishTime>03/12/2019 07:50:12</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_ReadBL.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/CreateEdit_ReadTab.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/Delete.cshtml">
+      <publishTime>03/31/2017 16:06:57</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/Edit.cshtml">
+      <publishTime>03/31/2017 16:01:55</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/GetBySupervisorId.cshtml">
+      <publishTime>09/03/2017 12:49:04</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/GetManagementRekanan.cshtml">
+      <publishTime>12/28/2018 06:13:00</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/GridViewPartial.cshtml">
+      <publishTime>02/10/2019 00:52:15</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/Index.cshtml">
+      <publishTime>05/12/2017 15:38:06</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/RekananDetailedInfo.cshtml">
+      <publishTime>02/10/2019 01:01:20</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/View.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/_GetManagementRek.cshtml">
+      <publishTime>02/08/2019 16:42:41</publishTime>
+    </File>
+    <File Include="Views/MstRekanan/_InfoLastModifiedByRek.cshtml">
+      <publishTime>02/10/2019 00:55:30</publishTime>
+    </File>
+    <File Include="Views/MstRekanan_ARC/Create.cshtml">
+      <publishTime>03/31/2017 16:14:49</publishTime>
+    </File>
+    <File Include="Views/MstRekanan_ARC/Delete.cshtml">
+      <publishTime>03/31/2017 16:15:38</publishTime>
+    </File>
+    <File Include="Views/MstRekanan_ARC/Edit.cshtml">
+      <publishTime>03/31/2017 16:16:35</publishTime>
+    </File>
+    <File Include="Views/MstRekanan_ARC/Index.cshtml">
+      <publishTime>03/31/2017 16:17:24</publishTime>
+    </File>
+    <File Include="Views/MstSubRegion/CreateEdit.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/MstSubRegion/Index.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/MstTemplateDokRekanan/Create.cshtml">
+      <publishTime>04/20/2017 14:00:12</publishTime>
+    </File>
+    <File Include="Views/MstTemplateDokRekanan/Delete.cshtml">
+      <publishTime>04/20/2017 13:55:01</publishTime>
+    </File>
+    <File Include="Views/MstTemplateDokRekanan/Edit.cshtml">
+      <publishTime>04/20/2017 13:55:01</publishTime>
+    </File>
+    <File Include="Views/MstTemplateDokRekanan/Index.cshtml">
+      <publishTime>04/20/2017 13:55:01</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfBadanUsaha/Create.cshtml">
+      <publishTime>03/31/2017 16:32:59</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfBadanUsaha/Delete.cshtml">
+      <publishTime>03/31/2017 16:32:21</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfBadanUsaha/Edit.cshtml">
+      <publishTime>03/31/2017 16:34:07</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfBadanUsaha/Index.cshtml">
+      <publishTime>03/31/2017 16:31:02</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfDocument/Create.cshtml">
+      <publishTime>03/31/2017 16:37:20</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfDocument/Delete.cshtml">
+      <publishTime>03/31/2017 16:36:45</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfDocument/Edit.cshtml">
+      <publishTime>03/31/2017 16:36:18</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfDocument/Index.cshtml">
+      <publishTime>03/31/2017 16:35:46</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRegion/Create.cshtml">
+      <publishTime>03/31/2017 16:42:07</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRegion/Delete.cshtml">
+      <publishTime>03/31/2017 16:41:26</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRegion/Edit.cshtml">
+      <publishTime>03/31/2017 16:40:43</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRegion/Index.cshtml">
+      <publishTime>03/31/2017 16:40:00</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRekanan/Create.cshtml">
+      <publishTime>03/31/2017 16:46:43</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRekanan/Delete.cshtml">
+      <publishTime>03/31/2017 16:46:08</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRekanan/Edit.cshtml">
+      <publishTime>03/31/2017 16:45:14</publishTime>
+    </File>
+    <File Include="Views/MstTypeOfRekanan/Index.cshtml">
+      <publishTime>04/26/2017 12:14:48</publishTime>
+    </File>
+    <File Include="Views/MstWilayah/Create.cshtml">
+      <publishTime>03/31/2017 16:52:30</publishTime>
+    </File>
+    <File Include="Views/MstWilayah/Delete.cshtml">
+      <publishTime>03/31/2017 16:52:00</publishTime>
+    </File>
+    <File Include="Views/MstWilayah/Edit.cshtml">
+      <publishTime>03/31/2017 16:51:14</publishTime>
+    </File>
+    <File Include="Views/MstWilayah/Index.cshtml">
+      <publishTime>03/31/2017 16:51:20</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/Create.cshtml">
+      <publishTime>06/02/2017 10:42:31</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/Edit.cshtml">
+      <publishTime>06/02/2017 10:42:31</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/GetByRekanan_Asp.cshtml">
+      <publishTime>06/02/2017 12:30:44</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/GetByRekanan_Rek.cshtml">
+      <publishTime>06/02/2017 12:31:06</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/Index.cshtml">
+      <publishTime>06/02/2017 10:42:31</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/_Edit_Rek.cshtml">
+      <publishTime>06/02/2017 15:02:46</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/_GetByRekanan_Asp.cshtml">
+      <publishTime>06/02/2017 11:33:15</publishTime>
+    </File>
+    <File Include="Views/RptAsuransi/_GetByRekanan_Rek.cshtml">
+      <publishTime>06/02/2017 14:44:02</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>07/24/2017 15:49:56</publishTime>
+    </File>
+    <File Include="Views/Shared/_DaftarFile.cshtml">
+      <publishTime>02/26/2018 00:08:42</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>03/12/2019 18:19:10</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/13/2019 00:33:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout_LoadMenu.cshtml">
+      <publishTime>07/17/2017 13:35:57</publishTime>
+    </File>
+    <File Include="Views/Shared/_Menu.cshtml">
+      <publishTime>05/02/2017 12:43:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_SideMenu - Copy.cshtml">
+      <publishTime>05/09/2017 09:56:16</publishTime>
+    </File>
+    <File Include="Views/Shared/_SideMenu.cshtml">
+      <publishTime>05/31/2017 12:35:59</publishTime>
+    </File>
+    <File Include="Views/TrxAuditLog/Create.cshtml">
+      <publishTime>03/31/2017 16:58:06</publishTime>
+    </File>
+    <File Include="Views/TrxAuditLog/Delete.cshtml">
+      <publishTime>03/31/2017 16:57:14</publishTime>
+    </File>
+    <File Include="Views/TrxAuditLog/Edit.cshtml">
+      <publishTime>03/31/2017 16:56:14</publishTime>
+    </File>
+    <File Include="Views/TrxAuditLog/Index.cshtml">
+      <publishTime>03/31/2017 16:55:19</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/Create.cshtml">
+      <publishTime>03/31/2017 17:08:38</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/Delete.cshtml">
+      <publishTime>03/31/2017 17:08:42</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/Edit.cshtml">
+      <publishTime>04/03/2017 08:40:59</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/GetByIdOrganisasi.cshtml">
+      <publishTime>05/17/2017 09:15:32</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/Index.cshtml">
+      <publishTime>03/31/2017 17:08:47</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/_AddEditBranch.cshtml">
+      <publishTime>11/12/2017 23:24:21</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/_AddEditBranchOld.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/_BranchByIdOrganisasi.cshtml">
+      <publishTime>05/06/2018 15:10:34</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice/_BranchByRekanan.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOfficeHeader/AddEditBranchHeader.cshtml">
+      <publishTime>09/06/2017 18:17:31</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOfficeHeader/GetByRekanan.cshtml">
+      <publishTime>08/30/2017 15:55:28</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOfficeHeader/_BranchByGuidHeader.cshtml">
+      <publishTime>08/31/2017 12:16:36</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice_ARC/Create.cshtml">
+      <publishTime>04/03/2017 08:45:06</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 08:44:11</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 08:42:58</publishTime>
+    </File>
+    <File Include="Views/TrxBranchOffice_ARC/Index.cshtml">
+      <publishTime>04/03/2017 08:42:15</publishTime>
+    </File>
+    <File Include="Views/TrxDashboard/Index.cshtml">
+      <publishTime>12/04/2017 06:47:05</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/Create.cshtml">
+      <publishTime>05/15/2017 19:26:29</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/CreateEdit.cshtml">
+      <publishTime>05/16/2017 13:58:15</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/Delete.cshtml">
+      <publishTime>04/03/2017 08:51:41</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/Edit.cshtml">
+      <publishTime>04/03/2017 08:50:15</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/GetByRekanan.cshtml">
+      <publishTime>06/19/2017 16:53:36</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/Index.cshtml">
+      <publishTime>06/20/2017 09:49:21</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditAsisten.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditCabang.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditContact.cshtml">
+      <publishTime>09/04/2017 17:03:22</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditManagement.cshtml">
+      <publishTime>03/10/2019 00:41:40</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditManagementAS.cshtml">
+      <publishTime>03/10/2019 00:44:58</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditManagementKAP.cshtml">
+      <publishTime>02/06/2019 18:22:25</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditManagementKJP.cshtml">
+      <publishTime>02/06/2019 18:24:49</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditManagementMin.cshtml">
+      <publishTime>02/06/2019 18:30:27</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditNotarisItem.cshtml">
+      <publishTime>03/10/2019 01:05:11</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditOwnership.cshtml">
+      <publishTime>11/19/2017 09:40:49</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditPendukung.cshtml">
+      <publishTime>09/04/2017 17:03:21</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AddEditTAhli.cshtml">
+      <publishTime>07/20/2017 15:35:18</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_AsistenByRek.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_BranchByRek.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_ContactByRek.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_GetByGuidHeader.cshtml">
+      <publishTime>08/06/2017 19:16:32</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_GetByRekanan.cshtml">
+      <publishTime>03/10/2019 01:06:50</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_ManagementByRek.cshtml">
+      <publishTime>03/10/2019 01:04:27</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_NotarisItemByRek.cshtml">
+      <publishTime>03/10/2019 01:04:33</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_OwnershipByRek.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_PendukungByRek.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi/_TenagaAhliByRek.cshtml">
+      <publishTime>06/20/2017 13:49:13</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi_ARC/Create.cshtml">
+      <publishTime>04/03/2017 09:00:27</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 09:01:35</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 08:59:44</publishTime>
+    </File>
+    <File Include="Views/TrxDataOrganisasi_ARC/Index.cshtml">
+      <publishTime>04/03/2017 09:01:20</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/Create.cshtml">
+      <publishTime>04/03/2017 09:23:50</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/Delete.cshtml">
+      <publishTime>04/03/2017 09:18:43</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetAS_1MByRekanan.cshtml">
+      <publishTime>02/03/2019 21:35:00</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekanan.cshtml">
+      <publishTime>09/04/2017 17:03:21</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananAS.cshtml">
+      <publishTime>06/24/2018 23:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananAS_1M.cshtml">
+      <publishTime>01/28/2019 17:22:22</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananBLG.cshtml">
+      <publishTime>09/07/2017 12:11:41</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananKAP.cshtml">
+      <publishTime>09/30/2017 14:05:12</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananKJP.cshtml">
+      <publishTime>09/07/2017 11:20:08</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekananNOT.cshtml">
+      <publishTime>09/07/2017 12:11:09</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByRekanan_ASR.cshtml">
+      <publishTime>07/18/2017 00:32:48</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeASJ.cshtml">
+      <publishTime>09/07/2017 09:25:23</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeASJ1M.cshtml">
+      <publishTime>02/03/2019 03:38:07</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeASK.cshtml">
+      <publishTime>09/29/2017 12:34:39</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeASK1M.cshtml">
+      <publishTime>02/03/2019 03:38:09</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeBLG.cshtml">
+      <publishTime>09/07/2017 09:24:52</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeKAP.cshtml">
+      <publishTime>09/07/2017 09:36:25</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeKJP.cshtml">
+      <publishTime>09/06/2017 12:47:49</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeKMG.cshtml">
+      <publishTime>09/07/2017 09:24:22</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/GetByTypeNOT.cshtml">
+      <publishTime>09/07/2017 09:26:03</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/Index.cshtml">
+      <publishTime>04/03/2017 09:09:56</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptAsuransiJiwa.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptAsuransiKerugian.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptBalai.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptKAP.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptKJPP.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptKonsultanM.cshtml">
+      <publishTime>06/07/2017 16:17:19</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/RptNotaris.cshtml">
+      <publishTime>06/07/2017 16:16:52</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailAS.cshtml">
+      <publishTime>08/15/2017 17:30:51</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailAS_3M.cshtml">
+      <publishTime>01/28/2019 17:22:22</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailBLG.cshtml">
+      <publishTime>05/14/2018 05:05:17</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailKAP.cshtml">
+      <publishTime>01/27/2019 21:29:54</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailKJP.cshtml">
+      <publishTime>01/21/2019 07:10:06</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailNOT.cshtml">
+      <publishTime>05/06/2018 05:18:14</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_AddEditDetailOTH.cshtml">
+      <publishTime>09/04/2017 17:03:21</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_Edit.cshtml">
+      <publishTime>06/07/2017 16:53:10</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetAS_1MByRekanan.cshtml">
+      <publishTime>02/06/2019 00:30:25</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekanan.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananAS.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananAS_1M.cshtml">
+      <publishTime>02/03/2019 03:31:32</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananAS_PCP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananBLG.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananKAP.cshtml">
+      <publishTime>01/27/2019 21:17:48</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananKJP.cshtml">
+      <publishTime>01/27/2019 21:17:59</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekananNOT.cshtml">
+      <publishTime>01/27/2019 21:09:40</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_GetByRekanan_ASR.cshtml">
+      <publishTime>09/09/2018 20:04:14</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptAsuransiJiwa.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptAsuransiKerugian.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptBalai.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptKAP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptKJPP.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptKonsultanM.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan/_RptNotaris.cshtml">
+      <publishTime>09/09/2018 20:04:15</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/AddEditPekerjaanAS_1MHeader.cshtml">
+      <publishTime>09/06/2017 18:16:24</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/AddEditPekerjaanHeader.cshtml">
+      <publishTime>09/06/2017 18:15:17</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/GetByRekanan - Copy.cshtml">
+      <publishTime>11/11/2018 21:11:37</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/GetByRekanan.cshtml">
+      <publishTime>11/11/2018 21:24:33</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/PekerjaanByRekanan.cshtml">
+      <publishTime>09/29/2017 17:48:39</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/_AddEditPekerjaanAS_1MHeader.cshtml">
+      <publishTime>01/28/2019 17:22:47</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/_AddEditPekerjaanHeader.cshtml">
+      <publishTime>06/27/2018 14:28:52</publishTime>
+    </File>
+    <File Include="Views/trxDetailPekerjaanHeader/_GetByRekanan.cshtml">
+      <publishTime>02/05/2019 21:20:12</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan_ARC/Create.cshtml">
+      <publishTime>04/03/2017 09:30:20</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 09:29:40</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 09:28:22</publishTime>
+    </File>
+    <File Include="Views/TrxDetailPekerjaan_ARC/Index.cshtml">
+      <publishTime>04/03/2017 09:27:27</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/Edit.cshtml">
+      <publishTime>08/29/2017 15:50:39</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/GetByRekananTab.cshtml">
+      <publishTime>03/12/2019 18:26:37</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/GetTenagaAhliByRek.cshtml">
+      <publishTime>11/13/2017 01:54:51</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_1.cshtml">
+      <publishTime>03/08/2019 13:05:15</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_10.cshtml">
+      <publishTime>09/10/2018 13:38:56</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_15.cshtml">
+      <publishTime>09/10/2018 13:38:48</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_16.cshtml">
+      <publishTime>09/10/2018 13:38:41</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_2.cshtml">
+      <publishTime>12/28/2018 13:24:42</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_24.cshtml">
+      <publishTime>09/10/2018 13:38:25</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_25.cshtml">
+      <publishTime>09/10/2018 13:38:17</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_27.cshtml">
+      <publishTime>09/04/2017 17:03:20</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_28.cshtml">
+      <publishTime>09/10/2018 13:38:08</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_29.cshtml">
+      <publishTime>09/10/2018 13:38:01</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_3.cshtml">
+      <publishTime>01/21/2019 04:09:37</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_31.cshtml">
+      <publishTime>09/10/2018 13:37:42</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_32.cshtml">
+      <publishTime>09/10/2018 13:37:33</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_33.cshtml">
+      <publishTime>09/10/2018 13:37:22</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_36.cshtml">
+      <publishTime>09/10/2018 13:37:10</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_38.cshtml">
+      <publishTime>09/10/2018 13:37:00</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_40.cshtml">
+      <publishTime>09/10/2018 13:36:50</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_41.cshtml">
+      <publishTime>09/10/2018 11:59:36</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_5.cshtml">
+      <publishTime>09/10/2018 13:36:41</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_50.cshtml">
+      <publishTime>09/10/2018 13:36:34</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_54.cshtml">
+      <publishTime>09/10/2018 13:36:23</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_57.cshtml">
+      <publishTime>08/05/2018 22:14:40</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDD_8.cshtml">
+      <publishTime>09/10/2018 13:36:14</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_AddEditDocDetail.cshtml">
+      <publishTime>09/10/2018 13:36:05</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_GetTenagaAhliByRek.cshtml">
+      <publishTime>09/09/2018 20:04:38</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryDetail/_GetTenagaAhliTTByRek.cshtml">
+      <publishTime>09/09/2018 20:04:38</publishTime>
+    </File>
+    <File Include="Views/TrxDocMandatoryFile/Edit.cshtml">
+      <publishTime>08/29/2017 15:50:19</publishTime>
+    </File>
+    <File Include="Views/TrxDocumentMandatory/Create.cshtml">
+      <publishTime>04/03/2017 09:36:56</publishTime>
+    </File>
+    <File Include="Views/TrxDocumentMandatory/Delete.cshtml">
+      <publishTime>04/03/2017 09:37:18</publishTime>
+    </File>
+    <File Include="Views/TrxDocumentMandatory/Edit.cshtml">
+      <publishTime>04/03/2017 09:34:42</publishTime>
+    </File>
+    <File Include="Views/TrxDocumentMandatory/Index.cshtml">
+      <publishTime>04/03/2017 09:33:43</publishTime>
+    </File>
+    <File Include="Views/TrxFileDataPekerjaan/Create.cshtml">
+      <publishTime>04/03/2017 09:44:40</publishTime>
+    </File>
+    <File Include="Views/TrxFileDataPekerjaan/Delete.cshtml">
+      <publishTime>04/03/2017 09:43:16</publishTime>
+    </File>
+    <File Include="Views/TrxFileDataPekerjaan/Edit.cshtml">
+      <publishTime>04/03/2017 09:42:31</publishTime>
+    </File>
+    <File Include="Views/TrxFileDataPekerjaan/Index.cshtml">
+      <publishTime>04/03/2017 09:44:57</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetKategoriResikoByPenambah.cshtml">
+      <publishTime>03/06/2019 04:59:25</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetKonsoByPeriode.cshtml">
+      <publishTime>03/05/2019 11:58:56</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetKonsoResumeByPeriode.cshtml">
+      <publishTime>03/05/2019 17:39:41</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetResumeRoaByRekPeriode.cshtml">
+      <publishTime>03/11/2019 17:53:25</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetScoringByRekPeriode.cshtml">
+      <publishTime>03/08/2019 03:55:39</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/GetScoringMultiByRekPeriode.cshtml">
+      <publishTime>03/08/2019 04:48:25</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetKategoriResikoByPenambah.cshtml">
+      <publishTime>03/06/2019 05:14:51</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetKonsoByPeriode.cshtml">
+      <publishTime>03/08/2019 05:10:51</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetKonsoResumeByPeriode.cshtml">
+      <publishTime>03/05/2019 17:25:22</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetResumeRoaByRekPeriode.cshtml">
+      <publishTime>03/11/2019 18:24:52</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetScoringByRekPeriode.cshtml">
+      <publishTime>03/08/2019 04:49:56</publishTime>
+    </File>
+    <File Include="Views/TrxKonsolidasi/_GetScoringMultiByRekPeriode.cshtml">
+      <publishTime>03/12/2019 07:45:06</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/BLByPartner.cshtml">
+      <publishTime>02/08/2019 16:42:41</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/BLByRekanan.cshtml">
+      <publishTime>02/08/2019 16:47:32</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/GetManagementPCP.cshtml">
+      <publishTime>02/04/2018 07:19:11</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/ModalPopDown.cshtml">
+      <publishTime>01/22/2019 07:31:46</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/ModalPopLeft.cshtml">
+      <publishTime>01/22/2019 04:53:31</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/ModalPopUp.cshtml">
+      <publishTime>01/22/2019 07:22:17</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/_BLByPartner.cshtml">
+      <publishTime>02/08/2019 16:42:41</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/_BLByRekanan.cshtml">
+      <publishTime>02/08/2019 16:57:25</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/_ManagemenBL.cshtml">
+      <publishTime>02/08/2019 16:35:58</publishTime>
+    </File>
+    <File Include="Views/TrxManagement/_RekManagemenBL.cshtml">
+      <publishTime>02/08/2019 16:42:41</publishTime>
+    </File>
+    <File Include="Views/TrxManagementP2PK/AddEditManagementP2PK.cshtml">
+      <publishTime>02/10/2019 02:28:05</publishTime>
+    </File>
+    <File Include="Views/TrxManagementP2PK/GetManagementP2PK.cshtml">
+      <publishTime>02/10/2019 23:22:43</publishTime>
+    </File>
+    <File Include="Views/TrxManagementP2PK/GetManagementP2PK_Backup1.cshtml">
+      <publishTime>02/10/2019 04:59:29</publishTime>
+    </File>
+    <File Include="Views/TrxManagementP2PK/_GetManagementP2PK.cshtml">
+      <publishTime>02/10/2019 23:18:12</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased/Create.cshtml">
+      <publishTime>04/03/2017 09:59:43</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased/Delete.cshtml">
+      <publishTime>04/03/2017 09:55:54</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased/Edit.cshtml">
+      <publishTime>04/03/2017 09:52:42</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased/Index.cshtml">
+      <publishTime>04/03/2017 09:49:32</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased_ARC/Create.cshtml">
+      <publishTime>04/03/2017 10:05:02</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 10:05:10</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 10:05:10</publishTime>
+    </File>
+    <File Include="Views/TrxMonitoringFeeBased_ARC/Index.cshtml">
+      <publishTime>04/03/2017 10:02:41</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/Create.cshtml">
+      <publishTime>05/15/2017 18:22:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/CreateEdit.cshtml">
+      <publishTime>12/26/2017 22:09:32</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/CreateEditDetail.cshtml">
+      <publishTime>09/10/2018 13:35:54</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/CreateEditTabular.cshtml">
+      <publishTime>04/08/2018 22:20:45</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/Delete.cshtml">
+      <publishTime>05/15/2017 18:22:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/Edit.cshtml">
+      <publishTime>05/15/2017 18:22:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/GetNotarisDetailAll.cshtml">
+      <publishTime>01/14/2018 22:47:18</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/Index.cshtml">
+      <publishTime>05/15/2017 18:22:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris/_GetNotarisDetailAll.cshtml">
+      <publishTime>04/02/2018 00:03:03</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris_ARC/Create.cshtml">
+      <publishTime>04/03/2017 10:34:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 10:33:36</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 10:32:34</publishTime>
+    </File>
+    <File Include="Views/TrxNotaris_ARC/Index.cshtml">
+      <publishTime>04/03/2017 10:31:17</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationContent/Create.cshtml">
+      <publishTime>04/20/2017 16:16:10</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationContent/Delete.cshtml">
+      <publishTime>04/20/2017 17:03:45</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationContent/Edit.cshtml">
+      <publishTime>04/20/2017 17:14:02</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationContent/Index.cshtml">
+      <publishTime>04/20/2017 17:13:29</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/Create.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/Delete.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/Edit.cshtml">
+      <publishTime>05/03/2017 15:20:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/GetNotificationBySubjectKritikal.cshtml">
+      <publishTime>05/14/2017 10:18:02</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/GetNotiInboxSentDraft.cshtml">
+      <publishTime>02/12/2019 18:19:52</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/Index.cshtml">
+      <publishTime>05/03/2017 15:24:57</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AddEditTDraft.cshtml">
+      <publishTime>02/11/2019 19:44:44</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AddEditTDraftContainer.cshtml">
+      <publishTime>09/17/2017 23:11:08</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AddEditTDraftPCP.cshtml">
+      <publishTime>02/11/2019 19:44:02</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AddEditTDraftReply.cshtml">
+      <publishTime>09/10/2018 13:35:17</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AlertByEmailSentCaption.cshtml">
+      <publishTime>02/12/2019 18:28:17</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_AlertByWhatsappSentCaption.cshtml">
+      <publishTime>02/12/2019 18:28:23</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_EmailSentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_GridSubjectTo.cshtml">
+      <publishTime>02/03/2019 11:43:30</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_NotificationKritikal.cshtml">
+      <publishTime>05/13/2017 21:55:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_NotificationNormal.cshtml">
+      <publishTime>05/13/2017 22:10:38</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_NotificationPenting.cshtml">
+      <publishTime>05/13/2017 22:10:10</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_ReadInfoByIdNotification.cshtml">
+      <publishTime>01/14/2019 04:23:01</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TrayDraftCaption.cshtml">
+      <publishTime>01/14/2019 03:41:25</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TrayDraftDetail.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TrayDraftDetail4Rek.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TrayInboxCaption.cshtml">
+      <publishTime>11/08/2017 06:58:38</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TraySentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TraySentDetail.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_TraySentDetail4Rek.cshtml">
+      <publishTime>09/22/2017 17:17:21</publishTime>
+    </File>
+    <File Include="Views/TrxNotificationHeader/_WhatsappSentCaption.cshtml">
+      <publishTime>02/12/2019 18:11:49</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/Create.cshtml">
+      <publishTime>04/03/2017 11:03:27</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/Delete.cshtml">
+      <publishTime>04/03/2017 11:00:45</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/Edit.cshtml">
+      <publishTime>04/03/2017 10:58:33</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/GetByRekanan.cshtml">
+      <publishTime>05/17/2017 09:13:54</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/Index.cshtml">
+      <publishTime>04/03/2017 10:56:01</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership/_OwnershipByRek.cshtml">
+      <publishTime>05/17/2017 09:56:21</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipDetail/Create.cshtml">
+      <publishTime>04/20/2017 17:16:18</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipDetail/Delete.cshtml">
+      <publishTime>04/20/2017 17:06:18</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipDetail/Edit.cshtml">
+      <publishTime>04/20/2017 17:05:47</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipDetail/Index.cshtml">
+      <publishTime>04/20/2017 17:13:11</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipHeader/Create.cshtml">
+      <publishTime>04/20/2017 17:18:40</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipHeader/Delete.cshtml">
+      <publishTime>04/20/2017 17:21:30</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipHeader/Edit.cshtml">
+      <publishTime>04/20/2017 17:23:53</publishTime>
+    </File>
+    <File Include="Views/TrxOwnershipHeader/Index.cshtml">
+      <publishTime>04/20/2017 17:27:43</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership_ARC/Create.cshtml">
+      <publishTime>04/03/2017 11:09:47</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 11:08:58</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 11:07:38</publishTime>
+    </File>
+    <File Include="Views/TrxOwnership_ARC/Index.cshtml">
+      <publishTime>04/03/2017 11:07:02</publishTime>
+    </File>
+    <File Include="Views/TrxPertanyaanNilai/GetNilaiAkhir.cshtml">
+      <publishTime>03/04/2019 08:00:37</publishTime>
+    </File>
+    <File Include="Views/TrxPertanyaanNilai/GetNilaiByPenilai.cshtml">
+      <publishTime>03/04/2019 02:11:50</publishTime>
+    </File>
+    <File Include="Views/TrxPertanyaanNilai/_GetNilaiAkhir.cshtml">
+      <publishTime>03/12/2019 07:41:35</publishTime>
+    </File>
+    <File Include="Views/TrxPertanyaanNilai/_GetNilaiByPenilai.cshtml">
+      <publishTime>03/13/2019 00:16:39</publishTime>
+    </File>
+    <File Include="Views/TrxRegistrationRequest/Create.cshtml">
+      <publishTime>04/20/2017 17:42:49</publishTime>
+    </File>
+    <File Include="Views/TrxRegistrationRequest/Delete.cshtml">
+      <publishTime>04/20/2017 17:42:36</publishTime>
+    </File>
+    <File Include="Views/TrxRegistrationRequest/Edit.cshtml">
+      <publishTime>04/20/2017 17:41:51</publishTime>
+    </File>
+    <File Include="Views/TrxRegistrationRequest/Index.cshtml">
+      <publishTime>04/20/2017 17:42:14</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/Create.cshtml">
+      <publishTime>09/04/2017 17:03:19</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/Delete.cshtml">
+      <publishTime>04/20/2017 17:41:24</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/Edit.cshtml">
+      <publishTime>05/17/2017 10:14:28</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/EditRekDocument.cshtml">
+      <publishTime>05/17/2017 16:55:38</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/GetByRekanan.cshtml">
+      <publishTime>05/17/2017 12:28:10</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/Index.cshtml">
+      <publishTime>04/20/2017 17:40:35</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_BranchByRekanan.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_BranchHeaderByRek.cshtml">
+      <publishTime>08/31/2017 05:08:19</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_EditDocDetail.cshtml">
+      <publishTime>06/13/2017 17:08:21</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_EditRekDocument.cshtml">
+      <publishTime>08/29/2017 15:50:13</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_1.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_10.cshtml">
+      <publishTime>09/09/2018 20:04:16</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_15.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_16.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_2.cshtml">
+      <publishTime>12/28/2018 13:42:42</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_24.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_25.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_27.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_28.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_29.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_3.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_31.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_32.cshtml">
+      <publishTime>09/09/2018 20:04:17</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_33.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_36.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_38.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_41.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_50.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_54.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDD_8.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDocByRek.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDocDetailByRek.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocument/_RekananDocFileByRek.cshtml">
+      <publishTime>09/09/2018 20:04:18</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocumentTrack/Create.cshtml">
+      <publishTime>04/03/2017 13:19:26</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocumentTrack/Delete.cshtml">
+      <publishTime>04/03/2017 13:20:21</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocumentTrack/Edit.cshtml">
+      <publishTime>04/03/2017 13:17:23</publishTime>
+    </File>
+    <File Include="Views/TrxRekananDocumentTrack/Index.cshtml">
+      <publishTime>04/03/2017 13:16:07</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal/Create.cshtml">
+      <publishTime>04/20/2017 17:39:28</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal/Delete.cshtml">
+      <publishTime>04/20/2017 17:39:28</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal/Edit.cshtml">
+      <publishTime>04/20/2017 17:38:16</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal/Index.cshtml">
+      <publishTime>04/20/2017 17:38:32</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal_ARC/Create.cshtml">
+      <publishTime>04/03/2017 13:46:58</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 13:46:25</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 13:45:43</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiEksternal_ARC/Index.cshtml">
+      <publishTime>04/03/2017 13:44:35</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal/Create.cshtml">
+      <publishTime>04/20/2017 17:36:27</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal/Delete.cshtml">
+      <publishTime>04/20/2017 17:39:28</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal/Edit.cshtml">
+      <publishTime>04/20/2017 17:37:14</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal/Index.cshtml">
+      <publishTime>04/20/2017 17:37:40</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal_ARC/Create.cshtml">
+      <publishTime>04/03/2017 13:59:50</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 13:59:57</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 13:58:50</publishTime>
+    </File>
+    <File Include="Views/TrxSanksiInternal_ARC/Index.cshtml">
+      <publishTime>04/03/2017 13:58:21</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/Create.cshtml">
+      <publishTime>04/20/2017 17:29:30</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/Delete.cshtml">
+      <publishTime>04/20/2017 17:31:10</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/Edit.cshtml">
+      <publishTime>04/20/2017 17:30:09</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/GetByRekanan.cshtml">
+      <publishTime>05/17/2017 09:18:19</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/Index.cshtml">
+      <publishTime>04/20/2017 17:32:39</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli/_TenagaAhliByRek.cshtml">
+      <publishTime>05/17/2017 09:54:05</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/AddEditTAHeader.cshtml">
+      <publishTime>01/15/2018 00:54:29</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/AddEditTPHeader.cshtml">
+      <publishTime>10/21/2017 14:17:28</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/_AddEditTAHeader.cshtml">
+      <publishTime>10/21/2017 15:36:35</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/_AddEditTAUpload.cshtml">
+      <publishTime>09/10/2018 13:35:07</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/_AddEditTPHeader.cshtml">
+      <publishTime>10/21/2017 14:04:36</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/_TenagaByRek.cshtml">
+      <publishTime>09/09/2018 20:04:19</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliHeader/_TenagaUploadByRek.cshtml">
+      <publishTime>09/09/2018 20:04:19</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhliTetapImp/_TenagaAhliTetapImpByRek.cshtml">
+      <publishTime>08/30/2017 13:41:06</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli_ARC/Create.cshtml">
+      <publishTime>04/03/2017 14:11:45</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli_ARC/Delete.cshtml">
+      <publishTime>04/03/2017 14:11:21</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli_ARC/Edit.cshtml">
+      <publishTime>04/03/2017 14:10:52</publishTime>
+    </File>
+    <File Include="Views/TrxTenagaAhli_ARC/Index.cshtml">
+      <publishTime>04/03/2017 14:12:11</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>08/02/2017 16:48:43</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>10/02/2015 09:32:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/04/2019 07:31:23</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
