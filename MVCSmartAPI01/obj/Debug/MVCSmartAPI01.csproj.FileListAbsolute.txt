@@ -1,0 +1,561 @@
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Antlr3.Runtime.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\EntityFramework.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Data.Edm.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Data.OData.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Newtonsoft.Json.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Net.Http.Formatting.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Spatial.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Helpers.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.OData.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.Tracing.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.WebHost.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Mvc.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Optimization.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Providers.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Razor.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Unity.WebApi.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\WebGrease.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Newtonsoft.Json.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Net.Http.Formatting.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.WebHost.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\EntityFramework.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Helpers.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Mvc.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Razor.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.Tracing.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Web.Http.OData.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Data.Edm.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\Microsoft.Data.OData.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\System.Spatial.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\de\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\es\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\it\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\de\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\es\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\fr\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\it\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ja\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ko\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\ru\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\MVCSmartAPI01.dll.config
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\bin\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\obj\Debug\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmart01\obj\Debug\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Data.Edm.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Data.OData.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.OData.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\WebGrease.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.OData.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Data.Edm.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Data.OData.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\de\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\es\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\it\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.csprojResolveAssemblyReference.cache
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Data.Edm.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Data.OData.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.OData.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\WebGrease.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Web.Http.OData.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Data.Edm.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\Microsoft.Data.OData.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\de\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\es\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\it\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01_Stabil - Copy\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.config
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Owin.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\WebGrease.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.pdb
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb
+C:\Projects\Smart\Code\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.csprojResolveAssemblyReference.cache
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.config
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Owin.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\WebGrease.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.pdb
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\log4net.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.csprojResolveAssemblyReference.cache
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Projects\Smart\Arsip\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.config
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Owin.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\WebGrease.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.pdb
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.csprojResolveAssemblyReference.cache
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Project\SMART\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.config
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll.config
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\MVCSmartAPI01.pdb
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Owin.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Optimization.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Providers.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Unity.WebApi.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\WebGrease.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Antlr3.Runtime.pdb
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\DevExpress.Data.v14.1.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\EntityFramework.SqlServer.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\log4net.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Newtonsoft.Json.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\Omu.ValueInjecter.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Net.Http.Formatting.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Owin.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.WebHost.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Helpers.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Mvc.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Razor.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Deployment.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.WebPages.Razor.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Web.Http.Tracing.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\System.Spatial.xml
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\de\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\es\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\fr\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\it\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\ja\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\ko\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\ru\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hans\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\bin\zh-Hant\System.Spatial.resources.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.dll
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartAPI01\obj\Debug\MVCSmartAPI01.pdb

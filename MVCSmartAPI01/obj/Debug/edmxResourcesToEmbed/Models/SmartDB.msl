@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_SMARTModelStoreContainer" CdmEntityContainer="DB_SMARTEntities">
+    <EntitySetMapping Name="emlNotifications">
+      <EntityTypeMapping TypeName="DB_SMARTModel.emlNotification">
+        <MappingFragment StoreEntitySet="emlNotification">
+          <ScalarProperty Name="IdEmailNotification" ColumnName="IdEmailNotification" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="ParameterKeys" ColumnName="ParameterKeys" />
+          <ScalarProperty Name="ParameterValues" ColumnName="ParameterValues" />
+          <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="AddressEmailIdTo" ColumnName="AddressEmailIdTo" />
+          <ScalarProperty Name="AddressEmailIdCc" ColumnName="AddressEmailIdCc" />
+          <ScalarProperty Name="AddressEmailTo" ColumnName="AddressEmailTo" />
+          <ScalarProperty Name="AddressEmailCc" ColumnName="AddressEmailCc" />
+          <ScalarProperty Name="StatusDelivery" ColumnName="StatusDelivery" />
+          <ScalarProperty Name="MailCreationDate" ColumnName="MailCreationDate" />
+          <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+          <ScalarProperty Name="FlagActivate" ColumnName="FlagActivate" />
+          <ScalarProperty Name="SatuanPeriode" ColumnName="SatuanPeriode" />
+          <ScalarProperty Name="CacahPeriode" ColumnName="CacahPeriode" />
+          <ScalarProperty Name="TanggalJatuhTempo" ColumnName="TanggalJatuhTempo" />
+          <ScalarProperty Name="TanggalNotifikasi" ColumnName="TanggalNotifikasi" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emlNotificationLogs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.emlNotificationLog">
+        <MappingFragment StoreEntitySet="emlNotificationLog">
+          <ScalarProperty Name="IdNotificationLog" ColumnName="IdNotificationLog" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="SendAttemptSeq" ColumnName="SendAttemptSeq" />
+          <ScalarProperty Name="SendAttemptDate" ColumnName="SendAttemptDate" />
+          <ScalarProperty Name="LogMessage" ColumnName="LogMessage" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emlTemplates">
+      <EntityTypeMapping TypeName="DB_SMARTModel.emlTemplate">
+        <MappingFragment StoreEntitySet="emlTemplate">
+          <ScalarProperty Name="IdTemplate" ColumnName="IdTemplate" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="TemplateSubject" ColumnName="TemplateSubject" />
+          <ScalarProperty Name="TemplateBody" ColumnName="TemplateBody" />
+          <ScalarProperty Name="ParameterKeys" ColumnName="ParameterKeys" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstContacts">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstContact">
+        <MappingFragment StoreEntitySet="mstContact">
+          <ScalarProperty Name="IdContact" ColumnName="IdContact" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Handphone1" ColumnName="Handphone1" />
+          <ScalarProperty Name="Handphone2" ColumnName="Handphone2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstContact_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstContact_ARC">
+        <MappingFragment StoreEntitySet="mstContact_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdContact" ColumnName="IdContact" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstKecamatans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstKecamatan">
+        <MappingFragment StoreEntitySet="mstKecamatan">
+          <ScalarProperty Name="IdKecamatan" ColumnName="IdKecamatan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstReferences">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstReference">
+        <MappingFragment StoreEntitySet="mstReference">
+          <ScalarProperty Name="IdRef" ColumnName="IdRef" />
+          <ScalarProperty Name="RefType" ColumnName="RefType" />
+          <ScalarProperty Name="RefCode" ColumnName="RefCode" />
+          <ScalarProperty Name="RefDesc" ColumnName="RefDesc" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstRegionAdmins">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstRegionAdmin">
+        <MappingFragment StoreEntitySet="mstRegionAdmin">
+          <ScalarProperty Name="IdRegionAdmin" ColumnName="IdRegionAdmin" />
+          <ScalarProperty Name="IdSupervisor" ColumnName="IdSupervisor" />
+          <ScalarProperty Name="RegionAdminCode" ColumnName="RegionAdminCode" />
+          <ScalarProperty Name="RegionAdminDescription" ColumnName="RegionAdminDescription" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstRekanans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstRekanan">
+        <MappingFragment StoreEntitySet="mstRekanan">
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+          <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+          <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Phone3" ColumnName="Phone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstRekanan_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstRekanan_ARC">
+        <MappingFragment StoreEntitySet="mstRekanan_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+          <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+          <ScalarProperty Name="IdKecamatan" ColumnName="IdKecamatan" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="EstablishedDate" ColumnName="EstablishedDate" />
+          <ScalarProperty Name="EstablishedPlace" ColumnName="EstablishedPlace" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="IsConsultantManagemen" ColumnName="IsConsultantManagemen" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstScoreValues">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstScoreValue">
+        <MappingFragment StoreEntitySet="mstScoreValue">
+          <ScalarProperty Name="IdScoreValue" ColumnName="IdScoreValue" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="ScoreType" ColumnName="ScoreType" />
+          <ScalarProperty Name="ScoreDescription" ColumnName="ScoreDescription" />
+          <ScalarProperty Name="ScoreValue" ColumnName="ScoreValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstSegmentasis">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstSegmentasi">
+        <MappingFragment StoreEntitySet="mstSegmentasi">
+          <ScalarProperty Name="IdSegmentasi" ColumnName="IdSegmentasi" />
+          <ScalarProperty Name="KodeSegmentasi" ColumnName="KodeSegmentasi" />
+          <ScalarProperty Name="NamaSegmentasi" ColumnName="NamaSegmentasi" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstTemplateDokRekanans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstTemplateDokRekanan">
+        <MappingFragment StoreEntitySet="mstTemplateDokRekanan">
+          <ScalarProperty Name="IdTemplateDokRekanan" ColumnName="IdTemplateDokRekanan" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+          <ScalarProperty Name="JudulDokumen" ColumnName="JudulDokumen" />
+          <ScalarProperty Name="KeteranganDokumen" ColumnName="KeteranganDokumen" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstTypeOfBadanUsahas">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstTypeOfBadanUsaha">
+        <MappingFragment StoreEntitySet="mstTypeOfBadanUsaha">
+          <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstTypeOfDocuments">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstTypeOfDocument">
+        <MappingFragment StoreEntitySet="mstTypeOfDocument">
+          <ScalarProperty Name="IdTypeOfDoc" ColumnName="IdTypeOfDoc" />
+          <ScalarProperty Name="NameType" ColumnName="NameType" />
+          <ScalarProperty Name="IsDataOrganisasi" ColumnName="IsDataOrganisasi" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstTypeOfRegions">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstTypeOfRegion">
+        <MappingFragment StoreEntitySet="mstTypeOfRegion">
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdSupervisor" ColumnName="IdSupervisor" />
+          <ScalarProperty Name="RegionDescription" ColumnName="RegionDescription" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstTypeOfRekanans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstTypeOfRekanan">
+        <MappingFragment StoreEntitySet="mstTypeOfRekanan">
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mstWilayahs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.mstWilayah">
+        <MappingFragment StoreEntitySet="mstWilayah">
+          <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptKAPs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptKAP">
+        <MappingFragment StoreEntitySet="rptKAP">
+          <ScalarProperty Name="IdRptKAP" ColumnName="IdRptKAP" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_IdJenisReview" ColumnName="r_IdJenisReview" />
+          <ScalarProperty Name="r_Alamat" ColumnName="r_Alamat" />
+          <ScalarProperty Name="r_Telepon" ColumnName="r_Telepon" />
+          <ScalarProperty Name="r_Fax" ColumnName="r_Fax" />
+          <ScalarProperty Name="r_Email" ColumnName="r_Email" />
+          <ScalarProperty Name="r_HP" ColumnName="r_HP" />
+          <ScalarProperty Name="r_Pengalaman" ColumnName="r_Pengalaman" />
+          <ScalarProperty Name="r_Partner" ColumnName="r_Partner" />
+          <ScalarProperty Name="r_TenagaAkuntanPublik" ColumnName="r_TenagaAkuntanPublik" />
+          <ScalarProperty Name="r_Auditor" ColumnName="r_Auditor" />
+          <ScalarProperty Name="r_PartnerTerdaftar" ColumnName="r_PartnerTerdaftar" />
+          <ScalarProperty Name="r_Afiliasi" ColumnName="r_Afiliasi" />
+          <ScalarProperty Name="r_Cabang" ColumnName="r_Cabang" />
+          <ScalarProperty Name="r_KlienAset300M" ColumnName="r_KlienAset300M" />
+          <ScalarProperty Name="a_ValReputasi" ColumnName="a_ValReputasi" />
+          <ScalarProperty Name="a_ValKinerja" ColumnName="a_ValKinerja" />
+          <ScalarProperty Name="a_ValPelayanan" ColumnName="a_ValPelayanan" />
+          <ScalarProperty Name="a_ValAdministratif" ColumnName="a_ValAdministratif" />
+          <ScalarProperty Name="a_IdTambahanKlasifikasi" ColumnName="a_IdTambahanKlasifikasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptKJPPs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptKJPP">
+        <MappingFragment StoreEntitySet="rptKJPP">
+          <ScalarProperty Name="IdRptKJPP" ColumnName="IdRptKJPP" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_IdJenisReview" ColumnName="r_IdJenisReview" />
+          <ScalarProperty Name="r_Alamat" ColumnName="r_Alamat" />
+          <ScalarProperty Name="r_Telepon" ColumnName="r_Telepon" />
+          <ScalarProperty Name="r_Fax" ColumnName="r_Fax" />
+          <ScalarProperty Name="r_Email" ColumnName="r_Email" />
+          <ScalarProperty Name="r_HP" ColumnName="r_HP" />
+          <ScalarProperty Name="r_Pengalaman" ColumnName="r_Pengalaman" />
+          <ScalarProperty Name="r_TenagaSurvey" ColumnName="r_TenagaSurvey" />
+          <ScalarProperty Name="r_TenagaAhliBeregister" ColumnName="r_TenagaAhliBeregister" />
+          <ScalarProperty Name="r_TenagaAhliBerizin" ColumnName="r_TenagaAhliBerizin" />
+          <ScalarProperty Name="r_CabangLuar" ColumnName="r_CabangLuar" />
+          <ScalarProperty Name="r_PenilaianAset100M" ColumnName="r_PenilaianAset100M" />
+          <ScalarProperty Name="a_ValReputasi" ColumnName="a_ValReputasi" />
+          <ScalarProperty Name="a_ValKinerja" ColumnName="a_ValKinerja" />
+          <ScalarProperty Name="a_ValPelayanan" ColumnName="a_ValPelayanan" />
+          <ScalarProperty Name="a_ValAdministratif" ColumnName="a_ValAdministratif" />
+          <ScalarProperty Name="a_IdTambahanKlasifikasi" ColumnName="a_IdTambahanKlasifikasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptKonsultanManagemen">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptKonsultanManageman">
+        <MappingFragment StoreEntitySet="rptKonsultanManagemen">
+          <ScalarProperty Name="IdKonsultanManajemen" ColumnName="IdKonsultanManajemen" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_IdJenisReview" ColumnName="r_IdJenisReview" />
+          <ScalarProperty Name="r_Alamat" ColumnName="r_Alamat" />
+          <ScalarProperty Name="r_Telepon" ColumnName="r_Telepon" />
+          <ScalarProperty Name="r_Fax" ColumnName="r_Fax" />
+          <ScalarProperty Name="r_Email" ColumnName="r_Email" />
+          <ScalarProperty Name="r_HP" ColumnName="r_HP" />
+          <ScalarProperty Name="r_Pengalaman" ColumnName="r_Pengalaman" />
+          <ScalarProperty Name="r_TenagaAhli" ColumnName="r_TenagaAhli" />
+          <ScalarProperty Name="r_PengalamanAhli" ColumnName="r_PengalamanAhli" />
+          <ScalarProperty Name="r_JumlahProyek" ColumnName="r_JumlahProyek" />
+          <ScalarProperty Name="r_PengalamanNilaiProyek300M" ColumnName="r_PengalamanNilaiProyek300M" />
+          <ScalarProperty Name="a_ValReputasi" ColumnName="a_ValReputasi" />
+          <ScalarProperty Name="a_ValKinerja" ColumnName="a_ValKinerja" />
+          <ScalarProperty Name="a_ValPelayanan" ColumnName="a_ValPelayanan" />
+          <ScalarProperty Name="a_ValAdministratif" ColumnName="a_ValAdministratif" />
+          <ScalarProperty Name="a_IdTambahanKlasifikasi" ColumnName="a_IdTambahanKlasifikasi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptNotaris">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptNotari">
+        <MappingFragment StoreEntitySet="rptNotaris">
+          <ScalarProperty Name="IdRptNotaris" ColumnName="IdRptNotaris" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_Notaris" ColumnName="r_Notaris" />
+          <ScalarProperty Name="r_IdJenisReview" ColumnName="r_IdJenisReview" />
+          <ScalarProperty Name="r_Alamat" ColumnName="r_Alamat" />
+          <ScalarProperty Name="r_Telepon" ColumnName="r_Telepon" />
+          <ScalarProperty Name="r_Fax" ColumnName="r_Fax" />
+          <ScalarProperty Name="r_Email" ColumnName="r_Email" />
+          <ScalarProperty Name="r_HP" ColumnName="r_HP" />
+          <ScalarProperty Name="r_MJabatanNotaris" ColumnName="r_MJabatanNotaris" />
+          <ScalarProperty Name="r_MJabatanPPAT" ColumnName="r_MJabatanPPAT" />
+          <ScalarProperty Name="r_TenagaKerja" ColumnName="r_TenagaKerja" />
+          <ScalarProperty Name="r_Asisten" ColumnName="r_Asisten" />
+          <ScalarProperty Name="r_RataLimitKredit" ColumnName="r_RataLimitKredit" />
+          <ScalarProperty Name="a_ValReputasi" ColumnName="a_ValReputasi" />
+          <ScalarProperty Name="a_ValKinerja" ColumnName="a_ValKinerja" />
+          <ScalarProperty Name="a_ValPelayanan" ColumnName="a_ValPelayanan" />
+          <ScalarProperty Name="a_ValAdministratif" ColumnName="a_ValAdministratif" />
+          <ScalarProperty Name="a_IdTambahanKlasifikasi" ColumnName="a_IdTambahanKlasifikasi" />
+          <ScalarProperty Name="a_PensiunNotaris" ColumnName="a_PensiunNotaris" />
+          <ScalarProperty Name="a_PerpanjanganPensiunNotaris" ColumnName="a_PerpanjanganPensiunNotaris" />
+          <ScalarProperty Name="a_PerpanjanganPensiunPPAT" ColumnName="a_PerpanjanganPensiunPPAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxAsistens">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxAsisten">
+        <MappingFragment StoreEntitySet="trxAsisten">
+          <ScalarProperty Name="IdAsisten" ColumnName="IdAsisten" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Handphone1" ColumnName="Handphone1" />
+          <ScalarProperty Name="Handphone2" ColumnName="Handphone2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxAuditLogs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxAuditLog">
+        <MappingFragment StoreEntitySet="trxAuditLog">
+          <ScalarProperty Name="TrailId" ColumnName="TrailId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="DetailedInfo" ColumnName="DetailedInfo" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxBranchOffices">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxBranchOffice">
+        <MappingFragment StoreEntitySet="trxBranchOffice">
+          <ScalarProperty Name="IdCabang" ColumnName="IdCabang" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdOrganisasi" ColumnName="IdOrganisasi" />
+          <ScalarProperty Name="BranchType" ColumnName="BranchType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+          <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+          <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+          <ScalarProperty Name="IdKecamatan" ColumnName="IdKecamatan" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxBranchOffice_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxBranchOffice_ARC">
+        <MappingFragment StoreEntitySet="trxBranchOffice_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdCabang" ColumnName="IdCabang" />
+          <ScalarProperty Name="IdOrganisasi" ColumnName="IdOrganisasi" />
+          <ScalarProperty Name="BranchType" ColumnName="BranchType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+          <ScalarProperty Name="IdKecamatan" ColumnName="IdKecamatan" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDataOrganisasis">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDataOrganisasi">
+        <MappingFragment StoreEntitySet="trxDataOrganisasi">
+          <ScalarProperty Name="IdOrganisasi" ColumnName="IdOrganisasi" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="OfficeStatus" ColumnName="OfficeStatus" />
+          <ScalarProperty Name="NumberOfBranch" ColumnName="NumberOfBranch" />
+          <ScalarProperty Name="NumberOfFixEmpl" ColumnName="NumberOfFixEmpl" />
+          <ScalarProperty Name="NumberOfNonFixEmpl" ColumnName="NumberOfNonFixEmpl" />
+          <ScalarProperty Name="NumberOfAgent" ColumnName="NumberOfAgent" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDataOrganisasi_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDataOrganisasi_ARC">
+        <MappingFragment StoreEntitySet="trxDataOrganisasi_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdOrganisasi" ColumnName="IdOrganisasi" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="OfficeStatus" ColumnName="OfficeStatus" />
+          <ScalarProperty Name="NumberOfBranch" ColumnName="NumberOfBranch" />
+          <ScalarProperty Name="NumberOfFixEmpl" ColumnName="NumberOfFixEmpl" />
+          <ScalarProperty Name="NumberOfNonFixEmpl" ColumnName="NumberOfNonFixEmpl" />
+          <ScalarProperty Name="NumberOfAgent" ColumnName="NumberOfAgent" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDetailPekerjaans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDetailPekerjaan">
+        <MappingFragment StoreEntitySet="trxDetailPekerjaan">
+          <ScalarProperty Name="IdDetailPekerjaan" ColumnName="IdDetailPekerjaan" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdSegmentasi" ColumnName="IdSegmentasi" />
+          <ScalarProperty Name="TahunLaporan" ColumnName="TahunLaporan" />
+          <ScalarProperty Name="BulanLaporan" ColumnName="BulanLaporan" />
+          <ScalarProperty Name="DebiturName" ColumnName="DebiturName" />
+          <ScalarProperty Name="DebiturLocation" ColumnName="DebiturLocation" />
+          <ScalarProperty Name="BidangUsahaDebitur" ColumnName="BidangUsahaDebitur" />
+          <ScalarProperty Name="JenisJasa" ColumnName="JenisJasa" />
+          <ScalarProperty Name="NamaPemberiPekerjaan" ColumnName="NamaPemberiPekerjaan" />
+          <ScalarProperty Name="UnitKerja" ColumnName="UnitKerja" />
+          <ScalarProperty Name="TotalAsetPerusahaan" ColumnName="TotalAsetPerusahaan" />
+          <ScalarProperty Name="FeeNominal" ColumnName="FeeNominal" />
+          <ScalarProperty Name="NilaiPenutupan" ColumnName="NilaiPenutupan" />
+          <ScalarProperty Name="TanggalMulaiPekerjaan" ColumnName="TanggalMulaiPekerjaan" />
+          <ScalarProperty Name="TanggalSelesaiPekerjaan" ColumnName="TanggalSelesaiPekerjaan" />
+          <ScalarProperty Name="NomorPolis" ColumnName="NomorPolis" />
+          <ScalarProperty Name="PICRekanan" ColumnName="PICRekanan" />
+          <ScalarProperty Name="PICBank" ColumnName="PICBank" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDetailPekerjaan_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDetailPekerjaan_ARC">
+        <MappingFragment StoreEntitySet="trxDetailPekerjaan_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdDetailPekerjaan" ColumnName="IdDetailPekerjaan" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdSegmentasi" ColumnName="IdSegmentasi" />
+          <ScalarProperty Name="TahunLaporan" ColumnName="TahunLaporan" />
+          <ScalarProperty Name="BulanLaporan" ColumnName="BulanLaporan" />
+          <ScalarProperty Name="DebiturName" ColumnName="DebiturName" />
+          <ScalarProperty Name="DebiturLocation" ColumnName="DebiturLocation" />
+          <ScalarProperty Name="BidangUsahaDebitur" ColumnName="BidangUsahaDebitur" />
+          <ScalarProperty Name="JenisJasa" ColumnName="JenisJasa" />
+          <ScalarProperty Name="NamaPemberiPekerjaan" ColumnName="NamaPemberiPekerjaan" />
+          <ScalarProperty Name="UnitKerja" ColumnName="UnitKerja" />
+          <ScalarProperty Name="TotalAsetPerusahaan" ColumnName="TotalAsetPerusahaan" />
+          <ScalarProperty Name="FeeNominal" ColumnName="FeeNominal" />
+          <ScalarProperty Name="NilaiPenutupan" ColumnName="NilaiPenutupan" />
+          <ScalarProperty Name="TanggalMulaiPekerjaan" ColumnName="TanggalMulaiPekerjaan" />
+          <ScalarProperty Name="TanggalSelesaiPekerjaan" ColumnName="TanggalSelesaiPekerjaan" />
+          <ScalarProperty Name="NomorPolis" ColumnName="NomorPolis" />
+          <ScalarProperty Name="PICRekanan" ColumnName="PICRekanan" />
+          <ScalarProperty Name="PICBank" ColumnName="PICBank" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDocMandatoryDetails">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDocMandatoryDetail">
+        <MappingFragment StoreEntitySet="trxDocMandatoryDetail">
+          <ScalarProperty Name="IdDocMandatoryDetail" ColumnName="IdDocMandatoryDetail" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+          <ScalarProperty Name="nomorDokumen" ColumnName="nomorDokumen" />
+          <ScalarProperty Name="badanPembuatDokumen" ColumnName="badanPembuatDokumen" />
+          <ScalarProperty Name="tanggalAwal" ColumnName="tanggalAwal" />
+          <ScalarProperty Name="tanggalAkhir" ColumnName="tanggalAkhir" />
+          <ScalarProperty Name="catatan" ColumnName="catatan" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDocMandatoryFiles">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDocMandatoryFile">
+        <MappingFragment StoreEntitySet="trxDocMandatoryFile">
+          <ScalarProperty Name="IdDocMandatoryFile" ColumnName="IdDocMandatoryFile" />
+          <ScalarProperty Name="IdDocMandatoryDetail" ColumnName="IdDocMandatoryDetail" />
+          <ScalarProperty Name="namaFile" ColumnName="namaFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxDocumentMandatories">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxDocumentMandatory">
+        <MappingFragment StoreEntitySet="trxDocumentMandatory">
+          <ScalarProperty Name="IdMandatoryDocument" ColumnName="IdMandatoryDocument" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsMandatory" ColumnName="IsMandatory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxFileDataPekerjaans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxFileDataPekerjaan">
+        <MappingFragment StoreEntitySet="trxFileDataPekerjaan">
+          <ScalarProperty Name="IdDataPekerjaan" ColumnName="IdDataPekerjaan" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="BlobPekerjaan" ColumnName="BlobPekerjaan" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxManagements">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxManagement">
+        <MappingFragment StoreEntitySet="trxManagement">
+          <ScalarProperty Name="IdManagemen" ColumnName="IdManagemen" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Handphone1" ColumnName="Handphone1" />
+          <ScalarProperty Name="Handphone2" ColumnName="Handphone2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxMonitoringFeeBaseds">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxMonitoringFeeBased">
+        <MappingFragment StoreEntitySet="trxMonitoringFeeBased">
+          <ScalarProperty Name="IdFeeBased" ColumnName="IdFeeBased" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="IdCabang" ColumnName="IdCabang" />
+          <ScalarProperty Name="NomorPolis" ColumnName="NomorPolis" />
+          <ScalarProperty Name="Produk" ColumnName="Produk" />
+          <ScalarProperty Name="NilaiPertanggungan" ColumnName="NilaiPertanggungan" />
+          <ScalarProperty Name="Periode" ColumnName="Periode" />
+          <ScalarProperty Name="NilaiPremi" ColumnName="NilaiPremi" />
+          <ScalarProperty Name="NilaiFeeBased" ColumnName="NilaiFeeBased" />
+          <ScalarProperty Name="NilaiPPNBasedNet" ColumnName="NilaiPPNBasedNet" />
+          <ScalarProperty Name="NilaiPPNBased" ColumnName="NilaiPPNBased" />
+          <ScalarProperty Name="PercentFeeBased" ColumnName="PercentFeeBased" />
+          <ScalarProperty Name="IdChannel" ColumnName="IdChannel" />
+          <ScalarProperty Name="SudahBayar" ColumnName="SudahBayar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxMonitoringFeeBased_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxMonitoringFeeBased_ARC">
+        <MappingFragment StoreEntitySet="trxMonitoringFeeBased_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdFeeBased" ColumnName="IdFeeBased" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+          <ScalarProperty Name="IdCabang" ColumnName="IdCabang" />
+          <ScalarProperty Name="NomorPolis" ColumnName="NomorPolis" />
+          <ScalarProperty Name="Produk" ColumnName="Produk" />
+          <ScalarProperty Name="NilaiPertanggungan" ColumnName="NilaiPertanggungan" />
+          <ScalarProperty Name="Periode" ColumnName="Periode" />
+          <ScalarProperty Name="NilaiPremi" ColumnName="NilaiPremi" />
+          <ScalarProperty Name="NilaiFeeBased" ColumnName="NilaiFeeBased" />
+          <ScalarProperty Name="NilaiPPNBasedNet" ColumnName="NilaiPPNBasedNet" />
+          <ScalarProperty Name="NilaiPPNBased" ColumnName="NilaiPPNBased" />
+          <ScalarProperty Name="PercentFeeBased" ColumnName="PercentFeeBased" />
+          <ScalarProperty Name="IdChannel" ColumnName="IdChannel" />
+          <ScalarProperty Name="SudahBayar" ColumnName="SudahBayar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotaris">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotari">
+        <MappingFragment StoreEntitySet="trxNotaris">
+          <ScalarProperty Name="IdNotaris" ColumnName="IdNotaris" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SKNotaris" ColumnName="SKNotaris" />
+          <ScalarProperty Name="SumpahNotarisNumber" ColumnName="SumpahNotarisNumber" />
+          <ScalarProperty Name="SumpahNotarisDate" ColumnName="SumpahNotarisDate" />
+          <ScalarProperty Name="KTP" ColumnName="KTP" />
+          <ScalarProperty Name="NPWP" ColumnName="NPWP" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="IsKoperasiMember" ColumnName="IsKoperasiMember" />
+          <ScalarProperty Name="SKKoperasiNumber" ColumnName="SKKoperasiNumber" />
+          <ScalarProperty Name="SKKoperasiDate" ColumnName="SKKoperasiDate" />
+          <ScalarProperty Name="IsBapepamReg" ColumnName="IsBapepamReg" />
+          <ScalarProperty Name="BapepamSKNumber" ColumnName="BapepamSKNumber" />
+          <ScalarProperty Name="BapepamSKDate" ColumnName="BapepamSKDate" />
+          <ScalarProperty Name="UpLimit" ColumnName="UpLimit" />
+          <ScalarProperty Name="PPATSKNumber" ColumnName="PPATSKNumber" />
+          <ScalarProperty Name="PPATSKDate" ColumnName="PPATSKDate" />
+          <ScalarProperty Name="PPATSumpahNumber" ColumnName="PPATSumpahNumber" />
+          <ScalarProperty Name="PPATSumpahDate" ColumnName="PPATSumpahDate" />
+          <ScalarProperty Name="WilayahKerjaPPAT" ColumnName="WilayahKerjaPPAT" />
+          <ScalarProperty Name="IsIPPATMember" ColumnName="IsIPPATMember" />
+          <ScalarProperty Name="SKIPPATNumber" ColumnName="SKIPPATNumber" />
+          <ScalarProperty Name="SKPPATDate" ColumnName="SKPPATDate" />
+          <ScalarProperty Name="IsINIMember" ColumnName="IsINIMember" />
+          <ScalarProperty Name="INISKNumber" ColumnName="INISKNumber" />
+          <ScalarProperty Name="INISKDate" ColumnName="INISKDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotaris_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotaris_ARC">
+        <MappingFragment StoreEntitySet="trxNotaris_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdNotaris" ColumnName="IdNotaris" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SKNotaris" ColumnName="SKNotaris" />
+          <ScalarProperty Name="SumpahNotarisNumber" ColumnName="SumpahNotarisNumber" />
+          <ScalarProperty Name="SumpahNotarisDate" ColumnName="SumpahNotarisDate" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="IsKoperasiMember" ColumnName="IsKoperasiMember" />
+          <ScalarProperty Name="SKKoperasiNumber" ColumnName="SKKoperasiNumber" />
+          <ScalarProperty Name="SKKoperasiDate" ColumnName="SKKoperasiDate" />
+          <ScalarProperty Name="IsBapepamReg" ColumnName="IsBapepamReg" />
+          <ScalarProperty Name="BapepamSKNumber" ColumnName="BapepamSKNumber" />
+          <ScalarProperty Name="BapepamSKDate" ColumnName="BapepamSKDate" />
+          <ScalarProperty Name="UpLimit" ColumnName="UpLimit" />
+          <ScalarProperty Name="PPATSKNumber" ColumnName="PPATSKNumber" />
+          <ScalarProperty Name="PPATSKDate" ColumnName="PPATSKDate" />
+          <ScalarProperty Name="PPATSumpahNumber" ColumnName="PPATSumpahNumber" />
+          <ScalarProperty Name="PPATSumpahDate" ColumnName="PPATSumpahDate" />
+          <ScalarProperty Name="WilayahKerjaPPAT" ColumnName="WilayahKerjaPPAT" />
+          <ScalarProperty Name="IsIPPATMember" ColumnName="IsIPPATMember" />
+          <ScalarProperty Name="SKIPPATNumber" ColumnName="SKIPPATNumber" />
+          <ScalarProperty Name="SKPPATDate" ColumnName="SKPPATDate" />
+          <ScalarProperty Name="IsINIMember" ColumnName="IsINIMember" />
+          <ScalarProperty Name="INISKNumber" ColumnName="INISKNumber" />
+          <ScalarProperty Name="INISKDate" ColumnName="INISKDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotificationAttachments">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotificationAttachment">
+        <MappingFragment StoreEntitySet="trxNotificationAttachment">
+          <ScalarProperty Name="IdNotificationAttachment" ColumnName="IdNotificationAttachment" />
+          <ScalarProperty Name="IdNotificationContent" ColumnName="IdNotificationContent" />
+          <ScalarProperty Name="AttachmentFile" ColumnName="AttachmentFile" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotificationContents">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotificationContent">
+        <MappingFragment StoreEntitySet="trxNotificationContent">
+          <ScalarProperty Name="IdNotificationContent" ColumnName="IdNotificationContent" />
+          <ScalarProperty Name="BodyContent" ColumnName="BodyContent" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotificationDetails">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotificationDetail">
+        <MappingFragment StoreEntitySet="trxNotificationDetail">
+          <ScalarProperty Name="IdNotificationDetail" ColumnName="IdNotificationDetail" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="SubjectTo" ColumnName="SubjectTo" />
+          <ScalarProperty Name="SubjectFrom" ColumnName="SubjectFrom" />
+          <ScalarProperty Name="IdNotificationContent" ColumnName="IdNotificationContent" />
+          <ScalarProperty Name="flgTraySent" ColumnName="flgTraySent" />
+          <ScalarProperty Name="flgTrayRead" ColumnName="flgTrayRead" />
+          <ScalarProperty Name="flgEmailSent" ColumnName="flgEmailSent" />
+          <ScalarProperty Name="flgEmailRead" ColumnName="flgEmailRead" />
+          <ScalarProperty Name="flgWASent" ColumnName="flgWASent" />
+          <ScalarProperty Name="flgWARead" ColumnName="flgWARead" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxNotificationHeaders">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxNotificationHeader">
+        <MappingFragment StoreEntitySet="trxNotificationHeader">
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="IdTipeNotification" ColumnName="IdTipeNotification" />
+          <ScalarProperty Name="IdLevelUrgensi" ColumnName="IdLevelUrgensi" />
+          <ScalarProperty Name="CaptionInfo" ColumnName="CaptionInfo" />
+          <ScalarProperty Name="IdDataProfilePart" ColumnName="IdDataProfilePart" />
+          <ScalarProperty Name="flgValidity" ColumnName="flgValidity" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxOwnerships">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxOwnership">
+        <MappingFragment StoreEntitySet="trxOwnership">
+          <ScalarProperty Name="IdOwnership" ColumnName="IdOwnership" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Handphone1" ColumnName="Handphone1" />
+          <ScalarProperty Name="Handphone2" ColumnName="Handphone2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="Sertifikasi" ColumnName="Sertifikasi" />
+          <ScalarProperty Name="PercentSaham" ColumnName="PercentSaham" />
+          <ScalarProperty Name="NominalSaham" ColumnName="NominalSaham" />
+          <ScalarProperty Name="IsKeyPerson" ColumnName="IsKeyPerson" />
+          <ScalarProperty Name="NPWP" ColumnName="NPWP" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxOwnership_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxOwnership_ARC">
+        <MappingFragment StoreEntitySet="trxOwnership_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdOwnership" ColumnName="IdOwnership" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="KTP" ColumnName="KTP" />
+          <ScalarProperty Name="KTPEndDate" ColumnName="KTPEndDate" />
+          <ScalarProperty Name="Sertifikasi" ColumnName="Sertifikasi" />
+          <ScalarProperty Name="PercentSaham" ColumnName="PercentSaham" />
+          <ScalarProperty Name="NominalSaham" ColumnName="NominalSaham" />
+          <ScalarProperty Name="IsKeyPerson" ColumnName="IsKeyPerson" />
+          <ScalarProperty Name="NPWP" ColumnName="NPWP" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxRegistrationRequests">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxRegistrationRequest">
+        <MappingFragment StoreEntitySet="trxRegistrationRequest">
+          <ScalarProperty Name="IdRegRequest" ColumnName="IdRegRequest" />
+          <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="AlamatEmail" ColumnName="AlamatEmail" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsFollowedUp" ColumnName="IsFollowedUp" />
+          <ScalarProperty Name="FollowedUpDate" ColumnName="FollowedUpDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxRekananDocuments">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxRekananDocument">
+        <MappingFragment StoreEntitySet="trxRekananDocument">
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+          <ScalarProperty Name="IssuedBy" ColumnName="IssuedBy" />
+          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Notaris" ColumnName="Notaris" />
+          <ScalarProperty Name="BlobDocument" ColumnName="BlobDocument" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxRekananDocumentTracks">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxRekananDocumentTrack">
+        <MappingFragment StoreEntitySet="trxRekananDocumentTrack">
+          <ScalarProperty Name="IdDocumentTrack" ColumnName="IdDocumentTrack" />
+          <ScalarProperty Name="IdDocument" ColumnName="IdDocument" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+          <ScalarProperty Name="IdTypeOfStatusDoc" ColumnName="IdTypeOfStatusDoc" />
+          <ScalarProperty Name="VerificationNote" ColumnName="VerificationNote" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxSanksiEksternals">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxSanksiEksternal">
+        <MappingFragment StoreEntitySet="trxSanksiEksternal">
+          <ScalarProperty Name="IdSanksiEksternal" ColumnName="IdSanksiEksternal" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SanksiType" ColumnName="SanksiType" />
+          <ScalarProperty Name="Pelanggaran" ColumnName="Pelanggaran" />
+          <ScalarProperty Name="LetterNumber" ColumnName="LetterNumber" />
+          <ScalarProperty Name="LetterDate" ColumnName="LetterDate" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="SanksiStatus" ColumnName="SanksiStatus" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxSanksiEksternal_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxSanksiEksternal_ARC">
+        <MappingFragment StoreEntitySet="trxSanksiEksternal_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdSanksiEksternal" ColumnName="IdSanksiEksternal" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SanksiType" ColumnName="SanksiType" />
+          <ScalarProperty Name="Pelanggaran" ColumnName="Pelanggaran" />
+          <ScalarProperty Name="LetterNumber" ColumnName="LetterNumber" />
+          <ScalarProperty Name="LetterDate" ColumnName="LetterDate" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="SanksiStatus" ColumnName="SanksiStatus" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxSanksiInternals">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxSanksiInternal">
+        <MappingFragment StoreEntitySet="trxSanksiInternal">
+          <ScalarProperty Name="IdSanksiInternal" ColumnName="IdSanksiInternal" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SanksiType" ColumnName="SanksiType" />
+          <ScalarProperty Name="Pelanggaran" ColumnName="Pelanggaran" />
+          <ScalarProperty Name="LetterNumber" ColumnName="LetterNumber" />
+          <ScalarProperty Name="LetterDate" ColumnName="LetterDate" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="SanksiStatus" ColumnName="SanksiStatus" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxSanksiInternal_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxSanksiInternal_ARC">
+        <MappingFragment StoreEntitySet="trxSanksiInternal_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdSanksiInternal" ColumnName="IdSanksiInternal" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="SanksiType" ColumnName="SanksiType" />
+          <ScalarProperty Name="Pelanggaran" ColumnName="Pelanggaran" />
+          <ScalarProperty Name="LetterNumber" ColumnName="LetterNumber" />
+          <ScalarProperty Name="LetterDate" ColumnName="LetterDate" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="SanksiStatus" ColumnName="SanksiStatus" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxTenagaAhlis">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxTenagaAhli">
+        <MappingFragment StoreEntitySet="trxTenagaAhli">
+          <ScalarProperty Name="IdTenagaAhli" ColumnName="IdTenagaAhli" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="NomorNPWP" ColumnName="NomorNPWP" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="Email2" ColumnName="Email2" />
+          <ScalarProperty Name="Sertifikasi" ColumnName="Sertifikasi" />
+          <ScalarProperty Name="Gelar" ColumnName="Gelar" />
+          <ScalarProperty Name="AsosiasiProfesi" ColumnName="AsosiasiProfesi" />
+          <ScalarProperty Name="Handphone1" ColumnName="Handphone1" />
+          <ScalarProperty Name="Handphone2" ColumnName="Handphone2" />
+          <ScalarProperty Name="Telephone1" ColumnName="Telephone1" />
+          <ScalarProperty Name="Telephone2" ColumnName="Telephone2" />
+          <ScalarProperty Name="Telephone3" ColumnName="Telephone3" />
+          <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxTenagaAhli_ARC">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxTenagaAhli_ARC">
+        <MappingFragment StoreEntitySet="trxTenagaAhli_ARC">
+          <ScalarProperty Name="IdArc" ColumnName="IdArc" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="IdTenagaAhli" ColumnName="IdTenagaAhli" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Sertifikasi" ColumnName="Sertifikasi" />
+          <ScalarProperty Name="Gelar" ColumnName="Gelar" />
+          <ScalarProperty Name="AsosiasiProfesi" ColumnName="AsosiasiProfesi" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trxTenagaPendukungs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.trxTenagaPendukung">
+        <MappingFragment StoreEntitySet="trxTenagaPendukung">
+          <ScalarProperty Name="IdTenagaPendukung" ColumnName="IdTenagaPendukung" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Alamat" ColumnName="Alamat" />
+          <ScalarProperty Name="NomorKTP" ColumnName="NomorKTP" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptAsuransis">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptAsuransi">
+        <MappingFragment StoreEntitySet="rptAsuransi">
+          <ScalarProperty Name="IdRptAsuransi" ColumnName="IdRptAsuransi" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_IdJenisAsuransi" ColumnName="r_IdJenisAsuransi" />
+          <ScalarProperty Name="r_CadanganTeknis" ColumnName="r_CadanganTeknis" />
+          <ScalarProperty Name="r_TotalInvestasi" ColumnName="r_TotalInvestasi" />
+          <ScalarProperty Name="r_HasilInvestasi" ColumnName="r_HasilInvestasi" />
+          <ScalarProperty Name="r_LabaBeforeTax" ColumnName="r_LabaBeforeTax" />
+          <ScalarProperty Name="r_PremiNetto" ColumnName="r_PremiNetto" />
+          <ScalarProperty Name="r_PremiBruttoPrevY" ColumnName="r_PremiBruttoPrevY" />
+          <ScalarProperty Name="r_PremiBruttoCurY" ColumnName="r_PremiBruttoCurY" />
+          <ScalarProperty Name="r_TotalAktiva" ColumnName="r_TotalAktiva" />
+          <ScalarProperty Name="r_AktivaLancar" ColumnName="r_AktivaLancar" />
+          <ScalarProperty Name="r_KewajibanLancar" ColumnName="r_KewajibanLancar" />
+          <ScalarProperty Name="r_BebanKomisiBersih" ColumnName="r_BebanKomisiBersih" />
+          <ScalarProperty Name="r_BebanUsaha" ColumnName="r_BebanUsaha" />
+          <ScalarProperty Name="r_TanahBangunan" ColumnName="r_TanahBangunan" />
+          <ScalarProperty Name="r_JumlahKewajibanPolis" ColumnName="r_JumlahKewajibanPolis" />
+          <ScalarProperty Name="r_JumlahKlaimManfaat" ColumnName="r_JumlahKlaimManfaat" />
+          <ScalarProperty Name="r_LabaRugi" ColumnName="r_LabaRugi" />
+          <ScalarProperty Name="r_RBC_Q4" ColumnName="r_RBC_Q4" />
+          <ScalarProperty Name="r_TotalEkuitasPrevY" ColumnName="r_TotalEkuitasPrevY" />
+          <ScalarProperty Name="r_TotalEkuitasCurY" ColumnName="r_TotalEkuitasCurY" />
+          <ScalarProperty Name="r_JaringanKantor" ColumnName="r_JaringanKantor" />
+          <ScalarProperty Name="r_KapasitasTreaty" ColumnName="r_KapasitasTreaty" />
+          <ScalarProperty Name="r_RasioDanaInvestasi" ColumnName="r_RasioDanaInvestasi" />
+          <ScalarProperty Name="a_IdReputasiUmum" ColumnName="a_IdReputasiUmum" />
+          <ScalarProperty Name="a_IdKarakterBonafiditasUmum" ColumnName="a_IdKarakterBonafiditasUmum" />
+          <ScalarProperty Name="a_IdKinerjaPembayaranKlaim" ColumnName="a_IdKinerjaPembayaranKlaim" />
+          <ScalarProperty Name="a_IdPelayananUmumJiwa" ColumnName="a_IdPelayananUmumJiwa" />
+          <ScalarProperty Name="a_IdPortfolioBankLain" ColumnName="a_IdPortfolioBankLain" />
+          <ScalarProperty Name="a_IdSpesialisasiBisnisUmum" ColumnName="a_IdSpesialisasiBisnisUmum" />
+          <ScalarProperty Name="a_IdDukunganLembagaP" ColumnName="a_IdDukunganLembagaP" />
+          <ScalarProperty Name="a_IdReputasiJiwa" ColumnName="a_IdReputasiJiwa" />
+          <ScalarProperty Name="a_IdKarakterBonafiditasJiwa" ColumnName="a_IdKarakterBonafiditasJiwa" />
+          <ScalarProperty Name="a_IdRatingJiwa" ColumnName="a_IdRatingJiwa" />
+          <ScalarProperty Name="a_IdJenisScoreKualitatif" ColumnName="a_IdJenisScoreKualitatif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rptBalaiLelangs">
+      <EntityTypeMapping TypeName="DB_SMARTModel.rptBalaiLelang">
+        <MappingFragment StoreEntitySet="rptBalaiLelang">
+          <ScalarProperty Name="IdRptBalaiLelang" ColumnName="IdRptBalaiLelang" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="r_IdJenisReview" ColumnName="r_IdJenisReview" />
+          <ScalarProperty Name="r_Alamat" ColumnName="r_Alamat" />
+          <ScalarProperty Name="r_Telepon" ColumnName="r_Telepon" />
+          <ScalarProperty Name="r_Fax" ColumnName="r_Fax" />
+          <ScalarProperty Name="r_Email" ColumnName="r_Email" />
+          <ScalarProperty Name="r_HP" ColumnName="r_HP" />
+          <ScalarProperty Name="r_ValPerizinanLegalitas" ColumnName="r_ValPerizinanLegalitas" />
+          <ScalarProperty Name="r_ValSaranaPendukung" ColumnName="r_ValSaranaPendukung" />
+          <ScalarProperty Name="r_PengalamanPengurus" ColumnName="r_PengalamanPengurus" />
+          <ScalarProperty Name="r_ValKinerjaPerusahaan" ColumnName="r_ValKinerjaPerusahaan" />
+          <ScalarProperty Name="r_JumlahKantorCabang" ColumnName="r_JumlahKantorCabang" />
+          <ScalarProperty Name="r_ValPengalamanPraLelang" ColumnName="r_ValPengalamanPraLelang" />
+          <ScalarProperty Name="r_JumlahTenagaKerja" ColumnName="r_JumlahTenagaKerja" />
+          <ScalarProperty Name="r_JumlahModalSendiri" ColumnName="r_JumlahModalSendiri" />
+          <ScalarProperty Name="r_ProfitMargin" ColumnName="r_ProfitMargin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwKelengkapanDokumenRekanans">
+      <EntityTypeMapping TypeName="DB_SMARTModel.vwKelengkapanDokumenRekanan">
+        <MappingFragment StoreEntitySet="vwKelengkapanDokumenRekanan">
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="idtypeofdocument" ColumnName="idtypeofdocument" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+          <ScalarProperty Name="IsDocExisted" ColumnName="IsDocExisted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwUserRoles">
+      <EntityTypeMapping TypeName="DB_SMARTModel.vwUserRole">
+        <MappingFragment StoreEntitySet="vwUserRole">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IdSupervisor" ColumnName="IdSupervisor" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdRekananContact" ColumnName="IdRekananContact" />
+          <ScalarProperty Name="IdNotaris" ColumnName="IdNotaris" />
+          <ScalarProperty Name="IdOrganisasi" ColumnName="IdOrganisasi" />
+          <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fDataOrganisasiByRek" FunctionImportName="fDataOrganisasiByRek">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_SMARTModel.fDataOrganisasiByRek_Result">
+          <ScalarProperty Name="IdJudul" ColumnName="IdJudul" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="Judul" ColumnName="Judul" />
+          <ScalarProperty Name="Jumlah" ColumnName="Jumlah" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fDataRekananByIds" FunctionImportName="fDataRekananByIds">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_SMARTModel.fDataRekananByIds_Result">
+          <ScalarProperty Name="jenis" ColumnName="jenis" />
+          <ScalarProperty Name="idrekanan" ColumnName="idrekanan" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fGenerateUsernamePassword" FunctionImportName="fGenerateUsernamePassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_SMARTModel.fGenerateUsernamePassword_Result">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fGetNotificationBySubject" FunctionImportName="fGetNotificationBySubject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_SMARTModel.fGetNotificationBySubject_Result">
+          <ScalarProperty Name="IdTipeNotification" ColumnName="IdTipeNotification" />
+          <ScalarProperty Name="IdLevelUrgensi" ColumnName="IdLevelUrgensi" />
+          <ScalarProperty Name="CaptionInfo" ColumnName="CaptionInfo" />
+          <ScalarProperty Name="Pengirim" ColumnName="Pengirim" />
+          <ScalarProperty Name="BodyContent" ColumnName="BodyContent" />
+          <ScalarProperty Name="flgTrayRead" ColumnName="flgTrayRead" />
+          <ScalarProperty Name="IdNotificationDetail" ColumnName="IdNotificationDetail" />
+          <ScalarProperty Name="IdNotificationContent" ColumnName="IdNotificationContent" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fGetRekananByIdSupervisor" FunctionImportName="fGetRekananByIdSupervisor" />
+    <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fPekerjaanByTypeOfRekanan" FunctionImportName="fPekerjaanByTypeOfRekanan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_SMARTModel.fPekerjaanByTypeOfRekanan_Result">
+          <ScalarProperty Name="IdDetailPekerjaan" ColumnName="IdDetailPekerjaan" />
+          <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+          <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+          <ScalarProperty Name="IdSegmentasi" ColumnName="IdSegmentasi" />
+          <ScalarProperty Name="TahunLaporan" ColumnName="TahunLaporan" />
+          <ScalarProperty Name="BulanLaporan" ColumnName="BulanLaporan" />
+          <ScalarProperty Name="DebiturName" ColumnName="DebiturName" />
+          <ScalarProperty Name="DebiturLocation" ColumnName="DebiturLocation" />
+          <ScalarProperty Name="BidangUsahaDebitur" ColumnName="BidangUsahaDebitur" />
+          <ScalarProperty Name="JenisJasa" ColumnName="JenisJasa" />
+          <ScalarProperty Name="NamaPemberiPekerjaan" ColumnName="NamaPemberiPekerjaan" />
+          <ScalarProperty Name="UnitKerja" ColumnName="UnitKerja" />
+          <ScalarProperty Name="TotalAsetPerusahaan" ColumnName="TotalAsetPerusahaan" />
+          <ScalarProperty Name="FeeNominal" ColumnName="FeeNominal" />
+          <ScalarProperty Name="NilaiPenutupan" ColumnName="NilaiPenutupan" />
+          <ScalarProperty Name="TanggalMulaiPekerjaan" ColumnName="TanggalMulaiPekerjaan" />
+          <ScalarProperty Name="TanggalSelesaiPekerjaan" ColumnName="TanggalSelesaiPekerjaan" />
+          <ScalarProperty Name="NomorPolis" ColumnName="NomorPolis" />
+          <ScalarProperty Name="PICRekanan" ColumnName="PICRekanan" />
+          <ScalarProperty Name="PICBank" ColumnName="PICBank" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+          <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

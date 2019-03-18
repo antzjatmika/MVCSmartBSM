@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_SMARTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="emlNotification">
+    <Key>
+      <PropertyRef Name="IdEmailNotification" />
+    </Key>
+    <Property Name="IdEmailNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateId" Type="int" Nullable="false" />
+    <Property Name="ParameterKeys" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ParameterValues" Type="nvarchar" MaxLength="2000" />
+    <Property Name="EmailSubject" Type="nvarchar" MaxLength="1000" />
+    <Property Name="EmailBody" Type="nvarchar(max)" />
+    <Property Name="AddressEmailIdTo" Type="nvarchar" MaxLength="600" />
+    <Property Name="AddressEmailIdCc" Type="nvarchar" MaxLength="600" />
+    <Property Name="AddressEmailTo" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddressEmailCc" Type="nvarchar" MaxLength="500" />
+    <Property Name="StatusDelivery" Type="int" Nullable="false" />
+    <Property Name="MailCreationDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="SentDate" Type="smalldatetime" />
+    <Property Name="FlagActivate" Type="bit" Nullable="false" />
+    <Property Name="SatuanPeriode" Type="int" Nullable="false" />
+    <Property Name="CacahPeriode" Type="int" Nullable="false" />
+    <Property Name="TanggalJatuhTempo" Type="smalldatetime" Nullable="false" />
+    <Property Name="TanggalNotifikasi" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emlNotificationLog">
+    <Key>
+      <PropertyRef Name="IdNotificationLog" />
+    </Key>
+    <Property Name="IdNotificationLog" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdNotification" Type="int" Nullable="false" />
+    <Property Name="SendAttemptSeq" Type="int" />
+    <Property Name="SendAttemptDate" Type="smalldatetime" />
+    <Property Name="LogMessage" Type="varchar(max)" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emlTemplate">
+    <Key>
+      <PropertyRef Name="IdTemplate" />
+    </Key>
+    <Property Name="IdTemplate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TemplateSubject" Type="varchar(max)" Nullable="false" />
+    <Property Name="TemplateBody" Type="varchar(max)" Nullable="false" />
+    <Property Name="ParameterKeys" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstContact">
+    <Key>
+      <PropertyRef Name="IdContact" />
+    </Key>
+    <Property Name="IdContact" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CellPhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstContact_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdContact" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CellPhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstKecamatan">
+    <Key>
+      <PropertyRef Name="IdKecamatan" />
+    </Key>
+    <Property Name="IdKecamatan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstReference">
+    <Key>
+      <PropertyRef Name="IdRef" />
+    </Key>
+    <Property Name="IdRef" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefType" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RefCode" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RefDesc" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstRekanan">
+    <Key>
+      <PropertyRef Name="IdRekanan" />
+    </Key>
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRegion" Type="int" Nullable="false" />
+    <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClassOfRekanan" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfRekanan" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfBadanUsaha" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IdWilayah" Type="int" />
+    <Property Name="IdKecamatan" Type="int" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="Phone1" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2" Type="varchar" MaxLength="20" />
+    <Property Name="EstablishedDate" Type="smalldatetime" />
+    <Property Name="EstablishedPlace" Type="varchar" MaxLength="50" />
+    <Property Name="Fax1" Type="varchar" MaxLength="20" />
+    <Property Name="Fax2" Type="varchar" MaxLength="20" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NomorKTP" Type="varchar" MaxLength="50" />
+    <Property Name="NomorNPWP" Type="varchar" MaxLength="50" />
+    <Property Name="IsConsultantManagemen" Type="bit" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstRekanan_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClassOfRekanan" Type="int" Nullable="false" />
+    <Property Name="TypeOfRekanan" Type="int" Nullable="false" />
+    <Property Name="TypeOfBadanUsaha" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="WilayahCode" Type="int" />
+    <Property Name="KecamatanCode" Type="int" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="Phone1" Type="varchar" MaxLength="20" />
+    <Property Name="Phone2" Type="varchar" MaxLength="20" />
+    <Property Name="EstablishedDate" Type="smalldatetime" />
+    <Property Name="EstablishedPlace" Type="varchar" MaxLength="50" />
+    <Property Name="Fax1" Type="varchar" MaxLength="20" />
+    <Property Name="Fax2" Type="varchar" MaxLength="20" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="NPWP" Type="varchar" MaxLength="50" />
+    <Property Name="IsConsultantManagemen" Type="bit" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstTypeOfBadanUsaha">
+    <Key>
+      <PropertyRef Name="IdTypeOfBadanUsaha" />
+    </Key>
+    <Property Name="IdTypeOfBadanUsaha" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstTypeOfDocument">
+    <Key>
+      <PropertyRef Name="IdTypeOfDocument" />
+    </Key>
+    <Property Name="IdTypeOfDocument" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstTypeOfRegion">
+    <Key>
+      <PropertyRef Name="IdRegion" />
+    </Key>
+    <Property Name="IdRegion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSupervisor" Type="int" Nullable="false" />
+    <Property Name="RegionDescription" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstTypeOfRekanan">
+    <Key>
+      <PropertyRef Name="IdTypeOfRekanan" />
+    </Key>
+    <Property Name="IdTypeOfRekanan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mstWilayah">
+    <Key>
+      <PropertyRef Name="IdWilayah" />
+    </Key>
+    <Property Name="IdWilayah" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxAuditLog">
+    <Key>
+      <PropertyRef Name="TrailId" />
+    </Key>
+    <Property Name="TrailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="ActionType" Type="varchar" MaxLength="50" />
+    <Property Name="DetailedInfo" Type="varchar" MaxLength="500" />
+    <Property Name="TransactionDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="trxBranchOffice">
+    <Key>
+      <PropertyRef Name="IdCabang" />
+    </Key>
+    <Property Name="IdCabang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOrganisasi" Type="int" Nullable="false" />
+    <Property Name="BranchType" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="WilayahCode" Type="int" />
+    <Property Name="KecamatanCode" Type="int" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxBranchOffice_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdCabang" Type="int" Nullable="false" />
+    <Property Name="IdOrganisasi" Type="int" Nullable="false" />
+    <Property Name="BranchType" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="WilayahCode" Type="int" />
+    <Property Name="KecamatanCode" Type="int" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxDataOrganisasi">
+    <Key>
+      <PropertyRef Name="IdOrganisasi" />
+    </Key>
+    <Property Name="IdOrganisasi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OfficeStatus" Type="varchar" MaxLength="50" />
+    <Property Name="NumberOfBranch" Type="int" />
+    <Property Name="NumberOfFixEmpl" Type="int" />
+    <Property Name="NumberOfNonFixEmpl" Type="int" />
+    <Property Name="NumberOfAgent" Type="int" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxDataOrganisasi_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdOrganisasi" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OfficeStatus" Type="varchar" MaxLength="50" />
+    <Property Name="NumberOfBranch" Type="int" />
+    <Property Name="NumberOfFixEmpl" Type="int" />
+    <Property Name="NumberOfNonFixEmpl" Type="int" />
+    <Property Name="NumberOfAgent" Type="int" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxDetailPekerjaan">
+    <Key>
+      <PropertyRef Name="IdDetailPekerjaan" />
+    </Key>
+    <Property Name="IdDetailPekerjaan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DebiturName" Type="varchar" MaxLength="100" />
+    <Property Name="DebiturLocation" Type="varchar" MaxLength="100" />
+    <Property Name="BidangUsahaDebitur" Type="varchar" MaxLength="100" />
+    <Property Name="JenisJasa" Type="varchar" MaxLength="100" />
+    <Property Name="NamaPemberiPekerjaan" Type="varchar" MaxLength="100" />
+    <Property Name="UnitKerja" Type="varchar" MaxLength="100" />
+    <Property Name="TotalAsetPerusahaan" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="FeeNominal" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NilaiPenutupan" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TanggalMulaiPekerjaan" Type="smalldatetime" />
+    <Property Name="TanggalSelesaiPekerjaan" Type="smalldatetime" />
+    <Property Name="NomorPolis" Type="varchar" MaxLength="100" />
+    <Property Name="PICRekanan" Type="varchar" MaxLength="100" />
+    <Property Name="PICBank" Type="varchar" MaxLength="100" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="trxDetailPekerjaan_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdDetailPekerjaan" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DebiturName" Type="varchar" MaxLength="100" />
+    <Property Name="DebiturLocation" Type="varchar" MaxLength="100" />
+    <Property Name="BidangUsahaDebitur" Type="varchar" MaxLength="100" />
+    <Property Name="JenisJasa" Type="varchar" MaxLength="100" />
+    <Property Name="NamaPemberiPekerjaan" Type="varchar" MaxLength="100" />
+    <Property Name="UnitKerja" Type="varchar" MaxLength="100" />
+    <Property Name="TotalAsetPerusahaan" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="FeeNominal" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NilaiPenutupan" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="TanggalMulaiPekerjaan" Type="smalldatetime" />
+    <Property Name="TanggalSelesaiPekerjaan" Type="smalldatetime" />
+    <Property Name="NomorPolis" Type="varchar" MaxLength="100" />
+    <Property Name="PICRekanan" Type="varchar" MaxLength="100" />
+    <Property Name="PICBank" Type="varchar" MaxLength="100" />
+    <Property Name="Keterangan" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="trxDocumentMandatory">
+    <Key>
+      <PropertyRef Name="IdMandatoryDocument" />
+    </Key>
+    <Property Name="IdMandatoryDocument" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTypeOfRekanan" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfDocument" Type="int" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsMandatory" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxFileDataPekerjaan">
+    <Key>
+      <PropertyRef Name="IdDataPekerjaan" />
+    </Key>
+    <Property Name="IdDataPekerjaan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="BlobPekerjaan" Type="varbinary(max)" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxMonitoringFeeBased">
+    <Key>
+      <PropertyRef Name="IdFeeBased" />
+    </Key>
+    <Property Name="IdFeeBased" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRegion" Type="int" Nullable="false" />
+    <Property Name="IdArea" Type="int" Nullable="false" />
+    <Property Name="IdCabang" Type="int" Nullable="false" />
+    <Property Name="NomorPolis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Produk" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NilaiPertanggungan" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Periode" Type="int" Nullable="false" />
+    <Property Name="NilaiPremi" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NilaiFeeBased" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NilaiPPNBasedNet" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NilaiPPNBased" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PercentFeeBased" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IdChannel" Type="int" Nullable="false" />
+    <Property Name="SudahBayar" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxMonitoringFeeBased_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFeeBased" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRegion" Type="int" Nullable="false" />
+    <Property Name="IdArea" Type="int" Nullable="false" />
+    <Property Name="IdCabang" Type="int" Nullable="false" />
+    <Property Name="NomorPolis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Produk" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NilaiPertanggungan" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Periode" Type="int" Nullable="false" />
+    <Property Name="NilaiPremi" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NilaiFeeBased" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NilaiPPNBasedNet" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NilaiPPNBased" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PercentFeeBased" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IdChannel" Type="int" Nullable="false" />
+    <Property Name="SudahBayar" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxNotaris">
+    <Key>
+      <PropertyRef Name="IdNotaris" />
+    </Key>
+    <Property Name="IdNotaris" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SKNotaris" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SumpahNotarisNumber" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SumpahNotarisDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="IsKoperasiMember" Type="bit" />
+    <Property Name="SKKoperasiNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SKKoperasiDate" Type="smalldatetime" />
+    <Property Name="IsBapepamReg" Type="bit" />
+    <Property Name="BapepamSKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="BapepamSKDate" Type="smalldatetime" />
+    <Property Name="UpLimit" Type="int" />
+    <Property Name="PPATSKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="PPATSKDate" Type="smalldatetime" />
+    <Property Name="PPATSumpahNumber" Type="varchar" MaxLength="200" />
+    <Property Name="PPATSumpahDate" Type="smalldatetime" />
+    <Property Name="WilayahKerjaPPAT" Type="varchar" MaxLength="50" />
+    <Property Name="IsIPPATMember" Type="bit" />
+    <Property Name="SKIPPATNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SKPPATDate" Type="smalldatetime" />
+    <Property Name="IsINIMember" Type="bit" />
+    <Property Name="INISKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="INISKDate" Type="smalldatetime" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxNotaris_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdNotaris" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SKNotaris" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SumpahNotarisNumber" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SumpahNotarisDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="IsKoperasiMember" Type="bit" />
+    <Property Name="SKKoperasiNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SKKoperasiDate" Type="smalldatetime" />
+    <Property Name="IsBapepamReg" Type="bit" />
+    <Property Name="BapepamSKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="BapepamSKDate" Type="smalldatetime" />
+    <Property Name="UpLimit" Type="int" />
+    <Property Name="PPATSKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="PPATSKDate" Type="smalldatetime" />
+    <Property Name="PPATSumpahNumber" Type="varchar" MaxLength="200" />
+    <Property Name="PPATSumpahDate" Type="smalldatetime" />
+    <Property Name="WilayahKerjaPPAT" Type="varchar" MaxLength="50" />
+    <Property Name="IsIPPATMember" Type="bit" />
+    <Property Name="SKIPPATNumber" Type="varchar" MaxLength="50" />
+    <Property Name="SKPPATDate" Type="smalldatetime" />
+    <Property Name="IsINIMember" Type="bit" />
+    <Property Name="INISKNumber" Type="varchar" MaxLength="50" />
+    <Property Name="INISKDate" Type="smalldatetime" />
+    <Property Name="Remark" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxNotification">
+    <Key>
+      <PropertyRef Name="IdNotification" />
+    </Key>
+    <Property Name="IdNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaptionNoti" Type="varbinary" MaxLength="250" Nullable="false" />
+    <Property Name="ContentNoti" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="IdTypeOfStatus" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfNoti" Type="int" Nullable="false" />
+    <Property Name="JatuhTempo" Type="smalldatetime" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxNotificationOld">
+    <Key>
+      <PropertyRef Name="IdNotification" />
+    </Key>
+    <Property Name="IdNotification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsTrayNotification" Type="bit" Nullable="false" />
+    <Property Name="IsEmailNotification" Type="bit" Nullable="false" />
+    <Property Name="NotificationCaption" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DueDate" Type="smalldatetime" />
+    <Property Name="NotifyDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdTemplate" Type="int" Nullable="false" />
+    <Property Name="IsNotifiedByTray" Type="bit" Nullable="false" />
+    <Property Name="IsNotifiedByEmail" Type="bit" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxOwnership">
+    <Key>
+      <PropertyRef Name="IdOwnership" />
+    </Key>
+    <Property Name="IdOwnership" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KTP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KTPEndDate" Type="smalldatetime" />
+    <Property Name="Sertifikasi" Type="varchar" MaxLength="100" />
+    <Property Name="PercentSaham" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NominalSaham" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IsKeyPerson" Type="bit" />
+    <Property Name="NPWP" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxOwnership_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdOwnership" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KTP" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="KTPEndDate" Type="smalldatetime" />
+    <Property Name="Sertifikasi" Type="varchar" MaxLength="100" />
+    <Property Name="PercentSaham" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="NominalSaham" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IsKeyPerson" Type="bit" />
+    <Property Name="NPWP" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxPengumuman">
+    <Key>
+      <PropertyRef Name="IdPengumuman" />
+    </Key>
+    <Property Name="IdPengumuman" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CaptionPengumuman" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IsiPengumuman" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="IdTypeOfStatus" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfPengumunan" Type="int" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxRegistrationRequest">
+    <Key>
+      <PropertyRef Name="IdRegRequest" />
+    </Key>
+    <Property Name="IdRegRequest" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamaLengkap" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NomorKTP" Type="varchar" MaxLength="50" />
+    <Property Name="NomorNPWP" Type="varchar" MaxLength="50" />
+    <Property Name="AlamatEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsFollowedUp" Type="int" Nullable="false" />
+    <Property Name="FollowedUpDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxRekananDocument">
+    <Key>
+      <PropertyRef Name="IdDocument" />
+    </Key>
+    <Property Name="IdDocument" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTypeOfDocument" Type="int" Nullable="false" />
+    <Property Name="IssuedBy" Type="varchar" MaxLength="50" />
+    <Property Name="IssuedDate" Type="smalldatetime" />
+    <Property Name="EndDate" Type="smalldatetime" />
+    <Property Name="Notaris" Type="varchar" MaxLength="50" />
+    <Property Name="BlobDocument" Type="varbinary(max)" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxRekananDocumentTrack">
+    <Key>
+      <PropertyRef Name="IdDocumentTrack" />
+    </Key>
+    <Property Name="IdDocumentTrack" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDocument" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTypeOfDocument" Type="int" Nullable="false" />
+    <Property Name="IdTypeOfStatusDoc" Type="int" Nullable="false" />
+    <Property Name="VerificationNote" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxSanksiEksternal">
+    <Key>
+      <PropertyRef Name="IdSanksiEksternal" />
+    </Key>
+    <Property Name="IdSanksiEksternal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SanksiType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pelanggaran" Type="varchar" MaxLength="200" />
+    <Property Name="LetterNumber" Type="varchar" MaxLength="50" />
+    <Property Name="LetterDate" Type="smalldatetime" />
+    <Property Name="Period" Type="int" />
+    <Property Name="SanksiStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxSanksiEksternal_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdSanksiEksternal" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SanksiType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pelanggaran" Type="varchar" MaxLength="200" />
+    <Property Name="LetterNumber" Type="varchar" MaxLength="50" />
+    <Property Name="LetterDate" Type="smalldatetime" />
+    <Property Name="Period" Type="int" />
+    <Property Name="SanksiStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxSanksiInternal">
+    <Key>
+      <PropertyRef Name="IdSanksiInternal" />
+    </Key>
+    <Property Name="IdSanksiInternal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SanksiType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pelanggaran" Type="varchar" MaxLength="200" />
+    <Property Name="LetterNumber" Type="varchar" MaxLength="50" />
+    <Property Name="LetterDate" Type="smalldatetime" />
+    <Property Name="Period" Type="int" />
+    <Property Name="SanksiStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxSanksiInternal_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdSanksiInternal" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SanksiType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pelanggaran" Type="varchar" MaxLength="200" />
+    <Property Name="LetterNumber" Type="varchar" MaxLength="50" />
+    <Property Name="LetterDate" Type="smalldatetime" />
+    <Property Name="Period" Type="int" />
+    <Property Name="SanksiStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxTenagaAhli">
+    <Key>
+      <PropertyRef Name="IdTenagaAhli" />
+    </Key>
+    <Property Name="IdTenagaAhli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Sertifikasi" Type="varchar" MaxLength="50" />
+    <Property Name="Gelar" Type="varchar" MaxLength="50" />
+    <Property Name="AsosiasiProfesi" Type="varchar" MaxLength="50" />
+    <Property Name="Experience" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trxTenagaAhli_ARC">
+    <Key>
+      <PropertyRef Name="IdArc" />
+    </Key>
+    <Property Name="IdArc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="IdTenagaAhli" Type="int" Nullable="false" />
+    <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Sertifikasi" Type="varchar" MaxLength="50" />
+    <Property Name="Gelar" Type="varchar" MaxLength="50" />
+    <Property Name="AsosiasiProfesi" Type="varchar" MaxLength="50" />
+    <Property Name="Experience" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DB_SMARTModelStoreContainer">
+    <EntitySet Name="emlNotification" EntityType="Self.emlNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emlNotificationLog" EntityType="Self.emlNotificationLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="emlTemplate" EntityType="Self.emlTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstContact" EntityType="Self.mstContact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstContact_ARC" EntityType="Self.mstContact_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstKecamatan" EntityType="Self.mstKecamatan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstReference" EntityType="Self.mstReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstRekanan" EntityType="Self.mstRekanan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstRekanan_ARC" EntityType="Self.mstRekanan_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstTypeOfBadanUsaha" EntityType="Self.mstTypeOfBadanUsaha" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstTypeOfDocument" EntityType="Self.mstTypeOfDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstTypeOfRegion" EntityType="Self.mstTypeOfRegion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstTypeOfRekanan" EntityType="Self.mstTypeOfRekanan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mstWilayah" EntityType="Self.mstWilayah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxAuditLog" EntityType="Self.trxAuditLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxBranchOffice" EntityType="Self.trxBranchOffice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxBranchOffice_ARC" EntityType="Self.trxBranchOffice_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxDataOrganisasi" EntityType="Self.trxDataOrganisasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxDataOrganisasi_ARC" EntityType="Self.trxDataOrganisasi_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxDetailPekerjaan" EntityType="Self.trxDetailPekerjaan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxDetailPekerjaan_ARC" EntityType="Self.trxDetailPekerjaan_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxDocumentMandatory" EntityType="Self.trxDocumentMandatory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxFileDataPekerjaan" EntityType="Self.trxFileDataPekerjaan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxMonitoringFeeBased" EntityType="Self.trxMonitoringFeeBased" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxMonitoringFeeBased_ARC" EntityType="Self.trxMonitoringFeeBased_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxNotaris" EntityType="Self.trxNotaris" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxNotaris_ARC" EntityType="Self.trxNotaris_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxNotification" EntityType="Self.trxNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxNotificationOld" EntityType="Self.trxNotificationOld" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxOwnership" EntityType="Self.trxOwnership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxOwnership_ARC" EntityType="Self.trxOwnership_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxPengumuman" EntityType="Self.trxPengumuman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxRegistrationRequest" EntityType="Self.trxRegistrationRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxRekananDocument" EntityType="Self.trxRekananDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxRekananDocumentTrack" EntityType="Self.trxRekananDocumentTrack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxSanksiEksternal" EntityType="Self.trxSanksiEksternal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxSanksiEksternal_ARC" EntityType="Self.trxSanksiEksternal_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxSanksiInternal" EntityType="Self.trxSanksiInternal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxSanksiInternal_ARC" EntityType="Self.trxSanksiInternal_ARC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxTenagaAhli" EntityType="Self.trxTenagaAhli" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trxTenagaAhli_ARC" EntityType="Self.trxTenagaAhli_ARC" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

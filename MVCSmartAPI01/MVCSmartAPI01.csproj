@@ -1,0 +1,1106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EA4ED64-D193-4894-9612-16B23214E9A8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVCSmartAPI01</RootNamespace>
+    <AssemblyName>MVCSmartAPI01</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1">
+      <HintPath>..\DevExpress.v14.1\DevExpress.Data.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\ValueInjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.4.0.30506\lib\net40\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.WebApi">
+      <HintPath>..\packages\Unity.WebApi.5.1.5.2\lib\net45\Unity.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Dashboard\DashboardController.cs" />
+    <Compile Include="Controllers\Helper\EmailHelper.cs" />
+    <Compile Include="Controllers\POCController.cs" />
+    <Compile Include="Controllers\Reports\RptAsuransiController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanBLGController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanAS_3MController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanAS_1MController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanAS_1MTMPController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanTMPController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanHeaderController.cs" />
+    <Compile Include="Controllers\Reports\XLSExportHelper.cs" />
+    <Compile Include="Controllers\Tables\MstEmailPoolController.cs" />
+    <Compile Include="Controllers\Tables\MstPengumumanController.cs" />
+    <Compile Include="Controllers\Tables\MstDatamasterController.cs" />
+    <Compile Include="Controllers\Tables\MstRegionController.cs" />
+    <Compile Include="Controllers\Tables\MstSubRegionController.cs" />
+    <Compile Include="Controllers\Tables\MstKategoriResikoController.cs" />
+    <Compile Include="Controllers\Tables\TrxKonsolidasiController.cs" />
+    <Compile Include="Controllers\Tables\TrxPertanyaanNilaiController.cs" />
+    <Compile Include="Controllers\Tables\TrxBranchOfficeTMPController.cs" />
+    <Compile Include="Controllers\Tables\TrxBranchOfficeHeaderController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotarisItemController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhliTMPController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhliHeaderController.cs" />
+    <Compile Include="Controllers\Tables\TrxFileScannedController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaPendukungTMPController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaPendukungImpController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhliTidakTetapImpController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhliTetapImpController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaPendukungController.cs" />
+    <Compile Include="Controllers\Tables\TrxAsistenController.cs" />
+    <Compile Include="Controllers\Tables\TrxManagementController.cs" />
+    <Compile Include="Controllers\Tables\MstSegmentasiController.cs" />
+    <Compile Include="Controllers\Tables\TrxDocMandatoryFileController.cs" />
+    <Compile Include="Controllers\Tables\TrxDocMandatoryDetailController.cs" />
+    <Compile Include="Controllers\Tables\VwUserRoleController.cs" />
+    <Compile Include="Controllers\Tables\EmlNotificationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotificationContentController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotificationDetailController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotificationHeaderController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhli_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxTenagaAhliController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Tables\TrxSanksiInternal_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxSanksiInternalController.cs" />
+    <Compile Include="Controllers\Tables\TrxSanksiEksternal_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxSanksiEksternalController.cs" />
+    <Compile Include="Controllers\Tables\TrxRekananDocumentTrackController.cs" />
+    <Compile Include="Controllers\Tables\TrxRekananDocumentController.cs" />
+    <Compile Include="Controllers\Tables\TrxRegistrationRequestController.cs" />
+    <Compile Include="Controllers\Tables\TrxOwnership_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxOwnershipController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotaris_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxNotarisController.cs" />
+    <Compile Include="Controllers\Tables\TrxMonitoringFeeBased_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxMonitoringFeeBasedController.cs" />
+    <Compile Include="Controllers\Tables\TrxFileDataPekerjaanController.cs" />
+    <Compile Include="Controllers\Tables\TrxDocumentMandatoryController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaan_ARCController.cs" />
+    <Compile Include="Controllers\Reports\TrxDetailPekerjaanController.cs" />
+    <Compile Include="Controllers\Tables\TrxDataOrganisasi_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxDataOrganisasiController.cs" />
+    <Compile Include="Controllers\Tables\TrxBranchOffice_ARCController.cs" />
+    <Compile Include="Controllers\Tables\TrxBranchOfficeController.cs" />
+    <Compile Include="Controllers\Tables\TrxAuditLogController.cs" />
+    <Compile Include="Controllers\Tables\MstWilayahController.cs" />
+    <Compile Include="Controllers\Tables\MstTypeOfRekananController.cs" />
+    <Compile Include="Controllers\Tables\MstTypeOfRegionController.cs" />
+    <Compile Include="Controllers\Tables\MstTypeOfDocumentController.cs" />
+    <Compile Include="Controllers\Tables\MstTypeOfBadanUsahaController.cs" />
+    <Compile Include="Controllers\Tables\MstRekanan_ARCController.cs" />
+    <Compile Include="Controllers\Tables\MstRekananController.cs" />
+    <Compile Include="Controllers\Tables\MstReferenceController.cs" />
+    <Compile Include="Controllers\Tables\MstKecamatanController.cs" />
+    <Compile Include="Controllers\Tables\MstContact_ARCController.cs" />
+    <Compile Include="Controllers\Tables\MstContactController.cs" />
+    <Compile Include="Controllers\Tables\EmlTemplateController.cs" />
+    <Compile Include="Controllers\Tables\EmlNotificationLogController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataAccessRepository\Dynamic.cs" />
+    <Compile Include="DataAccessRepository\Reports\RptAsuransiRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanBLGRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanAS_3MRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanHeaderRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanAS_1MRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanAS_1MTMPRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanTMPRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\EmlNotificationLogRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\DashboardRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstEmailPoolRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstPengumumanRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstRegionRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstSubRegionRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxKategoriResikoRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxKonsolidasiRep.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRepository\Tables\TrxPertanyaanNilaiRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxBranchOfficeHeaderRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxBranchOfficeTMPRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotarisItemRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliUploadRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxManagementBLHistRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliHeaderRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxFileScannedRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliTMPRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaPendukungImpRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliTidakTetapImpRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliTetapImpRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaPendukungTMPRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaPendukungRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxAsistenRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxManagementRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDocMandatoryFileRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDocMandatoryDetailRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstSegmentasiRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\VwUserRoleRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\EmlNotificationRep.cs" />
+    <Compile Include="DataAccessRepository\IDataAccessRepository.cs" />
+    <Compile Include="DataAccessRepository\Tables\EmlTemplateRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotificationContentRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotificationDetailRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotificationHeaderRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhli_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxTenagaAhliRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxSanksiInternal_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxSanksiInternalRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxSanksiEksternal_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxSanksiEksternalRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxRekananDocumentTrackRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxRekananDocumentRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxRegistrationRequestRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxOwnership_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxOwnershipRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotaris_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxNotarisRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxMonitoringFeeBased_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxMonitoringFeeBasedRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxFileDataPekerjaanRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDocumentMandatoryRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaan_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDataOrganisasi_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDataOrganisasiRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxBranchOffice_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxBranchOfficeRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxAuditLogRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstWilayahRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstTypeOfRekananRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstTypeOfRegionRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstTypeOfDocumentRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstTypeOfBadanUsahaRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstRekanan_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstRekananRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstReferenceRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstKecamatanRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstContact_ARCRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstContactRep.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\ApiLogHandler.cs" />
+    <Compile Include="Logging\MessageHandler .cs" />
+    <Compile Include="Models\Account\AccountBindingModels.cs" />
+    <Compile Include="Models\Account\AccountViewModels.cs" />
+    <Compile Include="Models\ApiLogEntry.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomCriteriaToLinqWhereParser.cs" />
+    <Compile Include="Models\DB_SMART1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SMART1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_SMART1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DB_SMART1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SMART1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\emlNotification.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\emlNotificationLog.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\emlTemplate.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan1237_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan45_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan6_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekananFinal_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan_Bulan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan_Seg_Bulan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashFeeByRekanan_Seg_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashNilaiPenutupanByRekanan_Bulan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashNilaiPenutupanByRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashPekerjaanByRekanan1237_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashPekerjaanByRekanan45_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashPekerjaanByRekanan6_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashPekerjaanByRekananFinal_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDashPekerjaanByRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDataOrganisasiByRek1_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDataOrganisasiByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDataOrganisasiByRek_Type_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fDataRekananByIds_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGenerateUsernamePassword_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetInboxByRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetLapAS1MByRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetNotiByIdNotification_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetNotificationBySubject_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetPekerjaan3MByIdTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetPengumumanByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetRekananByIdSupervisor_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetSentByIdNotification_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetSupervisorByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTDraftCaptionBySubjectFrom_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTDraftDetailBySubjectFrom_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTInboxCaptionBySubjectTo_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTInboxDetailBySubjectTo_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTSentCaptionBySubjectFrom_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fGetTSentDetailBySubjectFrom_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fInfo2LastModifiedByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fInfoLastModifiedByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fKategoriResiko_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fKonsoByPeriode_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fKonsoResumeByPeriode_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fManagementRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fMasukMasaRegistrasi_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormEdit\AddEditTDraftCaptionForm.cs" />
+    <Compile Include="Models\FormEdit\draftDetailForm.cs" />
+    <Compile Include="Models\FormEdit\sentDetailForm.cs" />
+    <Compile Include="Models\FormEdit\sentCaptionForm.cs" />
+    <Compile Include="Models\FormEdit\inboxCaptionForm.cs" />
+    <Compile Include="Models\FormEdit\draftCaptionForm.cs" />
+    <Compile Include="Models\FormEdit\readInfoByIdNotiForm.cs" />
+    <Compile Include="Models\FormEdit\mstSubRegionForm.cs" />
+    <Compile Include="Models\FormEdit\trxBranchOfficeHeaderForm.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanAS_1MMulti.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanBLGSingle.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanBLGMulti.cs" />
+    <Compile Include="Models\FormEdit\mstDataMaster.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanMulti.cs" />
+    <Compile Include="Models\FormEdit\mstRekananForm.cs" />
+    <Compile Include="Models\FormEdit\trxDataOrganisasiForm.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanSingle.cs" />
+    <Compile Include="Models\FormEdit\trxNotarisFormNew.cs" />
+    <Compile Include="Models\FormEdit\trxNotarisForm.cs" />
+    <Compile Include="Models\FormEdit\trxRekananDocumentForm.cs" />
+    <Compile Include="Models\FormEdit\trxDetailPekerjaanHeaderForm.cs" />
+    <Compile Include="Models\FormEdit\trxTenagaAhliHeaderForm.cs" />
+    <Compile Include="Models\fPekerjaanAS_1MByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fPekerjaanAS_3MByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fPekerjaanBLGByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fPekerjaanByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fReadInfoByIdNotification_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fResumeRoaByPeriode_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fScoringByPeriode_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fScoringResumeByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fTotDocumentDetailByRek_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fXLS_RekByIdSupervisor_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\mstContact.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstContact_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstEmailPool.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstKategoriResiko.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstKecamatan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstPengumuman.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstPertanyaan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstReference.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstRegionAdmin.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstRekanan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstRekanan_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstScoreValue.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstSegmentasi.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstSubRegion.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstTemplateDokRekanan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstTypeOfBadanUsaha.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstTypeOfDocument.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstTypeOfRegion.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstTypeOfRekanan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstWilayah.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OwinAuthDbContext.cs" />
+    <Compile Include="Models\rptAsuransi.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rptBalaiLelang.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rptKAP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rptKJPP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rptKonsultanManageman.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rptNotari.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SimpleRef.cs" />
+    <Compile Include="Models\splitstring_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxAsisten.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxAuditLog.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxBranchOffice.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxBranchOfficeHeader.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxBranchOfficeTMP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxBranchOffice_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDataOrganisasi.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDataOrganisasi_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanAS_1M.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanAS_1MTMP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanAS_3M.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanAS_Tahunan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanBLG.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanHeader.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaanTMP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDetailPekerjaan_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDocMandatoryDetail.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDocMandatoryFile.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxDocumentMandatory.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxFileDataPekerjaan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxFileScanned.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxKonsolidasi.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxManagement.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxManagementBlackListHistory.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxManagementP2PK.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxMonitoringFeeBased.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxMonitoringFeeBased_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotari.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotarisDetail.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotarisItem.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotarisTabular.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotaris_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotificationAttachment.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotificationContent.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotificationDetail.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotificationHeader.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxNotificationRecipient.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxOwnership.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxOwnership_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxPertanyaan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxPertanyaanNilai.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxRegistrationRequest.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxRekananDocument.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxRekananDocumentTrack.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxSanksiEksternal.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxSanksiEksternal_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxSanksiInternal.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxSanksiInternal_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhli.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliHeader.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliTetapImp.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliTidakTetap.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliTidakTetapImp.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliTMP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhliUpload.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaAhli_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaPendukung.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaPendukungImp.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxTenagaPendukungTMP.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\scoringResumeMulti.cs" />
+    <Compile Include="Models\ViewModel\dashPekerjaanByRekanan.cs" />
+    <Compile Include="Models\ViewModel\mstPengumumanMulti.cs" />
+    <Compile Include="Models\ViewModel\mstPengumumanSingle.cs" />
+    <Compile Include="Models\ViewModel\EmailModel.cs" />
+    <Compile Include="Models\ViewModel\dashFeeByRekanan.cs" />
+    <Compile Include="Models\ViewModel\mstRekananMap.cs" />
+    <Compile Include="Models\ViewModel\mstSubRegionMulti.cs" />
+    <Compile Include="Models\ViewModel\trxBranchOfficeMulti.cs" />
+    <Compile Include="Models\ViewModel\trxRekananDocumentMulti.cs" />
+    <Compile Include="Models\ViewModel\mstRekananExt.cs" />
+    <Compile Include="Models\ViewModel\trxDetailPekerjaanExt.cs" />
+    <Compile Include="Models\ViewModel\VmNotiBySubject.cs" />
+    <Compile Include="Models\ViewModel\mstRekananMulti.cs" />
+    <Compile Include="Models\vwKelengkapanDokumenRekanan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwNotarisTabular.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwPertanyaanNilai.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwPertanyaanNilaiAkhir.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwRekManagemenBL.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwUserRole.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\InlineEditing.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <EntityDeploy Include="Models\DB_SMART1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_SMART1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DB_SMART1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SMART1.edmx</DependentUpon>
+      <LastGenOutput>DB_SMART1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DB_SMART1.edmx.diagram">
+      <DependentUpon>DB_SMART1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DB_SMART1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SMART1.edmx</DependentUpon>
+      <LastGenOutput>DB_SMART1.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\SmartAPI.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr\event.js" />
+    <Content Include="Scripts\cldr\supplemental.js" />
+    <Content Include="Scripts\cldr\unresolved.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize\currency.js" />
+    <Content Include="Scripts\globalize\date.js" />
+    <Content Include="Scripts\globalize\message.js" />
+    <Content Include="Scripts\globalize\number.js" />
+    <Content Include="Scripts\globalize\plural.js" />
+    <Content Include="Scripts\globalize\relative-time.js" />
+    <Content Include="Scripts\globalize\unit.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.2.debug.js" />
+    <Content Include="Scripts\knockout-3.4.2.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2070</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2073/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
