@@ -120,7 +120,7 @@
                 <span></span>
             </div>
             <div class="demo">
-                <span><h6>Login</h6></span>
+                <span>Login</span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -138,9 +138,6 @@
                 <span></span>
             </div>
             break;
-
-
-
         case "Rekanan1":
         case "Rekanan2":
         case "Rekanan3":
@@ -187,17 +184,17 @@
             <span onclick="location.href = '@Url.Action("Logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
         </div>
         <div class="demo">
-            <span><h6>Notifikasi</h6></span>
-            <span><h6>Profile</h6></span>
+            <span>Notifikasi</span>
+            <span>Profile</span>
 
             @*sembunyi*@
-            <span><h6>Laporan Produksi</h6></span>
+            <span>Laporan Produksi</span>
             <span></span>
 
             <span></span>
             <span></span>
             <span></span>
-            <span><h6>Logout</h6></span>
+            <span>Logout</span>
         </div>
         <div class="demo">
             <spanx>
@@ -233,87 +230,30 @@
                         <a href="@Url.Action("CreateEdit_Read", "MstRekanan")">Informasi Umum</a>
                         <a href="@Url.Action("GetByRekananTab", "TrxDocMandatoryDetail")">Daftar Dokumen</a>
                         <a href="@Url.Action("GetByRekanan", "TrxDataOrganisasi")">Data Organisasi</a>
+                        <a href="@Url.Action("Index", "MstProdukAsuransi")">Produk Asuransi</a>
                     </div>
                 </div>
             </span>
-            <span>
-                <div class="dropdown">
-                    <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-pencil"></i></button>
-                    <div style="width:100px" class="dropdown-content">
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Wawancara
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 1, IdPenilai = 1 })">PPG</a></li>
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 1, IdPenilai = 2 })">FOG</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Seleksi Administrasi
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 2, IdPenilai = 1 })">PPG</a></li>
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 2, IdPenilai = 2 })">FOG</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    OTS
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 3, IdPenilai = 1 })">PPG</a></li>
-                                    <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 3, IdPenilai = 2 })">FOG</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="@Url.Action("GetNilaiAkhir", "TrxPertanyaanNilai")">Nilai Akhir</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-            </span>
-            <span>
-                <div class="dropdown">
-                    <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-th-list"></i></button>
-                    <div style="width:100px" class="dropdown-content">
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
-                            <li><a href="@Url.Action("GetKonsoByPeriode", "TrxKonsolidasi", new { intPeriode = 201710 })">Konsolidasi 2017</a></li>
-                            <li><a href="@Url.Action("GetKonsoByPeriode", "TrxKonsolidasi", new { intPeriode = 201810 })">Konsolidasi 2018</a></li>
-                            <li><a href="@Url.Action("GetKonsoResumeByPeriode", "TrxKonsolidasi", new { PeriodeAwal = 201710, PeriodeAkhir = 201810, TipeUraian = 2})">Konsolidasi Nov 2017 - Nov 2018</a></li>
-                            <li><a href="@Url.Action("GetKonsoResumeByPeriode", "TrxKonsolidasi", new { PeriodeAwal = 201710, PeriodeAkhir = 201810, TipeUraian = 1})">Ikhtisar Keuangan Nov 2017 - Nov 2018</a></li>
-                            <li><a href="@Url.Action("GetResumeRoaByRekPeriode", "TrxKonsolidasi", new { Periode = 201810 })">Resume ROA ROE</a></li>
-                            <li><a href="@Url.Action("GetByIdTypeOfRekanan", "MstKategoriResiko", new { IdTypeOfRekanan = 4 })">Kategori Risiko</a></li>
-                            <li><a href="@Url.Action("GetScoringMultiByRekPeriode", "TrxKonsolidasi", new { Periode = 201810 })">Scoring Akhir</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </span>
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span onclick="location.href = '@Url.Action("Logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
         </div>
         <div class="demo">
-            <span><h6>Profile</h6></span>
-            <span>Scoring</span>
-            <span>Konsolidasi</span>
+            <span>Profile</span>
             <span></span>
             <span></span>
             <span></span>
-            <span><h6>Logout</h6></span>
+            <span></span>
+            <span></span>
+            <span>Logout</span>
         </div>
         <div class="demo">
             <span class="badge badge-warning">last upd 2 Januari 2017</span>
-            <span class="badge badge-warning">last upd 21 Januari 2017</span>
-            <span class="badge badge-warning">last upd 12 Januari 2017</span>
+            <span></span>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -360,17 +300,17 @@
             <span onclick="location.href = '@Url.Action("Logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
         </div>
         <div class="demo">
-            <span><h6>Notifikasi</h6></span>
-            <span><h6>Profile</h6></span>
+            <span>Notifikasi</span>
+            <span>Profile</span>
 
             @*sembunyi*@
-            <span><h6>Laporan Produksi</h6></span>
+            <span>Laporan Produksi</span>
             <span></span>
 
             <span></span>
             <span></span>
             <span></span>
-            <span><h6>Logout</h6></span>
+            <span>Logout</span>
         </div>
         <div class="demo">
             <spanx>
@@ -398,134 +338,100 @@
 
         case "PCPKAR":
         @*PCP /KAR*@
-        <div class="demo">
-            <span>
-                <div class="dropdown">
-                    <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-cog"></i></button>
-                    <div style="width:100px" class="dropdown-content">
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
-                            <li><a href="@Url.Action("GetBySupervisorId", "MstRekanan")">Daftar Rekanan</a></li>
-                            @*<li><a href="@Url.Action("GetNotarisDetailAll", "TrxNotaris")">Daftar Notaris</a></li>
-                            <li><a href="@Url.Action("GetManagementRekanan", "MstRekanan")">Daftar Managemen Rekanan</a></li>
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Daftar Managemen P2PK<i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetManagementP2PK", "TrxManagementP2PK", new { IdTypeOfRekanan = 1, IsActive = true })">KJP</a></li>
-                                    <li><a href="@Url.Action("GetManagementP2PK", "TrxManagementP2PK", new { IdTypeOfRekanan = 2, IsActive = false })">KAP</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Pemberian Sanksi Managemen<i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("BLByRekanan", "TrxManagement")">Berdasar Rekanan</a></li>
-                                    <li><a href="@Url.Action("BLByPartner", "TrxManagement")">Berdasar Partner</a></li>
-                                </ul>
-                            </li>*@
-                        </ul>
+            <div class="demo">
+                <span>
+                    <div class="dropdown">
+                        <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-cog"></i></button>
+                        <div style="width:100px" class="dropdown-content">
+                            <a href="@Url.Action("CreateEdit_Read", "MstRekanan")">Informasi Umum</a>
+                            <a href="@Url.Action("GetByRekananTab", "TrxDocMandatoryDetail")">Daftar Dokumen</a>
+                            <a href="@Url.Action("GetByRekanan", "TrxDataOrganisasi")">Data Organisasi</a>
+                        </div>
                     </div>
-                </div>
-            </span>
-            <span>
-                <div class="dropdown">
-                    <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-list-alt"></i></button>
-                    <div style="width:100px" class="dropdown-content" >
-                        @*--1	Kantor Jasa Penilai Publik (KJPP)
-                        --2	Kantor Akuntan Publik (KAP)
-                        --3	Konsultan Manajemen
-                        --4	Asuransi Jiwa
-                        --5	Asuransi Kerugian
-                        --6	Balai Lelang
-                        --7	Notaris*@
-                        @*<a href="@Url.Action("GetByTypeKJP", "TrxDetailPekerjaan")">KJPP</a>
-                        <a href="@Url.Action("GetByTypeKAP", "TrxDetailPekerjaan")">KAP</a>
-                        <a href="@Url.Action("GetByTypeKMG", "TrxDetailPekerjaan")">Konsultan Manajemen</a>
-                        <a href="@Url.Action("GetByTypeASJ", "TrxDetailPekerjaan")">Asuransi Jiwa</a>
-                        <a href="@Url.Action("GetByTypeASK", "TrxDetailPekerjaan")">Asuransi Kerugian</a>
-                        <a href="@Url.Action("GetByTypeBLG", "TrxDetailPekerjaan")">Balai Lelang</a>
-                        <a href="@Url.Action("GetByTypeNOT", "TrxDetailPekerjaan")">Notaris</a>*@
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
-                            <li><a href="@Url.Action("GetByTypeKJP", "TrxDetailPekerjaan")">KJPP</a></li>
-                            <li><a href="@Url.Action("GetByTypeKAP", "TrxDetailPekerjaan")">KAP</a></li>
-                            <li><a href="@Url.Action("GetByTypeKMG", "TrxDetailPekerjaan")">Konsultan Manajemen</a></li>
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Asuransi Jiwa
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetByTypeASJ1M", "TrxDetailPekerjaan")">Bulanan</a></li>
-                                    <li><a href="@Url.Action("GetByTypeASJ", "TrxDetailPekerjaan")">3 Bulanan</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
-                                    Asuransi Kerugian
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="@Url.Action("GetByTypeASK1M", "TrxDetailPekerjaan")">Bulanan</a></li>
-                                    <li><a href="@Url.Action("GetByTypeASK", "TrxDetailPekerjaan")">3 Bulanan</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="@Url.Action("GetByTypeBLG", "TrxDetailPekerjaan")">Balai Lelang</a></li>
-                            <li><a href="@Url.Action("GetByTypeNOT", "TrxDetailPekerjaan")">Notaris</a></li>
-                        </ul>
+                </span>
+                <span>
+                    <div class="dropdown">
+                        <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-pencil"></i></button>
+                        <div style="width:100px" class="dropdown-content">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
+                                <li class="dropdown-submenu ">
+                                    <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
+                                        Wawancara
+                                        <i class="icon icon-caret-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 1, IdPenilai = 1 })">PPG</a></li>
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 1, IdPenilai = 2 })">FOG</a></li>
+                                    </ul>
+                                </li>
 
-                        @*<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 5px; *width: 180px;">
-                            <li class="dropdown-submenu ">
-                                <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown" href="@Url.Action("GetByTypeKJP", "TrxDetailPekerjaan")">
-                                    News
-                                    <i class="icon icon-caret-right"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <a href="#">A & E Passer</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="@Url.Action("GetByTypeKJP", "TrxDetailPekerjaan")">Elementary</a></li>
-                                            <li><a href="#">Secondary</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>*@
+                                <li class="dropdown-submenu ">
+                                    <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
+                                        Seleksi Administrasi
+                                        <i class="icon icon-caret-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 2, IdPenilai = 1 })">PPG</a></li>
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 2, IdPenilai = 2 })">FOG</a></li>
+                                    </ul>
+                                </li>
 
-                        @*<a href="@Url.Action("GetByRekanan_Asp", "RptAsuransi")">Asuransi</a>
-                        <a href="@Url.Action("RptKJPP", "TrxDetailPekerjaan")">KJPP</a>
-                        <a href="@Url.Action("RptKAP", "TrxDetailPekerjaan")">KAP</a>
-                        <a href="@Url.Action("RptKonsultanM", "TrxDetailPekerjaan")">Konsultan Manajemen</a>
-                        <a href="@Url.Action("RptAsuransiJiwa", "TrxDetailPekerjaan")">Asuransi Jiwa</a>
-                        <a href="@Url.Action("RptAsuransiKerugian", "TrxDetailPekerjaan")">Asuransi Kerugian</a>
-                        <a href="@Url.Action("RptBalai", "TrxDetailPekerjaan")">Balai Lelang</a>
-                        <a href="@Url.Action("RptNotaris", "TrxDetailPekerjaan")">Notaris</a>*@
+                                <li class="dropdown-submenu ">
+                                    <a tabindex="-1" class="dropdown-toggle topLevel" data-toggle="dropdown">
+                                        OTS
+                                        <i class="icon icon-caret-right"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 3, IdPenilai = 1 })">PPG</a></li>
+                                        <li><a href="@Url.Action("GetNilaiByPenilai", "TrxPertanyaanNilai", new { IdTypeOfGroup = 3, IdPenilai = 2 })">FOG</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="@Url.Action("GetNilaiAkhir", "TrxPertanyaanNilai")">Nilai Akhir</a></li>
+                            </ul>
+
+                        </div>
                     </div>
-                </div>
-            </span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span onclick="location.href = '@Url.Action("Logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
-        </div>
-        <div class="demo">
-            <span><h6>Daftar Rekanan</h6></span>
-            <span><h6>Laporan Produksi</h6></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span><h6>Logout</h6></span>
-        </div>
-        <div class="demo">
-            <span class="badge badge-warning">.</span>
-            <span class="badge badge-warning">.</span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+                </span>
+                <span>
+                    <div class="dropdown">
+                        <button type="button" class="hoves dropbtn btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-th-list"></i></button>
+                        <div style="width:100px" class="dropdown-content">
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static;margin-top: 10px; margin-bottom: 1px; *width: 180px;">
+                                <li><a href="@Url.Action("GetKonsoByPeriode", "TrxKonsolidasi", new { intPeriode = 201710 })">Konsolidasi 2017</a></li>
+                                <li><a href="@Url.Action("GetKonsoByPeriode", "TrxKonsolidasi", new { intPeriode = 201810 })">Konsolidasi 2018</a></li>
+                                <li><a href="@Url.Action("GetKonsoResumeByPeriode", "TrxKonsolidasi", new { PeriodeAwal = 201710, PeriodeAkhir = 201810, TipeUraian = 2})">Konsolidasi Nov 2017 - Nov 2018</a></li>
+                                <li><a href="@Url.Action("GetKonsoResumeByPeriode", "TrxKonsolidasi", new { PeriodeAwal = 201710, PeriodeAkhir = 201810, TipeUraian = 1})">Ikhtisar Keuangan Nov 2017 - Nov 2018</a></li>
+                                <li><a href="@Url.Action("GetResumeRoaByRekPeriode", "TrxKonsolidasi", new { Periode = 201810 })">Resume ROA ROE</a></li>
+                                <li><a href="@Url.Action("GetByIdTypeOfRekanan", "MstKategoriResiko", new { IdTypeOfRekanan = 4 })">Kategori Risiko</a></li>
+                                <li><a href="@Url.Action("GetScoringMultiByRekPeriode", "TrxKonsolidasi", new { Periode = 201810 })">Scoring Akhir</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span onclick="location.href = '@Url.Action("Logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
+            </div>
+            <div class="demo">
+                <span>Profile</span>
+                <span>Scoring</span>
+                <span>Konsolidasi</span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span>Logout</span>
+            </div>
+            <div class="demo">
+                <span class="badge badge-warning">last upd 2 Januari 2017</span>
+                <span class="badge badge-warning">last upd 21 Januari 2017</span>
+                <span class="badge badge-warning">last upd 12 Januari 2017</span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             break;
         case "AdminSistem":
         @*ADMIN SISTEM*@
@@ -549,13 +455,13 @@
             <span onclick="location.href = '@Url.Action("logout", "Account" )'; return false;"><button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-log-out"></i></button></span>
         </div>
         <div class="demo">
-            <span><h6>Management User</h6></span>
-            <span><h6>Konfigurasi</h6></span>
-            <span><h6>Audit Trail</h6></span>
+            <span>Management User</span>
+            <span>Konfigurasi</span>
+            <span>Audit Trail</span>
             <span></span>
             <span></span>
             <span></span>
-            <span><h6>Logout</h6></span>
+            <span>Logout</span>
         </div>
         <div class="demo">
             <spanx>
