@@ -1,0 +1,3 @@
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\obj\Debug\MVCSmartClient01.csprojResolveAssemblyReference.cache
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\obj\Debug\MVCSmartClient01.Properties.Resources.resources
+C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\obj\Debug\MVCSmartClient01.csproj.GenerateResource.Cache
