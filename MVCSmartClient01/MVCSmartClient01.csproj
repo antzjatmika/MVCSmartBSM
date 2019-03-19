@@ -571,35 +571,7 @@
     <Content Include="Content\Images\foto smart-051ASJ.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\foto smart-051ASK.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\foto smart-051BLG.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\foto smart-051KAP.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\foto smart-051KJP.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\foto smart-051KMG.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\foto smart-051NOT.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\Images\foto smart-dalam.jpg" />
-    <Content Include="Content\Images\front01.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\front02.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\front03.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\front04.png" />
     <Content Include="Content\Images\gplaypattern.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -609,15 +581,6 @@
     <Content Include="Content\Images\Grey.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Images\haldepan01.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\Home_AdminSistem.jpg" />
-    <Content Include="Content\Images\Home_KAR.jpg" />
-    <Content Include="Content\Images\Home_PCP.jpg" />
-    <Content Include="Content\Images\Home_PCPKAR.jpg" />
-    <Content Include="Content\Images\Home_Portfolio.jpg" />
-    <Content Include="Content\Images\Home_Rekanan.jpg" />
     <Content Include="Content\Images\LatarDepan.jpg" />
     <Content Include="Content\Images\Liquid Gold.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -626,22 +589,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Images\logoBSM1.png" />
-    <Content Include="Content\Images\panel02.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\panel03.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\panel11.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\panel22.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\panel33.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Images\policies-and-procedures.jpg" />
     <Content Include="Content\Images\Red.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

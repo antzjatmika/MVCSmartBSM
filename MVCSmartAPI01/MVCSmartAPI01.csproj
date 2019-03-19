@@ -309,6 +309,7 @@
     <Compile Include="DataAccessRepository\Tables\DashboardRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstEmailPoolRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstPengumumanRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\MstProdukAsuransiRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstRegionRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstSubRegionRep.cs" />
     <Compile Include="DataAccessRepository\Tables\TrxKategoriResikoRep.cs" />
@@ -619,6 +620,9 @@
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mstPertanyaan.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mstProdukAsuransi.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mstReference.cs">
