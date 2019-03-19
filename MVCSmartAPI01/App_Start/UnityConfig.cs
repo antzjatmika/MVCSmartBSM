@@ -91,6 +91,7 @@ namespace MVCSmartAPI01
             container.RegisterType<IDataAccessRepository<trxPertanyaanNilai, int>, TrxPertanyaanNilaiRep>();
             container.RegisterType<IDataAccessRepository<trxKonsolidasi, int>, TrxKonsolidasiRep>();
             container.RegisterType<IDataAccessRepository<mstKategoriResiko, int>, MstKategoriResikoRep>();
+            container.RegisterType<IDataAccessRepository<mstProdukAsuransi, int>, MstProdukAsuransiRep>();
 
             container.RegisterType<AccountController>(new InjectionConstructor());
 

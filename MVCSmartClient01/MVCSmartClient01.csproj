@@ -301,6 +301,7 @@
     <Compile Include="Controllers\DataOrganisasiController.cs" />
     <Compile Include="Controllers\ImportXLSHelper.cs" />
     <Compile Include="Controllers\MstKategoriResikoController.cs" />
+    <Compile Include="Controllers\MstProdukAsuransiController.cs" />
     <Compile Include="Controllers\TrxKonsolidasiController.cs" />
     <Compile Include="Controllers\TrxPertanyaanNilaiController.cs" />
     <Compile Include="Controllers\TrxManagementP2PKController.cs" />
@@ -417,6 +418,7 @@
     <Compile Include="Models\fGetRekananByIdSupervisor_Result.cs" />
     <Compile Include="Models\SimpleRef.cs" />
     <Compile Include="Models\Tables\mstKategoriResiko.cs" />
+    <Compile Include="Models\Tables\mstProdukAsuransi.cs" />
     <Compile Include="Models\Tables\trxKonsolidasi.cs" />
     <Compile Include="Models\Tables\mstPengumuman.cs" />
     <Compile Include="Models\Tables\trxPertanyaanNilai.cs" />
@@ -1228,6 +1230,8 @@
     <Content Include="Views\TrxKonsolidasi\_GetScoringMultiByRekPeriode.cshtml" />
     <Content Include="Views\TrxKonsolidasi\GetResumeRoaByRekPeriode.cshtml" />
     <Content Include="Views\TrxKonsolidasi\_GetResumeRoaByRekPeriode.cshtml" />
+    <Content Include="Views\MstProdukAsuransi\Index.cshtml" />
+    <Content Include="Views\MstProdukAsuransi\_Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

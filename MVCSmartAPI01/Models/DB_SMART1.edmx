@@ -226,6 +226,18 @@
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
           <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="mstProdukAsuransi">
+          <Key>
+            <PropertyRef Name="IdMstProdukAsuransi" />
+          </Key>
+          <Property Name="IdMstProdukAsuransi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NamaProduk" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="NoIzinProduk" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="TanggalIzin" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="mstReference">
           <Key>
             <PropertyRef Name="IdRef" />
@@ -1896,7 +1908,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwPertanyaanNilai' does not have 
           <Property Name="Deskripsi" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Bobot" Type="int" Nullable="false" />
           <Property Name="Nilai" Type="int" Nullable="false" />
-          <Property Name="Score" Type="decimal" Precision="29" Scale="13" />
+          <Property Name="Score" Type="decimal" Precision="33" Scale="6" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DB_SMART_BSM.dbo.vwPertanyaanNilaiAkhir' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -3028,6 +3040,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="mstKecamatan" EntityType="Self.mstKecamatan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mstPengumuman" EntityType="Self.mstPengumuman" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mstPertanyaan" EntityType="Self.mstPertanyaan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mstProdukAsuransi" EntityType="Self.mstProdukAsuransi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mstReference" EntityType="Self.mstReference" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mstRegionAdmin" EntityType="Self.mstRegionAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="mstRekanan" EntityType="Self.mstRekanan" Schema="dbo" store:Type="Tables" />
@@ -5634,6 +5647,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="trxPertanyaanNilai" EntityType="DB_SMARTModel.trxPertanyaanNilai" />
           <EntitySet Name="vwPertanyaanNilai" EntityType="DB_SMARTModel.vwPertanyaanNilai" />
           <EntitySet Name="vwPertanyaanNilaiAkhir" EntityType="DB_SMARTModel.vwPertanyaanNilaiAkhir" />
+          <EntitySet Name="mstProdukAsuransi" EntityType="DB_SMARTModel.mstProdukAsuransi" />
         </EntityContainer>
         <EntityType Name="AspNetUserClaim">
           <Key>
@@ -6187,7 +6201,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="Deskripsi" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Bobot" Type="Int32" Nullable="false" />
           <Property Name="Nilai" Type="Int32" Nullable="false" />
-          <Property Name="Score" Type="Decimal" Precision="29" Scale="13" />
+          <Property Name="Score" Type="Decimal" Precision="33" Scale="6" />
         </EntityType>
         <EntityType Name="vwPertanyaanNilaiAkhir">
           <Key>
@@ -6201,6 +6215,18 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="TotFOG" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="AvgScore" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="Urutan" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mstProdukAsuransi">
+          <Key>
+            <PropertyRef Name="IdMstProdukAsuransi" />
+          </Key>
+          <Property Name="IdMstProdukAsuransi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NamaProduk" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NoIzinProduk" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="TanggalIzin" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -8935,6 +8961,19 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <ScalarProperty Name="TotPPG" ColumnName="TotPPG" />
                 <ScalarProperty Name="Deskripsi" ColumnName="Deskripsi" />
                 <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mstProdukAsuransi">
+            <EntityTypeMapping TypeName="DB_SMARTModel.mstProdukAsuransi">
+              <MappingFragment StoreEntitySet="mstProdukAsuransi">
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="TanggalIzin" ColumnName="TanggalIzin" />
+                <ScalarProperty Name="NoIzinProduk" ColumnName="NoIzinProduk" />
+                <ScalarProperty Name="NamaProduk" ColumnName="NamaProduk" />
+                <ScalarProperty Name="IdMstProdukAsuransi" ColumnName="IdMstProdukAsuransi" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

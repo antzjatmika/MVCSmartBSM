@@ -126,6 +126,7 @@ namespace MVCSmartAPI01.Models
         public virtual DbSet<trxPertanyaanNilai> trxPertanyaanNilai { get; set; }
         public virtual DbSet<vwPertanyaanNilai> vwPertanyaanNilai { get; set; }
         public virtual DbSet<vwPertanyaanNilaiAkhir> vwPertanyaanNilaiAkhir { get; set; }
+        public virtual DbSet<mstProdukAsuransi> mstProdukAsuransi { get; set; }
     
         [DbFunction("DB_SMARTEntities1", "fDashFeeByRekanan")]
         public virtual IQueryable<fDashFeeByRekanan_Result> fDashFeeByRekanan(Nullable<int> tahun, Nullable<int> topN, Nullable<int> typeOfRekanan)
