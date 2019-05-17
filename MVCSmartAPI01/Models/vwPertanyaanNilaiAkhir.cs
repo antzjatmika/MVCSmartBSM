@@ -15,6 +15,7 @@ namespace MVCSmartAPI01.Models
     public partial class vwPertanyaanNilaiAkhir
     {
         public System.Guid IdRekanan { get; set; }
+        public int TahunBulan { get; set; }
         public string Deskripsi { get; set; }
         public Nullable<decimal> TotPPG { get; set; }
         public Nullable<decimal> TotFOG { get; set; }

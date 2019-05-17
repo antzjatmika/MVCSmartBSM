@@ -67,17 +67,17 @@ namespace MVCSmartAPI01.DataAccessRepository
                 ctx.SaveChanges();
             }
         }
-        public List<fKonsoByPeriode_Result> GetKonsoByPeriode(Guid IdRekanan, int intPeriode)
+        public List<fKonsoByPeriode_Result> GetKonsoByPeriode(Guid IdRekanan, int TahunBulan)
         {
             IdRekanan = new Guid();
             List<fKonsoByPeriode_Result> myData = new List<fKonsoByPeriode_Result>();
-            myData = ctx.fKonsoByPeriode(IdRekanan, intPeriode).ToList();
+            myData = ctx.fKonsoByPeriode(IdRekanan, TahunBulan).ToList();
             return myData;
         }
-        public List<fKonsoResumeByPeriode_Result> GetKonsoResumeByPeriode(Guid IdRekanan, int PeriodeAwal, int PeriodeAkhir, int TipeUraian)
+        public List<fKonsoResumeByPeriode_Result> GetKonsoResumeByPeriode(Guid IdRekanan, int PeriodeAkhir, int TipeUraian)
         {
             List<fKonsoResumeByPeriode_Result> myData = new List<fKonsoResumeByPeriode_Result>();
-            myData = ctx.fKonsoResumeByPeriode(IdRekanan, PeriodeAwal, PeriodeAkhir, TipeUraian).ToList();
+            myData = ctx.fKonsoResumeByPeriode(IdRekanan, PeriodeAkhir, TipeUraian).ToList();
             return myData;
         }
         public List<fKategoriResiko_Result> GetKategoriResikoByPenambah(decimal decPenambah)
@@ -112,6 +112,12 @@ namespace MVCSmartAPI01.DataAccessRepository
         {
             List<fResumeRoaByPeriode_Result> myData = new List<fResumeRoaByPeriode_Result>();
             myData = ctx.fResumeRoaByPeriode(IdRekanan, Periode).ToList();
+            return myData;
+        }
+        public List<fKonsoPairByParam_Result> GetKonsoPairByParam(Guid IdRekanan, int Periode)
+        {
+            List<fKonsoPairByParam_Result> myData = new List<fKonsoPairByParam_Result>();
+            myData = ctx.fKonsoPairByParam(IdRekanan, Periode).ToList();
             return myData;
         }
     }

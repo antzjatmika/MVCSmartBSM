@@ -21,5 +21,6 @@ namespace MVCSmartAPI01.Models
         public decimal Nilai { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string CreatedUser { get; set; }
+        public string Keterangan { get; set; }
     }
 }

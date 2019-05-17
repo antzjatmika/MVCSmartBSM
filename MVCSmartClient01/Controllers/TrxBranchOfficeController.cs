@@ -128,19 +128,19 @@ namespace MVCSmartClient01.Controllers
                 }
             }
 
-            if (!string.IsNullOrEmpty(myDataReturn.Telephone3) && myDataReturn.Telephone3.Contains("-"))
-            {
-                var arrReturn = myDataReturn.Telephone3.Split('-');
-                if (arrReturn.Length == 2)
-                {
-                    myDataReturn.Phone3_1 = arrReturn[0];
-                    myDataReturn.Phone3_2 = arrReturn[1];
-                }
-                else if (arrReturn.Length == 1)
-                {
-                    myDataReturn.Phone3_1 = arrReturn[0];
-                }
-            }
+            //if (!string.IsNullOrEmpty(myDataReturn.Telephone3) && myDataReturn.Telephone3.Contains("-"))
+            //{
+            //    var arrReturn = myDataReturn.Telephone3.Split('-');
+            //    if (arrReturn.Length == 2)
+            //    {
+            //        myDataReturn.Phone3_1 = arrReturn[0];
+            //        myDataReturn.Phone3_2 = arrReturn[1];
+            //    }
+            //    else if (arrReturn.Length == 1)
+            //    {
+            //        myDataReturn.Phone3_1 = arrReturn[0];
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(myDataReturn.Fax1) && myDataReturn.Fax1.Contains("-"))
             {
@@ -224,16 +224,16 @@ namespace MVCSmartClient01.Controllers
             }
             myDataForm.Telephone2 = strPhone2;
 
-            string strPhone3 = string.Empty;
-            if (!string.IsNullOrEmpty(myDataForm.Phone3_1))
-            {
-                strPhone3 = myDataForm.Phone3_1;
-            }
-            if (!string.IsNullOrEmpty(myDataForm.Phone3_2))
-            {
-                strPhone3 += "-" + myDataForm.Phone3_2;
-            }
-            myDataForm.Telephone3 = strPhone3;
+            //string strPhone3 = string.Empty;
+            //if (!string.IsNullOrEmpty(myDataForm.Phone3_1))
+            //{
+            //    strPhone3 = myDataForm.Phone3_1;
+            //}
+            //if (!string.IsNullOrEmpty(myDataForm.Phone3_2))
+            //{
+            //    strPhone3 += "-" + myDataForm.Phone3_2;
+            //}
+            //myDataForm.Telephone3 = strPhone3;
 
             string strFax1 = string.Empty;
             if (!string.IsNullOrEmpty(myDataForm.Fax1_1))

@@ -20,6 +20,10 @@ namespace MVCSmartAPI01.DataAccessRepository
         {
             return ctx.mstProdukAsuransi.ToList();
         }
+        public IEnumerable<mstProdukAsuransi> GetByRekanan(Guid IdRekanan)
+        {
+            return ctx.mstProdukAsuransi.Where(x => x.IdRekanan.Equals(IdRekanan)).ToList();
+        }
         //Get Specific Data based on Id
         public mstProdukAsuransi Get(int id)
         {

@@ -192,6 +192,28 @@ namespace MVCSmartClient01.Controllers
             }
             return View("Error");
         }
+        public async Task<ActionResult> GetNilaiByParam(Guid IdRekanan, int Periode, int IdTypeOfGroup, int IdPenilai)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetNilaiByParam/{1}/{2}/{3}/{4}", url, IdRekanan, Periode, IdTypeOfGroup, IdPenilai ));
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var myData = JsonConvert.DeserializeObject<List<fGetPertanyaanNilaiByParam_Result>>(responseData);
+                return View("GetNilaiByParam", myData);
+            }
+            return View("Error");
+        }
+        public async Task<ActionResult> _GetNilaiByParam(Guid IdRekanan, int Periode, int IdTypeOfGroup, int IdPenilai)
+        {
+            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetNilaiByParam/{1}/{2}/{3}/{4}", url, IdRekanan, Periode, IdTypeOfGroup, IdPenilai));
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var myData = JsonConvert.DeserializeObject<List<fGetPertanyaanNilaiByParam_Result>>(responseData);
+                return PartialView("_GetNilaiByParam", myData);
+            }
+            return View("Error");
+        }
         public async Task<ActionResult> _GetNilaiAkhir()
         {
             HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetNilaiAkhir/{1}", url, tokenContainer.IdRekananContact.ToString()));

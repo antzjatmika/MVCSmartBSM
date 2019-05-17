@@ -305,25 +305,10 @@ settings =>
             e.Properties["cpFilter"] = null;
         e.Properties["cp_FilterOri"] = g.FilterExpression;
     };
-    //settings.Columns.Add(column =>
-    //{
-    //    column.FieldName = "NamaPemberiPekerjaan";
-    //    column.HeaderStyle.Font.Bold = true;
-    //    column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
-    //    column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;
-    //});
-    //settings.Columns.Add(column =>
-    //{
-    //    column.FieldName = "UnitKerja";
-    //    column.Caption = "Unit Kerja Bank Mandiri";
-    //    column.HeaderStyle.Font.Bold = true;
-    //    column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
-    //    column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;
-    //});
     settings.Columns.Add(column =>
     {
         column.FieldName = "IdSegmentasi";
-        column.Caption = "Unit Kerja Bank Mandiri";
+        column.Caption = "Unit Kerja BSM";
         column.HeaderStyle.Font.Bold = true;
         column.ColumnType = MVCxGridViewColumnType.ComboBox;
         var comboBoxProperties = (DevExpress.Web.ASPxEditors.ComboBoxProperties)column.PropertiesEdit;
@@ -334,34 +319,10 @@ settings =>
         comboBoxProperties.ValueType = typeof(int);
     });
 
-    //settings.Columns.Add(column =>
-    //{
-    //    column.FieldName = "NilaiPenutupan";
-    //    column.HeaderStyle.Font.Bold = true;
-    //    column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
-    //    column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;
-    //    column.Visible = !Model.IsGrupNonNotaris;
-    //});
-    //settings.Columns.Add(column =>
-    //{
-    //    column.FieldName = "NomorPolis";
-    //    column.HeaderStyle.Font.Bold = true;
-    //    column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
-    //    column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;
-    //    column.Visible = !(Model.IsNotaris || Model.IsGrupNonNotaris);
-    //});
-    //settings.Columns.Add(column =>
-    //{
-    //    column.FieldName = "PICRekanan";
-    //    column.Caption = "PIC";
-    //    column.HeaderStyle.Font.Bold = true;
-    //    column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
-    //    column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;
-    //});
     settings.Columns.Add(column =>
     {
         column.FieldName = "PICBank";
-        column.Caption = "PIC Bank Mandiri";
+        column.Caption = "PIC BSM";
         column.HeaderStyle.Font.Bold = true;
         column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
         column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;

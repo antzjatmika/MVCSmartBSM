@@ -17,6 +17,7 @@
         private const string UserEmailKey = "UserEmail";
         private const string IdTypeOfRekananKey = "IdTypeOfRekanan";
         private const string XLSPointerKey = "XLSPointer";
+        private const string KeteranganKey = "Keterangan";
         public object ApiToken
         {
             get { return Current.Session != null ? Current.Session[ApiTokenKey] : null; }
@@ -79,6 +80,11 @@
         {
             get { return Current.Session != null ? Current.Session[XLSPointerKey] : null; }
             set { if (Current.Session != null) Current.Session[XLSPointerKey] = value; }
+        }
+        public object Keterangan
+        {
+            get { return Current.Session != null ? Current.Session[KeteranganKey] : null; }
+            set { if (Current.Session != null) Current.Session[KeteranganKey] = value; }
         }
         private static HttpContextBase Current
         {

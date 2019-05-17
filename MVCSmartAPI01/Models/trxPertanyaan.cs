@@ -21,5 +21,6 @@ namespace MVCSmartAPI01.Models
         public int Bobot { get; set; }
         public System.DateTime CreatedDate { get; set; }
         public string CreatedUser { get; set; }
+        public int IdTypeOfRekanan { get; set; }
     }
 }

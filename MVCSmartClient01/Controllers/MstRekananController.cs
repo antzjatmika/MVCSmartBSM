@@ -102,19 +102,19 @@ namespace MVCSmartClient01.Controllers
                         }
                     }
 
-                    if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
-                    {
-                        var arrReturn = myData.Phone3.Split('-');
-                        if (arrReturn.Length == 2)
-                        {
-                            myData.Phone3_1 = arrReturn[0];
-                            myData.Phone3_2 = arrReturn[1];
-                        }
-                        else if (arrReturn.Length == 1)
-                        {
-                            myData.Phone3_1 = arrReturn[0];
-                        }
-                    }
+                    //if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
+                    //{
+                    //    var arrReturn = myData.Phone3.Split('-');
+                    //    if (arrReturn.Length == 2)
+                    //    {
+                    //        myData.Phone3_1 = arrReturn[0];
+                    //        myData.Phone3_2 = arrReturn[1];
+                    //    }
+                    //    else if (arrReturn.Length == 1)
+                    //    {
+                    //        myData.Phone3_1 = arrReturn[0];
+                    //    }
+                    //}
 
                     if (!string.IsNullOrEmpty(myData.Fax1) && myData.Fax1.Contains("-"))
                     {
@@ -236,19 +236,19 @@ namespace MVCSmartClient01.Controllers
                         }
                     }
 
-                    if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
-                    {
-                        var arrReturn = myData.Phone3.Split('-');
-                        if (arrReturn.Length == 2)
-                        {
-                            myData.Phone3_1 = arrReturn[0];
-                            myData.Phone3_2 = arrReturn[1];
-                        }
-                        else if (arrReturn.Length == 1)
-                        {
-                            myData.Phone3_1 = arrReturn[0];
-                        }
-                    }
+                    //if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
+                    //{
+                    //    var arrReturn = myData.Phone3.Split('-');
+                    //    if (arrReturn.Length == 2)
+                    //    {
+                    //        myData.Phone3_1 = arrReturn[0];
+                    //        myData.Phone3_2 = arrReturn[1];
+                    //    }
+                    //    else if (arrReturn.Length == 1)
+                    //    {
+                    //        myData.Phone3_1 = arrReturn[0];
+                    //    }
+                    //}
 
                     if (!string.IsNullOrEmpty(myData.Fax1) && myData.Fax1.Contains("-"))
                     {
@@ -344,19 +344,19 @@ namespace MVCSmartClient01.Controllers
                 }
             }
 
-            if (!string.IsNullOrEmpty(myDataReturn.Phone3) && myDataReturn.Phone3.Contains("-"))
-            {
-                var arrReturn = myDataReturn.Phone3.Split('-');
-                if (arrReturn.Length == 2)
-                {
-                    myDataReturn.Phone3_1 = arrReturn[0];
-                    myDataReturn.Phone3_2 = arrReturn[1];
-                }
-                else if (arrReturn.Length == 1)
-                {
-                    myDataReturn.Phone3_1 = arrReturn[0];
-                }
-            }
+            //if (!string.IsNullOrEmpty(myDataReturn.Phone3) && myDataReturn.Phone3.Contains("-"))
+            //{
+            //    var arrReturn = myDataReturn.Phone3.Split('-');
+            //    if (arrReturn.Length == 2)
+            //    {
+            //        myDataReturn.Phone3_1 = arrReturn[0];
+            //        myDataReturn.Phone3_2 = arrReturn[1];
+            //    }
+            //    else if (arrReturn.Length == 1)
+            //    {
+            //        myDataReturn.Phone3_1 = arrReturn[0];
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(myDataReturn.Fax1) && myDataReturn.Fax1.Contains("-"))
             {
@@ -529,16 +529,16 @@ namespace MVCSmartClient01.Controllers
             }
             myDataForm.Phone2 = strPhone2;
 
-            string strPhone3 = string.Empty;
-            if (!string.IsNullOrEmpty(myDataForm.Phone3_1))
-            {
-                strPhone3 = myDataForm.Phone3_1;
-            }
-            if (!string.IsNullOrEmpty(myDataForm.Phone3_2))
-            {
-                strPhone3 += "-" + myDataForm.Phone3_2;
-            }
-            myDataForm.Phone3 = strPhone3;
+            //string strPhone3 = string.Empty;
+            //if (!string.IsNullOrEmpty(myDataForm.Phone3_1))
+            //{
+            //    strPhone3 = myDataForm.Phone3_1;
+            //}
+            //if (!string.IsNullOrEmpty(myDataForm.Phone3_2))
+            //{
+            //    strPhone3 += "-" + myDataForm.Phone3_2;
+            //}
+            //myDataForm.Phone3 = strPhone3;
 
             string strFax1 = string.Empty;
             if (!string.IsNullOrEmpty(myDataForm.Fax1_1))
@@ -836,7 +836,7 @@ namespace MVCSmartClient01.Controllers
             return View("Error");
         }
 
-        public ActionResult _InfoLastModifiedByRek(Guid IdRekanan, int IdTypeOfRekanan, string RegistrationNumber)
+        public ActionResult _InfoLastModifiedByRek(Guid IdRekanan, int IdTypeOfRekanan, string RegistrationNumber, int VerifiedBySystem, int VerifiedByAdmin)
         {
             HttpResponseMessage responseMessage = client.GetAsync(string.Format("{0}/GetInfoLastModifiedByRek/{1}", url, IdRekanan.ToString())).Result;
             if (responseMessage.IsSuccessStatusCode)
@@ -847,6 +847,14 @@ namespace MVCSmartClient01.Controllers
                 ViewBag.IdRekanan = IdRekanan;
                 ViewBag.IdTypeOfRekanan = IdTypeOfRekanan;
                 ViewBag.RegistrationNumber = RegistrationNumber;
+                if(VerifiedBySystem == 1 && VerifiedByAdmin == 1)
+                {
+                    ViewBag.Verified4Scoring = true;
+                }
+                else
+                {
+                    ViewBag.Verified4Scoring = false;
+                }
                 return PartialView(myData);
             }
             return View("Error");
@@ -896,19 +904,19 @@ namespace MVCSmartClient01.Controllers
                     }
                 }
 
-                if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
-                {
-                    var arrReturn = myData.Phone3.Split('-');
-                    if (arrReturn.Length == 2)
-                    {
-                        myData.Phone3_1 = arrReturn[0];
-                        myData.Phone3_2 = arrReturn[1];
-                    }
-                    else if (arrReturn.Length == 1)
-                    {
-                        myData.Phone3_1 = arrReturn[0];
-                    }
-                }
+                //if (!string.IsNullOrEmpty(myData.Phone3) && myData.Phone3.Contains("-"))
+                //{
+                //    var arrReturn = myData.Phone3.Split('-');
+                //    if (arrReturn.Length == 2)
+                //    {
+                //        myData.Phone3_1 = arrReturn[0];
+                //        myData.Phone3_2 = arrReturn[1];
+                //    }
+                //    else if (arrReturn.Length == 1)
+                //    {
+                //        myData.Phone3_1 = arrReturn[0];
+                //    }
+                //}
 
                 if (!string.IsNullOrEmpty(myData.Fax1) && myData.Fax1.Contains("-"))
                 {
@@ -952,11 +960,21 @@ namespace MVCSmartClient01.Controllers
             }
             return View("Error");
         }
+        public async Task<ActionResult> RekananDetailedInfo_Admin()
+        {
+            //assign current IdRekanan with selected id rekanan 
+            ViewBag.CurrentTab0 = "CreateEdit_ReadTab";
+            ViewBag.IdTypeOfRekanan = (int)tokenContainer.IdTypeOfRekanan;
+            ViewBag.InfoRekanan = String.Format("Informasi Detail Rekanan ({0})", (string) tokenContainer.Keterangan);
+            return View("RekananDetailedInfo");
+        }
+
         public async Task<ActionResult> RekananDetailedInfo(Guid IdRekanan, int IdTypeOfRekanan, string RegistrationNumber)
         {
             //assign current IdRekanan with selected id rekanan 
             tokenContainer.IdRekananContact = IdRekanan;
             tokenContainer.IdTypeOfRekanan = IdTypeOfRekanan;
+            tokenContainer.Keterangan = RegistrationNumber;
             ViewBag.CurrentTab0 = "CreateEdit_ReadTab";
             ViewBag.IdTypeOfRekanan = IdTypeOfRekanan;
             ViewBag.InfoRekanan = String.Format("Informasi Detail Rekanan ({0})", RegistrationNumber);

@@ -145,7 +145,7 @@ namespace MVCSmartAPI01.DataAccessRepository
                                 refCode = colCode.RefCode,
                                 refDesc = colCode.RefDesc
                             };
-            var mapData = from mstRek in ctx.mstRekanans
+            var mapData = from mstRek in ctx.mstRekanan
                           join clColor in colorCode on mstRek.ClassOfRekanan.ToString() equals clColor.refCode 
                           where mstRek.IdTypeOfRekanan.Equals(TypeOfRekanan)
                           select new { mstRek.IdRekanan, mstRek.Name, mstRek.Latitude, mstRek.Longitude, mstRek.ClassOfRekanan, clColor.refDesc };

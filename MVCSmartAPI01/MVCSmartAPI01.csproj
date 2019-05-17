@@ -230,9 +230,11 @@
     <Compile Include="Controllers\Tables\MstEmailPoolController.cs" />
     <Compile Include="Controllers\Tables\MstPengumumanController.cs" />
     <Compile Include="Controllers\Tables\MstDatamasterController.cs" />
+    <Compile Include="Controllers\Tables\MstProdukAsuransiController.cs" />
     <Compile Include="Controllers\Tables\MstRegionController.cs" />
     <Compile Include="Controllers\Tables\MstSubRegionController.cs" />
     <Compile Include="Controllers\Tables\MstKategoriResikoController.cs" />
+    <Compile Include="Controllers\Tables\TrxPeriodeScoringController.cs" />
     <Compile Include="Controllers\Tables\TrxKonsolidasiController.cs" />
     <Compile Include="Controllers\Tables\TrxPertanyaanNilaiController.cs" />
     <Compile Include="Controllers\Tables\TrxBranchOfficeTMPController.cs" />
@@ -307,11 +309,13 @@
     <Compile Include="DataAccessRepository\Reports\TrxDetailPekerjaanTMPRep.cs" />
     <Compile Include="DataAccessRepository\Tables\EmlNotificationLogRep.cs" />
     <Compile Include="DataAccessRepository\Tables\DashboardRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxDocMandatoryVerificationRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstEmailPoolRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstPengumumanRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstProdukAsuransiRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstRegionRep.cs" />
     <Compile Include="DataAccessRepository\Tables\MstSubRegionRep.cs" />
+    <Compile Include="DataAccessRepository\Tables\TrxPeriodeScoringRep.cs" />
     <Compile Include="DataAccessRepository\Tables\TrxKategoriResikoRep.cs" />
     <Compile Include="DataAccessRepository\Tables\TrxKonsolidasiRep.cs">
       <SubType>Code</SubType>
@@ -500,6 +504,9 @@
     <Compile Include="Models\fGetPengumumanByTypeOfRekanan_Result.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\fGetPertanyaanNilaiByParam_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\fGetRekananByIdSupervisor_Result.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
@@ -537,6 +544,9 @@
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fKonsoByPeriode_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fKonsoPairByParam_Result.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fKonsoResumeByPeriode_Result.cs">
@@ -580,6 +590,9 @@
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fPekerjaanByTypeOfRekanan_Result.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fPeriodeScoringByRekanan_Result.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fReadInfoByIdNotification_Result.cs">
@@ -744,6 +757,9 @@
     <Compile Include="Models\trxDocMandatoryFile.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\trxDocMandatoryVerification.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\trxDocumentMandatory.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
@@ -805,6 +821,9 @@
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\trxOwnership_ARC.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\trxPeriodeScoring.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\trxPertanyaan.cs">
@@ -893,7 +912,13 @@
     <Compile Include="Models\vwPertanyaanNilaiAkhir.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\vwRegistrationRequest.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\vwRekManagemenBL.cs">
+      <DependentUpon>DB_SMART1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwUserAdminPCP.cs">
       <DependentUpon>DB_SMART1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vwUserRole.cs">

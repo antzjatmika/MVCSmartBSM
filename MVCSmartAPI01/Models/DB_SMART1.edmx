@@ -231,6 +231,7 @@
             <PropertyRef Name="IdMstProdukAsuransi" />
           </Key>
           <Property Name="IdMstProdukAsuransi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
           <Property Name="NamaProduk" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="NoIzinProduk" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="TanggalIzin" Type="datetime" />
@@ -280,9 +281,9 @@
           <Property Name="ZipCode" Type="varchar" MaxLength="10" />
           <Property Name="Phone1" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Phone2" Type="varchar" MaxLength="20" />
-          <Property Name="Phone3" Type="varchar" MaxLength="20" />
           <Property Name="Fax1" Type="varchar" MaxLength="20" />
           <Property Name="Fax2" Type="varchar" MaxLength="20" />
+          <Property Name="Website" Type="varchar" MaxLength="150" />
           <Property Name="EmailAddress" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="PenerbitRating" Type="varchar" MaxLength="100" />
           <Property Name="NilaiRating" Type="varchar" MaxLength="50" />
@@ -1068,6 +1069,19 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.trxDetailPekerjaanAS_Tahunan' doe
           <Property Name="IdDocMandatoryDetail" Type="int" Nullable="false" />
           <Property Name="namaFile" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="trxDocMandatoryVerification">
+          <Key>
+            <PropertyRef Name="IdTrxDocMandatoryVerification" />
+          </Key>
+          <Property Name="IdTrxDocMandatoryVerification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IdTypeOfDocument" Type="int" Nullable="false" />
+          <Property Name="IsVerified" Type="bit" Nullable="false" />
+          <Property Name="Catatan" Type="varchar" MaxLength="200" />
+          <Property Name="LMDate" Type="datetime" />
+          <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="trxDocumentMandatory">
           <Key>
             <PropertyRef Name="IdMandatoryDocument" />
@@ -1119,6 +1133,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.trxFileScanned' does not have a p
           <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
           <Property Name="TahunBulan" Type="int" Nullable="false" />
           <Property Name="Nilai" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Keterangan" Type="varchar" MaxLength="150" />
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
           <Property Name="CreatedUser" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -1525,6 +1540,16 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.trxFileScanned' does not have a p
           <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="trxPeriodeScoring">
+          <Key>
+            <PropertyRef Name="IdTrxPeriodeScoring" />
+          </Key>
+          <Property Name="IdTrxPeriodeScoring" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TahunBulan" Type="int" Nullable="false" />
+          <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="trxPertanyaan">
           <Key>
             <PropertyRef Name="IdTPertanyaan" />
@@ -1532,6 +1557,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.trxFileScanned' does not have a p
           <Property Name="IdTPertanyaan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdPertanyaan" Type="int" Nullable="false" />
           <Property Name="IdTypeOfGroup" Type="int" Nullable="false" />
+          <Property Name="IdTypeOfRekanan" Type="int" Nullable="false" />
           <Property Name="SeqPertanyaan" Type="int" Nullable="false" />
           <Property Name="Bobot" Type="int" Nullable="false" />
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
@@ -1545,6 +1571,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.trxFileScanned' does not have a p
           <Property Name="IdTPertanyaan" Type="int" Nullable="false" />
           <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
           <Property Name="IdPenilai" Type="int" Nullable="false" />
+          <Property Name="TahunBulan" Type="int" Nullable="false" />
           <Property Name="Nilai" Type="int" Nullable="false" />
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
           <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
@@ -1895,6 +1922,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwPertanyaanNilai' does not have 
             <PropertyRef Name="IdTypeOfGroup" />
             <PropertyRef Name="IdPenilai" />
             <PropertyRef Name="IdRekanan" />
+            <PropertyRef Name="TahunBulan" />
             <PropertyRef Name="SeqPertanyaan" />
             <PropertyRef Name="Deskripsi" />
             <PropertyRef Name="Bobot" />
@@ -1904,6 +1932,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwPertanyaanNilai' does not have 
           <Property Name="IdTypeOfGroup" Type="int" Nullable="false" />
           <Property Name="IdPenilai" Type="int" Nullable="false" />
           <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TahunBulan" Type="int" Nullable="false" />
           <Property Name="SeqPertanyaan" Type="int" Nullable="false" />
           <Property Name="Deskripsi" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Bobot" Type="int" Nullable="false" />
@@ -1915,15 +1944,47 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwPertanyaanNilaiAkhir' does not 
         <EntityType Name="vwPertanyaanNilaiAkhir">
           <Key>
             <PropertyRef Name="IdRekanan" />
+            <PropertyRef Name="TahunBulan" />
             <PropertyRef Name="Deskripsi" />
             <PropertyRef Name="Urutan" />
           </Key>
           <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TahunBulan" Type="int" Nullable="false" />
           <Property Name="Deskripsi" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="TotPPG" Type="decimal" Precision="38" Scale="6" />
           <Property Name="TotFOG" Type="decimal" Precision="38" Scale="6" />
           <Property Name="AvgScore" Type="decimal" Precision="38" Scale="6" />
           <Property Name="Urutan" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_SMART_BSM.dbo.vwRegistrationRequest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwRegistrationRequest">
+          <Key>
+            <PropertyRef Name="IdRegRequest" />
+            <PropertyRef Name="NamaLengkap" />
+            <PropertyRef Name="AlamatLengkap" />
+            <PropertyRef Name="AlamatEmail" />
+            <PropertyRef Name="IdTypeOfRekanan" />
+            <PropertyRef Name="ImageBaseName" />
+            <PropertyRef Name="UserPassKey" />
+            <PropertyRef Name="CreatedDate" />
+            <PropertyRef Name="IsActive" />
+            <PropertyRef Name="DokInput" />
+            <PropertyRef Name="Kelengkapan" />
+          </Key>
+          <Property Name="IdRegRequest" Type="int" Nullable="false" />
+          <Property Name="NamaLengkap" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="AlamatLengkap" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="AlamatEmail" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IdTypeOfRekanan" Type="int" Nullable="false" />
+          <Property Name="ImageBaseName" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassKey" Type="varchar(max)" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="IsActive" Type="tinyint" Nullable="false" />
+          <Property Name="DokTotal" Type="int" />
+          <Property Name="DokInput" Type="int" Nullable="false" />
+          <Property Name="Kelengkapan" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DB_SMART_BSM.dbo.vwRekManagemenBL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1947,6 +2008,22 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwRekManagemenBL' does not have a
           <Property Name="Catatan" Type="varchar" MaxLength="1000" />
           <Property Name="TanggalMulaiBlackList" Type="smalldatetime" />
           <Property Name="TanggalAkhirBlacklist" Type="smalldatetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserAdminPCP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwUserAdminPCP">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="NamaLengkap" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="NamaLengkap" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -2451,11 +2528,35 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="fGetPertanyaanNilaiByParam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdRekanan" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Periode" Type="int" Mode="In" />
+          <Parameter Name="IdTypeOfGroup" Type="int" Mode="In" />
+          <Parameter Name="IdPenilai" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="IdTNPertanyaan" Type="int" Nullable="false" />
+                <Property Name="IdTypeOfGroup" Type="int" Nullable="false" />
+                <Property Name="IdPenilai" Type="int" Nullable="false" />
+                <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+                <Property Name="TahunBulan" Type="int" Nullable="false" />
+                <Property Name="SeqPertanyaan" Type="int" Nullable="false" />
+                <Property Name="Deskripsi" Type="varchar" MaxLength="250" Nullable="false" />
+                <Property Name="Bobot" Type="int" Nullable="false" />
+                <Property Name="Nilai" Type="int" Nullable="false" />
+                <Property Name="Score" Type="decimal" Precision="33" Scale="6" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="fGetRekananByIdSupervisor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdSupervisor" Type="int" Mode="In" />
           <ReturnType>
             <CollectionType>
               <RowType>
+                <Property Name="VerifiedBySystem" Type="int" Nullable="false" />
+                <Property Name="VerifiedByAdmin" Type="int" Nullable="false" />
                 <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
                 <Property Name="IdRegion" Type="int" Nullable="false" />
                 <Property Name="RegistrationNumber" Type="varchar" MaxLength="50" Nullable="false" />
@@ -2471,9 +2572,9 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <Property Name="ZipCode" Type="varchar" MaxLength="10" />
                 <Property Name="Phone1" Type="varchar" MaxLength="20" Nullable="false" />
                 <Property Name="Phone2" Type="varchar" MaxLength="20" />
-                <Property Name="Phone3" Type="varchar" MaxLength="20" />
                 <Property Name="Fax1" Type="varchar" MaxLength="20" />
                 <Property Name="Fax2" Type="varchar" MaxLength="20" />
+                <Property Name="Website" Type="varchar" MaxLength="150" />
                 <Property Name="EmailAddress" Type="varchar" MaxLength="100" Nullable="false" />
                 <Property Name="PenerbitRating" Type="varchar" MaxLength="100" />
                 <Property Name="NilaiRating" Type="varchar" MaxLength="50" />
@@ -2679,9 +2780,30 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="fKonsoPairByParam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdRekanan" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="TahunBulan" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="IdCur" Type="int" Nullable="false" />
+                <Property Name="IdPrev" Type="int" Nullable="false" />
+                <Property Name="SeqUraian" Type="int" Nullable="false" />
+                <Property Name="TahunBulanCur" Type="int" Nullable="false" />
+                <Property Name="TahunBulanPrev" Type="int" Nullable="false" />
+                <Property Name="Ikhtisar" Type="varchar" MaxLength="250" Nullable="false" />
+                <Property Name="NilaiCur" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+                <Property Name="NilaiPrev" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+                <Property Name="NilaiPersen" Type="decimal" Precision="18" Scale="2" />
+                <Property Name="Keterangan" Type="varchar" MaxLength="150" />
+                <Property Name="TahunBulanCurOri" Type="int" />
+                <Property Name="TahunBulanPrevOri" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="fKonsoResumeByPeriode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdRekanan" Type="uniqueidentifier" Mode="In" />
-          <Parameter Name="PeriodeAwal" Type="int" Mode="In" />
           <Parameter Name="PeriodeAkhir" Type="int" Mode="In" />
           <Parameter Name="TipeUraian" Type="int" Mode="In" />
           <ReturnType>
@@ -2692,7 +2814,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <Property Name="myValueAkhir" Type="decimal" Precision="18" Scale="2" Nullable="false" />
                 <Property Name="myValueAwal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
                 <Property Name="TumbuhSign" Type="int" />
-                <Property Name="TumbuhPercent" Type="decimal" Precision="38" Scale="15" />
+                <Property Name="TumbuhPercent" Type="decimal" Precision="18" Scale="2" />
                 <Property Name="SeqResume" Type="int" Nullable="false" />
               </RowType>
             </CollectionType>
@@ -2874,6 +2996,21 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
             </CollectionType>
           </ReturnType>
         </Function>
+        <Function Name="fPeriodeScoringByRekanan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdRekanan" Type="uniqueidentifier" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="IdTrxPeriodeScoring" Type="int" Nullable="false" />
+                <Property Name="TahunBulan" Type="int" Nullable="false" />
+                <Property Name="IdRekanan" Type="uniqueidentifier" Nullable="false" />
+                <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+                <Property Name="CreatedUser" Type="varchar" MaxLength="50" Nullable="false" />
+                <Property Name="IdTypeOfRekanan" Type="int" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
         <Function Name="fReadInfoByIdNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdNotificationDetail" Type="int" Mode="In" />
           <Parameter Name="flgTraySent" Type="bit" Mode="In" />
@@ -2960,6 +3097,8 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <Property Name="IdTypeOfDocument" Type="int" Nullable="false" />
                 <Property Name="TotDoc" Type="int" Nullable="false" />
                 <Property Name="docSeq" Type="int" Nullable="false" />
+                <Property Name="IsVerified" Type="bit" Nullable="false" />
+                <Property Name="Catatan" Type="varchar" MaxLength="200" Nullable="false" />
               </RowType>
             </CollectionType>
           </ReturnType>
@@ -2992,6 +3131,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <ReturnType>
             <CollectionType>
               <RowType>
+                <Property Name="Urutan" Type="int" />
                 <Property Name="Name" Type="nvarchar" MaxLength="500" />
               </RowType>
             </CollectionType>
@@ -3076,6 +3216,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="trxDetailPekerjaanTMP" EntityType="Self.trxDetailPekerjaanTMP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxDocMandatoryDetail" EntityType="Self.trxDocMandatoryDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxDocMandatoryFile" EntityType="Self.trxDocMandatoryFile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trxDocMandatoryVerification" EntityType="Self.trxDocMandatoryVerification" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxDocumentMandatory" EntityType="Self.trxDocumentMandatory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxFileDataPekerjaan" EntityType="Self.trxFileDataPekerjaan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxKonsolidasi" EntityType="Self.trxKonsolidasi" Schema="dbo" store:Type="Tables" />
@@ -3096,6 +3237,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="trxNotificationRecipient" EntityType="Self.trxNotificationRecipient" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxOwnership" EntityType="Self.trxOwnership" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxOwnership_ARC" EntityType="Self.trxOwnership_ARC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="trxPeriodeScoring" EntityType="Self.trxPeriodeScoring" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxPertanyaan" EntityType="Self.trxPertanyaan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxPertanyaanNilai" EntityType="Self.trxPertanyaanNilai" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trxRegistrationRequest" EntityType="Self.trxRegistrationRequest" Schema="dbo" store:Type="Tables" />
@@ -3267,6 +3409,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
     [vwPertanyaanNilai].[IdTypeOfGroup] AS [IdTypeOfGroup], 
     [vwPertanyaanNilai].[IdPenilai] AS [IdPenilai], 
     [vwPertanyaanNilai].[IdRekanan] AS [IdRekanan], 
+    [vwPertanyaanNilai].[TahunBulan] AS [TahunBulan], 
     [vwPertanyaanNilai].[SeqPertanyaan] AS [SeqPertanyaan], 
     [vwPertanyaanNilai].[Deskripsi] AS [Deskripsi], 
     [vwPertanyaanNilai].[Bobot] AS [Bobot], 
@@ -3277,12 +3420,30 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="vwPertanyaanNilaiAkhir" EntityType="Self.vwPertanyaanNilaiAkhir" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [vwPertanyaanNilaiAkhir].[IdRekanan] AS [IdRekanan], 
+    [vwPertanyaanNilaiAkhir].[TahunBulan] AS [TahunBulan], 
     [vwPertanyaanNilaiAkhir].[Deskripsi] AS [Deskripsi], 
     [vwPertanyaanNilaiAkhir].[TotPPG] AS [TotPPG], 
     [vwPertanyaanNilaiAkhir].[TotFOG] AS [TotFOG], 
     [vwPertanyaanNilaiAkhir].[AvgScore] AS [AvgScore], 
     [vwPertanyaanNilaiAkhir].[Urutan] AS [Urutan]
     FROM [dbo].[vwPertanyaanNilaiAkhir] AS [vwPertanyaanNilaiAkhir]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwRegistrationRequest" EntityType="Self.vwRegistrationRequest" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vwRegistrationRequest].[IdRegRequest] AS [IdRegRequest], 
+    [vwRegistrationRequest].[NamaLengkap] AS [NamaLengkap], 
+    [vwRegistrationRequest].[AlamatLengkap] AS [AlamatLengkap], 
+    [vwRegistrationRequest].[AlamatEmail] AS [AlamatEmail], 
+    [vwRegistrationRequest].[IdTypeOfRekanan] AS [IdTypeOfRekanan], 
+    [vwRegistrationRequest].[ImageBaseName] AS [ImageBaseName], 
+    [vwRegistrationRequest].[UserName] AS [UserName], 
+    [vwRegistrationRequest].[UserPassKey] AS [UserPassKey], 
+    [vwRegistrationRequest].[CreatedDate] AS [CreatedDate], 
+    [vwRegistrationRequest].[IsActive] AS [IsActive], 
+    [vwRegistrationRequest].[DokTotal] AS [DokTotal], 
+    [vwRegistrationRequest].[DokInput] AS [DokInput], 
+    [vwRegistrationRequest].[Kelengkapan] AS [Kelengkapan]
+    FROM [dbo].[vwRegistrationRequest] AS [vwRegistrationRequest]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vwRekManagemenBL" EntityType="Self.vwRekManagemenBL" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -3300,6 +3461,15 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
     [vwRekManagemenBL].[TanggalMulaiBlackList] AS [TanggalMulaiBlackList], 
     [vwRekManagemenBL].[TanggalAkhirBlacklist] AS [TanggalAkhirBlacklist]
     FROM [dbo].[vwRekManagemenBL] AS [vwRekManagemenBL]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwUserAdminPCP" EntityType="Self.vwUserAdminPCP" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vwUserAdminPCP].[Id] AS [Id], 
+    [vwUserAdminPCP].[UserName] AS [UserName], 
+    [vwUserAdminPCP].[RoleName] AS [RoleName], 
+    [vwUserAdminPCP].[NamaLengkap] AS [NamaLengkap], 
+    [vwUserAdminPCP].[CreatedDate] AS [CreatedDate]
+    FROM [dbo].[vwUserAdminPCP] AS [vwUserAdminPCP]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vwUserRole" EntityType="Self.vwUserRole" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -3690,11 +3860,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="FileExt2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="FileExt3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </ComplexType>
-        <ComplexType Name="fTotDocumentDetailByRek_Result">
-          <Property Name="IdTypeOfDocument" Type="Int32" Nullable="false" />
-          <Property Name="TotDoc" Type="Int32" Nullable="false" />
-          <Property Name="docSeq" Type="Int32" Nullable="false" />
-        </ComplexType>
         <ComplexType Name="fXLS_RekByIdSupervisor_Result">
           <Property Name="IdRekanan" Type="Guid" Nullable="false" />
           <Property Name="IdTypeOfRekanan" Type="Int32" Nullable="false" />
@@ -3898,39 +4063,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="RegionAdminDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
-        <EntityType Name="mstRekanan">
-          <Key>
-            <PropertyRef Name="IdRekanan" />
-          </Key>
-          <Property Name="IdRekanan" Type="Guid" Nullable="false" />
-          <Property Name="IdRegion" Type="Int32" Nullable="false" />
-          <Property Name="RegistrationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ClassOfRekanan" Type="Int32" Nullable="false" />
-          <Property Name="IdTypeOfRekanan" Type="Int32" Nullable="false" />
-          <Property Name="IdTypeOfBadanUsaha" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IdWilayah" Type="Int32" />
-          <Property Name="Kelurahan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Kecamatan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Kota" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Phone1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Phone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Phone3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Fax1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Fax2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="PenerbitRating" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="NilaiRating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Longitude" Type="Decimal" Precision="9" Scale="6" />
-          <Property Name="Latitude" Type="Decimal" Precision="9" Scale="6" />
-          <Property Name="LMDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="IsActive" Type="Byte" Nullable="false" />
         </EntityType>
         <EntityType Name="mstRekanan_ARC">
           <Key>
@@ -5326,7 +5458,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="mstPengumumen" EntityType="Self.mstPengumuman" />
           <EntitySet Name="mstReferences" EntityType="Self.mstReference" />
           <EntitySet Name="mstRegionAdmins" EntityType="Self.mstRegionAdmin" />
-          <EntitySet Name="mstRekanans" EntityType="Self.mstRekanan" />
           <EntitySet Name="mstRekanan_ARC" EntityType="Self.mstRekanan_ARC" />
           <EntitySet Name="mstScoreValues" EntityType="Self.mstScoreValue" />
           <EntitySet Name="mstSegmentasis" EntityType="Self.mstSegmentasi" />
@@ -5526,9 +5657,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
             <Parameter Name="IdNotificationDetail" Mode="In" Type="Int32" />
             <Parameter Name="flgTraySent" Mode="In" Type="Boolean" />
           </FunctionImport>
-          <FunctionImport Name="fTotDocumentDetailByRek" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fTotDocumentDetailByRek_Result)">
-          <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
-          </FunctionImport>
           <FunctionImport Name="fXLS_RekByIdSupervisor" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fXLS_RekByIdSupervisor_Result)">
           <Parameter Name="IdSupervisor" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -5593,9 +5721,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
           </FunctionImport>
           <EntitySet Name="trxManagement" EntityType="DB_SMARTModel.trxManagement" />
-          <FunctionImport Name="fGetRekananByIdSupervisor" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fGetRekananByIdSupervisor_Result)">
-          <Parameter Name="IdSupervisor" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="fGetLapAS1MByRekanan" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fGetLapAS1MByRekanan_Result)">
           <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
           </FunctionImport>
@@ -5622,7 +5747,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           </FunctionImport>
           <FunctionImport Name="fKonsoResumeByPeriode" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fKonsoResumeByPeriode_Result)">
             <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
-            <Parameter Name="PeriodeAwal" Mode="In" Type="Int32" />
             <Parameter Name="PeriodeAkhir" Mode="In" Type="Int32" />
             <Parameter Name="TipeUraian" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -5647,6 +5771,30 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySet Name="trxPertanyaanNilai" EntityType="DB_SMARTModel.trxPertanyaanNilai" />
           <EntitySet Name="vwPertanyaanNilai" EntityType="DB_SMARTModel.vwPertanyaanNilai" />
           <EntitySet Name="vwPertanyaanNilaiAkhir" EntityType="DB_SMARTModel.vwPertanyaanNilaiAkhir" />
+          <FunctionImport Name="fGetPertanyaanNilaiByParam" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fGetPertanyaanNilaiByParam_Result)">
+            <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
+            <Parameter Name="Periode" Mode="In" Type="Int32" />
+            <Parameter Name="IdTypeOfGroup" Mode="In" Type="Int32" />
+            <Parameter Name="IdPenilai" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="trxPeriodeScoring" EntityType="DB_SMARTModel.trxPeriodeScoring" />
+          <FunctionImport Name="fPeriodeScoringByRekanan" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fPeriodeScoringByRekanan_Result)">
+          <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="fKonsoPairByParam" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fKonsoPairByParam_Result)">
+            <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
+            <Parameter Name="TahunBulan" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="mstRekanan" EntityType="DB_SMARTModel.mstRekanan" />
+          <FunctionImport Name="fTotDocumentDetailByRek" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fTotDocumentDetailByRek_Result)">
+          <Parameter Name="IdRekanan" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <EntitySet Name="trxDocMandatoryVerification" EntityType="DB_SMARTModel.trxDocMandatoryVerification" />
+          <FunctionImport Name="fGetRekananByIdSupervisor" IsComposable="true" ReturnType="Collection(DB_SMARTModel.fGetRekananByIdSupervisor_Result)">
+          <Parameter Name="IdSupervisor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="vwRegistrationRequest" EntityType="DB_SMARTModel.vwRegistrationRequest" />
+          <EntitySet Name="vwUserAdminPCP" EntityType="DB_SMARTModel.vwUserAdminPCP" />
           <EntitySet Name="mstProdukAsuransi" EntityType="DB_SMARTModel.mstProdukAsuransi" />
         </EntityContainer>
         <EntityType Name="AspNetUserClaim">
@@ -5886,40 +6034,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="StatusBlackList" Type="Boolean" Nullable="false" />
           <Property Name="Catatan" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
-        <ComplexType Name="fGetRekananByIdSupervisor_Result">
-          <Property Type="Guid" Name="IdRekanan" Nullable="false" />
-          <Property Type="Int32" Name="IdRegion" Nullable="false" />
-          <Property Type="String" Name="RegistrationNumber" Nullable="false" MaxLength="50" />
-          <Property Type="Int32" Name="ClassOfRekanan" Nullable="false" />
-          <Property Type="Int32" Name="IdTypeOfRekanan" Nullable="false" />
-          <Property Type="Int32" Name="IdTypeOfBadanUsaha" Nullable="false" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="150" />
-          <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
-          <Property Type="Int32" Name="IdWilayah" Nullable="true" />
-          <Property Type="String" Name="Kelurahan" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="Kecamatan" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="Kota" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="10" />
-          <Property Type="String" Name="Phone1" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="Phone2" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="Phone3" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="Fax1" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="Fax2" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="EmailAddress" Nullable="false" MaxLength="100" />
-          <Property Type="String" Name="PenerbitRating" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="NilaiRating" Nullable="true" MaxLength="50" />
-          <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="9" Scale="6" />
-          <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="9" Scale="6" />
-          <Property Type="DateTime" Name="LMDate" Nullable="false" Precision="16" />
-          <Property Type="String" Name="Note" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="CreatedUser" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="16" />
-          <Property Type="Byte" Name="IsActive" Nullable="false" />
-          <Property Type="String" Name="Kode" Nullable="false" MaxLength="3" />
-          <Property Type="String" Name="ContactPerson" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="Handphone" Nullable="false" MaxLength="20" />
-          <Property Type="String" Name="NoNPWP" Nullable="false" MaxLength="100" />
-        </ComplexType>
         <ComplexType Name="fGetLapAS1MByRekanan_Result">
           <Property Type="String" Name="JudulDokumen" Nullable="true" MaxLength="8000" />
           <Property Type="Int32" Name="IdDetailPekerjaan" Nullable="false" />
@@ -6067,6 +6181,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="Bobot" Type="Int32" Nullable="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdTypeOfRekanan" Type="Int32" Nullable="false" />
         </EntityType>
         <ComplexType Name="fKategoriResiko_Result">
           <Property Type="Int32" Name="SeqPerKategori" Nullable="false" />
@@ -6110,6 +6225,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="Nilai" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Keterangan" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="mstKategoriResiko">
           <Key>
@@ -6181,6 +6297,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="Nilai" Type="Int32" Nullable="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TahunBulan" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="vwPertanyaanNilai">
           <Key>
@@ -6188,6 +6305,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
             <PropertyRef Name="IdTypeOfGroup" />
             <PropertyRef Name="IdPenilai" />
             <PropertyRef Name="IdRekanan" />
+            <PropertyRef Name="TahunBulan" />
             <PropertyRef Name="SeqPertanyaan" />
             <PropertyRef Name="Deskripsi" />
             <PropertyRef Name="Bobot" />
@@ -6197,6 +6315,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <Property Name="IdTypeOfGroup" Type="Int32" Nullable="false" />
           <Property Name="IdPenilai" Type="Int32" Nullable="false" />
           <Property Name="IdRekanan" Type="Guid" Nullable="false" />
+          <Property Name="TahunBulan" Type="Int32" Nullable="false" />
           <Property Name="SeqPertanyaan" Type="Int32" Nullable="false" />
           <Property Name="Deskripsi" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Bobot" Type="Int32" Nullable="false" />
@@ -6206,21 +6325,199 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
         <EntityType Name="vwPertanyaanNilaiAkhir">
           <Key>
             <PropertyRef Name="IdRekanan" />
+            <PropertyRef Name="TahunBulan" />
             <PropertyRef Name="Deskripsi" />
             <PropertyRef Name="Urutan" />
           </Key>
           <Property Name="IdRekanan" Type="Guid" Nullable="false" />
+          <Property Name="TahunBulan" Type="Int32" Nullable="false" />
           <Property Name="Deskripsi" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="TotPPG" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="TotFOG" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="AvgScore" Type="Decimal" Precision="38" Scale="6" />
           <Property Name="Urutan" Type="Int32" Nullable="false" />
         </EntityType>
+        <ComplexType Name="fGetPertanyaanNilaiByParam_Result">
+          <Property Type="Int32" Name="IdTNPertanyaan" Nullable="false" />
+          <Property Type="Int32" Name="IdTypeOfGroup" Nullable="false" />
+          <Property Type="Int32" Name="IdPenilai" Nullable="false" />
+          <Property Type="Guid" Name="IdRekanan" Nullable="false" />
+          <Property Type="Int32" Name="TahunBulan" Nullable="false" />
+          <Property Type="Int32" Name="SeqPertanyaan" Nullable="false" />
+          <Property Type="String" Name="Deskripsi" Nullable="false" MaxLength="250" />
+          <Property Type="Int32" Name="Bobot" Nullable="false" />
+          <Property Type="Int32" Name="Nilai" Nullable="false" />
+          <Property Type="Decimal" Name="Score" Nullable="true" Precision="33" Scale="6" />
+        </ComplexType>
+        <EntityType Name="trxPeriodeScoring">
+          <Key>
+            <PropertyRef Name="IdTrxPeriodeScoring" />
+          </Key>
+          <Property Name="IdTrxPeriodeScoring" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TahunBulan" Type="Int32" Nullable="false" />
+          <Property Name="IdRekanan" Type="Guid" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="fPeriodeScoringByRekanan_Result">
+          <Property Type="Int32" Name="IdTrxPeriodeScoring" Nullable="false" />
+          <Property Type="Int32" Name="TahunBulan" Nullable="false" />
+          <Property Type="Guid" Name="IdRekanan" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CreatedUser" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="IdTypeOfRekanan" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="fKonsoPairByParam_Result">
+          <Property Type="Int32" Name="IdCur" Nullable="false" />
+          <Property Type="Int32" Name="IdPrev" Nullable="false" />
+          <Property Type="Int32" Name="SeqUraian" Nullable="false" />
+          <Property Type="Int32" Name="TahunBulanCur" Nullable="false" />
+          <Property Type="Int32" Name="TahunBulanPrev" Nullable="false" />
+          <Property Type="String" Name="Ikhtisar" Nullable="false" MaxLength="250" />
+          <Property Type="Decimal" Name="NilaiCur" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="NilaiPrev" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="NilaiPersen" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Keterangan" Nullable="true" MaxLength="150" />
+          <Property Type="Int32" Name="TahunBulanCurOri" Nullable="true" />
+          <Property Type="Int32" Name="TahunBulanPrevOri" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="mstRekanan">
+          <Key>
+            <PropertyRef Name="IdRekanan" />
+          </Key>
+          <Property Name="IdRekanan" Type="Guid" Nullable="false" />
+          <Property Name="IdRegion" Type="Int32" Nullable="false" />
+          <Property Name="RegistrationNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClassOfRekanan" Type="Int32" Nullable="false" />
+          <Property Name="IdTypeOfRekanan" Type="Int32" Nullable="false" />
+          <Property Name="IdTypeOfBadanUsaha" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IdWilayah" Type="Int32" />
+          <Property Name="Kelurahan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Kecamatan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Kota" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Phone1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fax1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Fax2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="EmailAddress" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PenerbitRating" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NilaiRating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Longitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="Latitude" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="LMDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IsActive" Type="Byte" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="fTotDocumentDetailByRek_Result">
+          <Property Type="Int32" Name="IdTypeOfDocument" Nullable="false" />
+          <Property Type="Int32" Name="TotDoc" Nullable="false" />
+          <Property Type="Int32" Name="docSeq" Nullable="false" />
+          <Property Type="Boolean" Name="IsVerified" Nullable="false" />
+          <Property Type="String" Name="Catatan" Nullable="false" MaxLength="200" />
+        </ComplexType>
+        <EntityType Name="trxDocMandatoryVerification">
+          <Key>
+            <PropertyRef Name="IdTrxDocMandatoryVerification" />
+          </Key>
+          <Property Name="IdTrxDocMandatoryVerification" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRekanan" Type="Guid" Nullable="false" />
+          <Property Name="IdTypeOfDocument" Type="Int32" Nullable="false" />
+          <Property Name="IsVerified" Type="Boolean" Nullable="false" />
+          <Property Name="Catatan" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LMDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedUser" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <ComplexType Name="fGetRekananByIdSupervisor_Result">
+          <Property Type="Int32" Name="VerifiedBySystem" Nullable="false" />
+          <Property Type="Int32" Name="VerifiedByAdmin" Nullable="false" />
+          <Property Type="Guid" Name="IdRekanan" Nullable="false" />
+          <Property Type="Int32" Name="IdRegion" Nullable="false" />
+          <Property Type="String" Name="RegistrationNumber" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="ClassOfRekanan" Nullable="false" />
+          <Property Type="Int32" Name="IdTypeOfRekanan" Nullable="false" />
+          <Property Type="Int32" Name="IdTypeOfBadanUsaha" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="IdWilayah" Nullable="true" />
+          <Property Type="String" Name="Kelurahan" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Kecamatan" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Kota" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ZipCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Phone1" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Phone2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Fax1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Fax2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Website" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="EmailAddress" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="PenerbitRating" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="NilaiRating" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Longitude" Nullable="true" Precision="9" Scale="6" />
+          <Property Type="Decimal" Name="Latitude" Nullable="true" Precision="9" Scale="6" />
+          <Property Type="DateTime" Name="LMDate" Nullable="false" Precision="16" />
+          <Property Type="String" Name="Note" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CreatedUser" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="false" Precision="16" />
+          <Property Type="Byte" Name="IsActive" Nullable="false" />
+          <Property Type="String" Name="Kode" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ContactPerson" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Handphone" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="NoNPWP" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="vwRegistrationRequest">
+          <Key>
+            <PropertyRef Name="IdRegRequest" />
+            <PropertyRef Name="NamaLengkap" />
+            <PropertyRef Name="AlamatLengkap" />
+            <PropertyRef Name="AlamatEmail" />
+            <PropertyRef Name="IdTypeOfRekanan" />
+            <PropertyRef Name="ImageBaseName" />
+            <PropertyRef Name="UserPassKey" />
+            <PropertyRef Name="CreatedDate" />
+            <PropertyRef Name="IsActive" />
+            <PropertyRef Name="DokInput" />
+            <PropertyRef Name="Kelengkapan" />
+          </Key>
+          <Property Name="IdRegRequest" Type="Int32" Nullable="false" />
+          <Property Name="NamaLengkap" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AlamatLengkap" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AlamatEmail" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdTypeOfRekanan" Type="Int32" Nullable="false" />
+          <Property Name="ImageBaseName" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassKey" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IsActive" Type="Byte" Nullable="false" />
+          <Property Name="DokTotal" Type="Int32" />
+          <Property Name="DokInput" Type="Int32" Nullable="false" />
+          <Property Name="Kelengkapan" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vwUserAdminPCP">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserName" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="NamaLengkap" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="NamaLengkap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
         <EntityType Name="mstProdukAsuransi">
           <Key>
             <PropertyRef Name="IdMstProdukAsuransi" />
           </Key>
           <Property Name="IdMstProdukAsuransi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdRekanan" Type="Guid" Nullable="false" />
           <Property Name="NamaProduk" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="NoIzinProduk" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="TanggalIzin" Type="DateTime" Precision="3" />
@@ -6424,40 +6721,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <ScalarProperty Name="RegionAdminDescription" ColumnName="RegionAdminDescription" />
                 <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="mstRekanans">
-            <EntityTypeMapping TypeName="DB_SMARTModel.mstRekanan">
-              <MappingFragment StoreEntitySet="mstRekanan">
-                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
-                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
-                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
-                <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
-                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
-                <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
-                <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
-                <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
-                <ScalarProperty Name="Kota" ColumnName="Kota" />
-                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
-                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
-                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
-                <ScalarProperty Name="Phone3" ColumnName="Phone3" />
-                <ScalarProperty Name="Fax1" ColumnName="Fax1" />
-                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
-                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
-                <ScalarProperty Name="PenerbitRating" ColumnName="PenerbitRating" />
-                <ScalarProperty Name="NilaiRating" ColumnName="NilaiRating" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="LMDate" ColumnName="LMDate" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -8336,15 +8599,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fTotDocumentDetailByRek" FunctionImportName="fTotDocumentDetailByRek">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DB_SMARTModel.fTotDocumentDetailByRek_Result">
-                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
-                <ScalarProperty Name="TotDoc" ColumnName="TotDoc" />
-                <ScalarProperty Name="docSeq" ColumnName="docSeq" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionName="DB_SMARTModel.Store.fXLS_RekByIdSupervisor" FunctionImportName="fXLS_RekByIdSupervisor">
             <ResultMapping>
               <ComplexTypeMapping TypeName="DB_SMARTModel.fXLS_RekByIdSupervisor_Result">
@@ -8610,44 +8864,6 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="fGetRekananByIdSupervisor" FunctionName="DB_SMARTModel.Store.fGetRekananByIdSupervisor">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DB_SMARTModel.fGetRekananByIdSupervisor_Result">
-                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
-                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
-                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
-                <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
-                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
-                <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
-                <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
-                <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
-                <ScalarProperty Name="Kota" ColumnName="Kota" />
-                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
-                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
-                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
-                <ScalarProperty Name="Phone3" ColumnName="Phone3" />
-                <ScalarProperty Name="Fax1" ColumnName="Fax1" />
-                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
-                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
-                <ScalarProperty Name="PenerbitRating" ColumnName="PenerbitRating" />
-                <ScalarProperty Name="NilaiRating" ColumnName="NilaiRating" />
-                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
-                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
-                <ScalarProperty Name="LMDate" ColumnName="LMDate" />
-                <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Kode" ColumnName="Kode" />
-                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
-                <ScalarProperty Name="Handphone" ColumnName="Handphone" />
-                <ScalarProperty Name="NoNPWP" ColumnName="NoNPWP" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="fGetLapAS1MByRekanan" FunctionName="DB_SMARTModel.Store.fGetLapAS1MByRekanan">
             <ResultMapping>
               <ComplexTypeMapping TypeName="DB_SMARTModel.fGetLapAS1MByRekanan_Result">
@@ -8801,6 +9017,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySetMapping Name="trxPertanyaan">
             <EntityTypeMapping TypeName="DB_SMARTModel.trxPertanyaan">
               <MappingFragment StoreEntitySet="trxPertanyaan">
+                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
                 <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="Bobot" ColumnName="Bobot" />
@@ -8838,6 +9055,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySetMapping Name="trxKonsolidasi">
             <EntityTypeMapping TypeName="DB_SMARTModel.trxKonsolidasi">
               <MappingFragment StoreEntitySet="trxKonsolidasi">
+                <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
                 <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="Nilai" ColumnName="Nilai" />
@@ -8927,6 +9145,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
           <EntitySetMapping Name="trxPertanyaanNilai">
             <EntityTypeMapping TypeName="DB_SMARTModel.trxPertanyaanNilai">
               <MappingFragment StoreEntitySet="trxPertanyaanNilai">
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
                 <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="Nilai" ColumnName="Nilai" />
@@ -8945,6 +9164,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <ScalarProperty Name="Bobot" ColumnName="Bobot" />
                 <ScalarProperty Name="Deskripsi" ColumnName="Deskripsi" />
                 <ScalarProperty Name="SeqPertanyaan" ColumnName="SeqPertanyaan" />
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
                 <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
                 <ScalarProperty Name="IdPenilai" ColumnName="IdPenilai" />
                 <ScalarProperty Name="IdTypeOfGroup" ColumnName="IdTypeOfGroup" />
@@ -8960,7 +9180,194 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <ScalarProperty Name="TotFOG" ColumnName="TotFOG" />
                 <ScalarProperty Name="TotPPG" ColumnName="TotPPG" />
                 <ScalarProperty Name="Deskripsi" ColumnName="Deskripsi" />
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
                 <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fGetPertanyaanNilaiByParam" FunctionName="DB_SMARTModel.Store.fGetPertanyaanNilaiByParam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_SMARTModel.fGetPertanyaanNilaiByParam_Result">
+                <ScalarProperty Name="IdTNPertanyaan" ColumnName="IdTNPertanyaan" />
+                <ScalarProperty Name="IdTypeOfGroup" ColumnName="IdTypeOfGroup" />
+                <ScalarProperty Name="IdPenilai" ColumnName="IdPenilai" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
+                <ScalarProperty Name="SeqPertanyaan" ColumnName="SeqPertanyaan" />
+                <ScalarProperty Name="Deskripsi" ColumnName="Deskripsi" />
+                <ScalarProperty Name="Bobot" ColumnName="Bobot" />
+                <ScalarProperty Name="Nilai" ColumnName="Nilai" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="trxPeriodeScoring">
+            <EntityTypeMapping TypeName="DB_SMARTModel.trxPeriodeScoring">
+              <MappingFragment StoreEntitySet="trxPeriodeScoring">
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
+                <ScalarProperty Name="IdTrxPeriodeScoring" ColumnName="IdTrxPeriodeScoring" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fPeriodeScoringByRekanan" FunctionName="DB_SMARTModel.Store.fPeriodeScoringByRekanan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_SMARTModel.fPeriodeScoringByRekanan_Result">
+                <ScalarProperty Name="IdTrxPeriodeScoring" ColumnName="IdTrxPeriodeScoring" />
+                <ScalarProperty Name="TahunBulan" ColumnName="TahunBulan" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="fKonsoPairByParam" FunctionName="DB_SMARTModel.Store.fKonsoPairByParam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_SMARTModel.fKonsoPairByParam_Result">
+                <ScalarProperty Name="IdCur" ColumnName="IdCur" />
+                <ScalarProperty Name="IdPrev" ColumnName="IdPrev" />
+                <ScalarProperty Name="SeqUraian" ColumnName="SeqUraian" />
+                <ScalarProperty Name="TahunBulanCur" ColumnName="TahunBulanCur" />
+                <ScalarProperty Name="TahunBulanPrev" ColumnName="TahunBulanPrev" />
+                <ScalarProperty Name="Ikhtisar" ColumnName="Ikhtisar" />
+                <ScalarProperty Name="NilaiCur" ColumnName="NilaiCur" />
+                <ScalarProperty Name="NilaiPrev" ColumnName="NilaiPrev" />
+                <ScalarProperty Name="NilaiPersen" ColumnName="NilaiPersen" />
+                <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+                <ScalarProperty Name="TahunBulanCurOri" ColumnName="TahunBulanCurOri" />
+                <ScalarProperty Name="TahunBulanPrevOri" ColumnName="TahunBulanPrevOri" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="mstRekanan">
+            <EntityTypeMapping TypeName="DB_SMARTModel.mstRekanan">
+              <MappingFragment StoreEntitySet="mstRekanan">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="LMDate" ColumnName="LMDate" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="NilaiRating" ColumnName="NilaiRating" />
+                <ScalarProperty Name="PenerbitRating" ColumnName="PenerbitRating" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+                <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Kota" ColumnName="Kota" />
+                <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+                <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+                <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
+                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+                <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fTotDocumentDetailByRek" FunctionName="DB_SMARTModel.Store.fTotDocumentDetailByRek">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_SMARTModel.fTotDocumentDetailByRek_Result">
+                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+                <ScalarProperty Name="TotDoc" ColumnName="TotDoc" />
+                <ScalarProperty Name="docSeq" ColumnName="docSeq" />
+                <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+                <ScalarProperty Name="Catatan" ColumnName="Catatan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="trxDocMandatoryVerification">
+            <EntityTypeMapping TypeName="DB_SMARTModel.trxDocMandatoryVerification">
+              <MappingFragment StoreEntitySet="trxDocMandatoryVerification">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="LMDate" ColumnName="LMDate" />
+                <ScalarProperty Name="Catatan" ColumnName="Catatan" />
+                <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+                <ScalarProperty Name="IdTypeOfDocument" ColumnName="IdTypeOfDocument" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+                <ScalarProperty Name="IdTrxDocMandatoryVerification" ColumnName="IdTrxDocMandatoryVerification" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fGetRekananByIdSupervisor" FunctionName="DB_SMARTModel.Store.fGetRekananByIdSupervisor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_SMARTModel.fGetRekananByIdSupervisor_Result">
+                <ScalarProperty Name="VerifiedBySystem" ColumnName="VerifiedBySystem" />
+                <ScalarProperty Name="VerifiedByAdmin" ColumnName="VerifiedByAdmin" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
+                <ScalarProperty Name="IdRegion" ColumnName="IdRegion" />
+                <ScalarProperty Name="RegistrationNumber" ColumnName="RegistrationNumber" />
+                <ScalarProperty Name="ClassOfRekanan" ColumnName="ClassOfRekanan" />
+                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+                <ScalarProperty Name="IdTypeOfBadanUsaha" ColumnName="IdTypeOfBadanUsaha" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="IdWilayah" ColumnName="IdWilayah" />
+                <ScalarProperty Name="Kelurahan" ColumnName="Kelurahan" />
+                <ScalarProperty Name="Kecamatan" ColumnName="Kecamatan" />
+                <ScalarProperty Name="Kota" ColumnName="Kota" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Fax1" ColumnName="Fax1" />
+                <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="PenerbitRating" ColumnName="PenerbitRating" />
+                <ScalarProperty Name="NilaiRating" ColumnName="NilaiRating" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="LMDate" ColumnName="LMDate" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="CreatedUser" ColumnName="CreatedUser" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Kode" ColumnName="Kode" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="Handphone" ColumnName="Handphone" />
+                <ScalarProperty Name="NoNPWP" ColumnName="NoNPWP" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="vwRegistrationRequest">
+            <EntityTypeMapping TypeName="DB_SMARTModel.vwRegistrationRequest">
+              <MappingFragment StoreEntitySet="vwRegistrationRequest">
+                <ScalarProperty Name="Kelengkapan" ColumnName="Kelengkapan" />
+                <ScalarProperty Name="DokInput" ColumnName="DokInput" />
+                <ScalarProperty Name="DokTotal" ColumnName="DokTotal" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UserPassKey" ColumnName="UserPassKey" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ImageBaseName" ColumnName="ImageBaseName" />
+                <ScalarProperty Name="IdTypeOfRekanan" ColumnName="IdTypeOfRekanan" />
+                <ScalarProperty Name="AlamatEmail" ColumnName="AlamatEmail" />
+                <ScalarProperty Name="AlamatLengkap" ColumnName="AlamatLengkap" />
+                <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+                <ScalarProperty Name="IdRegRequest" ColumnName="IdRegRequest" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwUserAdminPCP">
+            <EntityTypeMapping TypeName="DB_SMARTModel.vwUserAdminPCP">
+              <MappingFragment StoreEntitySet="vwUserAdminPCP">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="NamaLengkap" ColumnName="NamaLengkap" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -8973,6 +9380,7 @@ warning 6002: The table/view 'DB_SMART_BSM.dbo.vwUserRole' does not have a prima
                 <ScalarProperty Name="TanggalIzin" ColumnName="TanggalIzin" />
                 <ScalarProperty Name="NoIzinProduk" ColumnName="NoIzinProduk" />
                 <ScalarProperty Name="NamaProduk" ColumnName="NamaProduk" />
+                <ScalarProperty Name="IdRekanan" ColumnName="IdRekanan" />
                 <ScalarProperty Name="IdMstProdukAsuransi" ColumnName="IdMstProdukAsuransi" />
               </MappingFragment>
             </EntityTypeMapping>

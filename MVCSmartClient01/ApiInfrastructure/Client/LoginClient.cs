@@ -86,6 +86,27 @@ namespace MVCSmartClient01.ApiInfrastructure.Client
             var registerResponse = await CreateJsonResponse<RegisterResponse>(response);
             return registerResponse;
         }
+        public async Task<RegisterResponse> RegisterByAdmin(RegisterBindingModel viewModel)
+        {
+            var apiModel = new RegisterApiModel
+            {
+                NamaRekanan = viewModel.NamaRekanan,
+                NomorNPWP = viewModel.NomorNPWP,
+                Email = viewModel.Email,
+                Password = viewModel.Password,
+                ConfirmPassword = viewModel.ConfirmPassword,
+                BarePassword = viewModel.BarePassword,
+                IdTypeOfRekanan = viewModel.IdTypeOfRekanan,
+                IsActive = viewModel.IsActive
+            };
+            string urlModel = ConfigurationManager.AppSettings["SmartAPIUrl"];
+            var response = await ApiClient.PostJsonEncodedContent(string.Format("{0}/{1}", urlModel, RegisterUri), apiModel);
+            var responseRek = await ApiClient.PostJsonEncodedContent(string.Format("{0}/{1}", urlModel, RegisterUriRek), apiModel);
+            var registerResponse = await CreateJsonResponse<RegisterResponse>(response);
+
+            return registerResponse;
+        }
+
 
 
         public async Task<TokenResponse> Logout()

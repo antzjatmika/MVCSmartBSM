@@ -8,7 +8,7 @@
     {
         Task<TokenResponse> Login(string email, string password);
         Task<RegisterResponse> Register(RegisterBindingModel viewModel);
-        Task<RegisterResponse> RegisterByKiosk(RegisterBindingModel viewModel);
+        Task<RegisterResponse> RegisterByAdmin(RegisterBindingModel viewModel);
         Task<TokenResponse> Logout();
     }
 }

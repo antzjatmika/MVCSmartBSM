@@ -12,6 +12,7 @@ using System.Configuration;
 namespace MVCSmartClient01.Controllers
 {
     using ApiInfrastructure;
+
     public class MstProdukAsuransiController : Controller
     {
         HttpClient client;
@@ -38,23 +39,23 @@ namespace MVCSmartClient01.Controllers
         // GET: EmployeeInfo
         public async Task<ActionResult> Index()
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(url);
+            HttpResponseMessage responseMessage = await client.GetAsync(string.Format("{0}/GetByRekanan/{1}", url, tokenContainer.IdRekananContact.ToString()));
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-                var Employees = JsonConvert.DeserializeObject<List<mstProdukAsuransi>>(responseData);
-                return View(Employees);
+                var MyData = JsonConvert.DeserializeObject<List<mstProdukAsuransi>>(responseData);
+                return View(MyData);
             }
             return View("Error");
         }
         public async Task<ActionResult> _Index()
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(url);
+            HttpResponseMessage responseMessage = await client.GetAsync(string.Format("{0}/GetByRekanan/{1}", url, tokenContainer.IdRekananContact.ToString()));
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
-                var Employees = JsonConvert.DeserializeObject<List<mstProdukAsuransi>>(responseData);
-                return PartialView(Employees);
+                var MyData = JsonConvert.DeserializeObject<List<mstProdukAsuransi>>(responseData);
+                return PartialView(MyData);
             }
             return View("Error");
         }
@@ -62,11 +63,11 @@ namespace MVCSmartClient01.Controllers
         {
             return View(new mstProdukAsuransi());
         }
-
         //The Post method
         [HttpPost]
         public async Task<ActionResult> Create(mstProdukAsuransi Emp)
         {
+            Emp.IdRekanan = (Guid) tokenContainer.IdRekananContact;
             Emp.IsActive = true;
             Emp.CreatedDate = DateTime.Today;
             Emp.CreatedUser = tokenContainer.UserId.ToString();

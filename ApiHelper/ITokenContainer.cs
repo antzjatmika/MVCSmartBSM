@@ -19,5 +19,6 @@ namespace ApiHelper
         object UserEmail { get; set; }
         object IdTypeOfRekanan { get; set; }
         //object XLSPointer { get; set; }
+        object Keterangan { get; set; }
     }
 }

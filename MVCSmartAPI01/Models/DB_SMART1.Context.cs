@@ -39,7 +39,6 @@ namespace MVCSmartAPI01.Models
         public virtual DbSet<mstPengumuman> mstPengumumen { get; set; }
         public virtual DbSet<mstReference> mstReferences { get; set; }
         public virtual DbSet<mstRegionAdmin> mstRegionAdmins { get; set; }
-        public virtual DbSet<mstRekanan> mstRekanans { get; set; }
         public virtual DbSet<mstRekanan_ARC> mstRekanan_ARC { get; set; }
         public virtual DbSet<mstScoreValue> mstScoreValues { get; set; }
         public virtual DbSet<mstSegmentasi> mstSegmentasis { get; set; }
@@ -126,6 +125,11 @@ namespace MVCSmartAPI01.Models
         public virtual DbSet<trxPertanyaanNilai> trxPertanyaanNilai { get; set; }
         public virtual DbSet<vwPertanyaanNilai> vwPertanyaanNilai { get; set; }
         public virtual DbSet<vwPertanyaanNilaiAkhir> vwPertanyaanNilaiAkhir { get; set; }
+        public virtual DbSet<trxPeriodeScoring> trxPeriodeScoring { get; set; }
+        public virtual DbSet<mstRekanan> mstRekanan { get; set; }
+        public virtual DbSet<trxDocMandatoryVerification> trxDocMandatoryVerification { get; set; }
+        public virtual DbSet<vwRegistrationRequest> vwRegistrationRequest { get; set; }
+        public virtual DbSet<vwUserAdminPCP> vwUserAdminPCP { get; set; }
         public virtual DbSet<mstProdukAsuransi> mstProdukAsuransi { get; set; }
     
         [DbFunction("DB_SMARTEntities1", "fDashFeeByRekanan")]
@@ -572,16 +576,6 @@ namespace MVCSmartAPI01.Models
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fReadInfoByIdNotification_Result>("[DB_SMARTEntities1].[fReadInfoByIdNotification](@IdNotificationDetail, @flgTraySent)", idNotificationDetailParameter, flgTraySentParameter);
         }
     
-        [DbFunction("DB_SMARTEntities1", "fTotDocumentDetailByRek")]
-        public virtual IQueryable<fTotDocumentDetailByRek_Result> fTotDocumentDetailByRek(Nullable<System.Guid> idRekanan)
-        {
-            var idRekananParameter = idRekanan.HasValue ?
-                new ObjectParameter("IdRekanan", idRekanan) :
-                new ObjectParameter("IdRekanan", typeof(System.Guid));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fTotDocumentDetailByRek_Result>("[DB_SMARTEntities1].[fTotDocumentDetailByRek](@IdRekanan)", idRekananParameter);
-        }
-    
         [DbFunction("DB_SMARTEntities1", "fXLS_RekByIdSupervisor")]
         public virtual IQueryable<fXLS_RekByIdSupervisor_Result> fXLS_RekByIdSupervisor(Nullable<int> idSupervisor)
         {
@@ -751,16 +745,6 @@ namespace MVCSmartAPI01.Models
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fInfo2LastModifiedByRek_Result>("[DB_SMARTEntities1].[fInfo2LastModifiedByRek](@IdRekanan)", idRekananParameter);
         }
     
-        [DbFunction("DB_SMARTEntities1", "fGetRekananByIdSupervisor")]
-        public virtual IQueryable<fGetRekananByIdSupervisor_Result> fGetRekananByIdSupervisor(Nullable<int> idSupervisor)
-        {
-            var idSupervisorParameter = idSupervisor.HasValue ?
-                new ObjectParameter("IdSupervisor", idSupervisor) :
-                new ObjectParameter("IdSupervisor", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fGetRekananByIdSupervisor_Result>("[DB_SMARTEntities1].[fGetRekananByIdSupervisor](@IdSupervisor)", idSupervisorParameter);
-        }
-    
         [DbFunction("DB_SMARTEntities1", "fGetLapAS1MByRekanan")]
         public virtual IQueryable<fGetLapAS1MByRekanan_Result> fGetLapAS1MByRekanan(Nullable<System.Guid> idRekanan)
         {
@@ -824,15 +808,11 @@ namespace MVCSmartAPI01.Models
         }
     
         [DbFunction("DB_SMARTEntities1", "fKonsoResumeByPeriode")]
-        public virtual IQueryable<fKonsoResumeByPeriode_Result> fKonsoResumeByPeriode(Nullable<System.Guid> idRekanan, Nullable<int> periodeAwal, Nullable<int> periodeAkhir, Nullable<int> tipeUraian)
+        public virtual IQueryable<fKonsoResumeByPeriode_Result> fKonsoResumeByPeriode(Nullable<System.Guid> idRekanan, Nullable<int> periodeAkhir, Nullable<int> tipeUraian)
         {
             var idRekananParameter = idRekanan.HasValue ?
                 new ObjectParameter("IdRekanan", idRekanan) :
                 new ObjectParameter("IdRekanan", typeof(System.Guid));
-    
-            var periodeAwalParameter = periodeAwal.HasValue ?
-                new ObjectParameter("PeriodeAwal", periodeAwal) :
-                new ObjectParameter("PeriodeAwal", typeof(int));
     
             var periodeAkhirParameter = periodeAkhir.HasValue ?
                 new ObjectParameter("PeriodeAkhir", periodeAkhir) :
@@ -842,7 +822,7 @@ namespace MVCSmartAPI01.Models
                 new ObjectParameter("TipeUraian", tipeUraian) :
                 new ObjectParameter("TipeUraian", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fKonsoResumeByPeriode_Result>("[DB_SMARTEntities1].[fKonsoResumeByPeriode](@IdRekanan, @PeriodeAwal, @PeriodeAkhir, @TipeUraian)", idRekananParameter, periodeAwalParameter, periodeAkhirParameter, tipeUraianParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fKonsoResumeByPeriode_Result>("[DB_SMARTEntities1].[fKonsoResumeByPeriode](@IdRekanan, @PeriodeAkhir, @TipeUraian)", idRekananParameter, periodeAkhirParameter, tipeUraianParameter);
         }
     
         [DbFunction("DB_SMARTEntities1", "fDataOrganisasiByRek_Type")]
@@ -899,6 +879,72 @@ namespace MVCSmartAPI01.Models
                 new ObjectParameter("Periode", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fResumeRoaByPeriode_Result>("[DB_SMARTEntities1].[fResumeRoaByPeriode](@IdRekanan, @Periode)", idRekananParameter, periodeParameter);
+        }
+    
+        [DbFunction("DB_SMARTEntities1", "fGetPertanyaanNilaiByParam")]
+        public virtual IQueryable<fGetPertanyaanNilaiByParam_Result> fGetPertanyaanNilaiByParam(Nullable<System.Guid> idRekanan, Nullable<int> periode, Nullable<int> idTypeOfGroup, Nullable<int> idPenilai)
+        {
+            var idRekananParameter = idRekanan.HasValue ?
+                new ObjectParameter("IdRekanan", idRekanan) :
+                new ObjectParameter("IdRekanan", typeof(System.Guid));
+    
+            var periodeParameter = periode.HasValue ?
+                new ObjectParameter("Periode", periode) :
+                new ObjectParameter("Periode", typeof(int));
+    
+            var idTypeOfGroupParameter = idTypeOfGroup.HasValue ?
+                new ObjectParameter("IdTypeOfGroup", idTypeOfGroup) :
+                new ObjectParameter("IdTypeOfGroup", typeof(int));
+    
+            var idPenilaiParameter = idPenilai.HasValue ?
+                new ObjectParameter("IdPenilai", idPenilai) :
+                new ObjectParameter("IdPenilai", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fGetPertanyaanNilaiByParam_Result>("[DB_SMARTEntities1].[fGetPertanyaanNilaiByParam](@IdRekanan, @Periode, @IdTypeOfGroup, @IdPenilai)", idRekananParameter, periodeParameter, idTypeOfGroupParameter, idPenilaiParameter);
+        }
+    
+        [DbFunction("DB_SMARTEntities1", "fPeriodeScoringByRekanan")]
+        public virtual IQueryable<fPeriodeScoringByRekanan_Result> fPeriodeScoringByRekanan(Nullable<System.Guid> idRekanan)
+        {
+            var idRekananParameter = idRekanan.HasValue ?
+                new ObjectParameter("IdRekanan", idRekanan) :
+                new ObjectParameter("IdRekanan", typeof(System.Guid));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fPeriodeScoringByRekanan_Result>("[DB_SMARTEntities1].[fPeriodeScoringByRekanan](@IdRekanan)", idRekananParameter);
+        }
+    
+        [DbFunction("DB_SMARTEntities1", "fKonsoPairByParam")]
+        public virtual IQueryable<fKonsoPairByParam_Result> fKonsoPairByParam(Nullable<System.Guid> idRekanan, Nullable<int> tahunBulan)
+        {
+            var idRekananParameter = idRekanan.HasValue ?
+                new ObjectParameter("IdRekanan", idRekanan) :
+                new ObjectParameter("IdRekanan", typeof(System.Guid));
+    
+            var tahunBulanParameter = tahunBulan.HasValue ?
+                new ObjectParameter("TahunBulan", tahunBulan) :
+                new ObjectParameter("TahunBulan", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fKonsoPairByParam_Result>("[DB_SMARTEntities1].[fKonsoPairByParam](@IdRekanan, @TahunBulan)", idRekananParameter, tahunBulanParameter);
+        }
+    
+        [DbFunction("DB_SMARTEntities1", "fTotDocumentDetailByRek")]
+        public virtual IQueryable<fTotDocumentDetailByRek_Result> fTotDocumentDetailByRek(Nullable<System.Guid> idRekanan)
+        {
+            var idRekananParameter = idRekanan.HasValue ?
+                new ObjectParameter("IdRekanan", idRekanan) :
+                new ObjectParameter("IdRekanan", typeof(System.Guid));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fTotDocumentDetailByRek_Result>("[DB_SMARTEntities1].[fTotDocumentDetailByRek](@IdRekanan)", idRekananParameter);
+        }
+    
+        [DbFunction("DB_SMARTEntities1", "fGetRekananByIdSupervisor")]
+        public virtual IQueryable<fGetRekananByIdSupervisor_Result> fGetRekananByIdSupervisor(Nullable<int> idSupervisor)
+        {
+            var idSupervisorParameter = idSupervisor.HasValue ?
+                new ObjectParameter("IdSupervisor", idSupervisor) :
+                new ObjectParameter("IdSupervisor", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fGetRekananByIdSupervisor_Result>("[DB_SMARTEntities1].[fGetRekananByIdSupervisor](@IdSupervisor)", idSupervisorParameter);
         }
     }
 }

@@ -154,7 +154,6 @@ namespace MVCSmartClient01.Controllers
                         var myData = JsonConvert.DeserializeObject<IEnumerable<trxDocMandatoryDetail>>(responseData);
                         ViewBag.IdTypeOfDocument = IdTypeOfDocument;
                         ViewData["IdTypeOfDocument"] = IdTypeOfDocument;
-                        //return PartialView("_RekananDocDetailByRek", myData);
                         switch (IdTypeOfDocument)
                         {
                             case 1: //1	Surat Permohonan
@@ -177,6 +176,7 @@ namespace MVCSmartClient01.Controllers
                             case 3: //3	Akta Pendirian dan Perubahan
                             case 5: //5	Izin Usaha/Operasional Dari Instansi yang Berwenang
                             case 7: //7	Surat Tanda Daftar Perusahaan
+                            case 65: //5	Izin Usaha/Operasional Dari Instansi yang Berwenang
                                 return PartialView("_RekananDD_3", myData);
 
                             case 8: //7	Surat Tanda Daftar Perusahaan
@@ -197,14 +197,6 @@ namespace MVCSmartClient01.Controllers
                             case 29: //29	Daftar Tenaga Pendukung
                                 return PartialView("_RekananDD_27", myData);
 
-                            case 15: //15	Dokumen Sebagai Rekanan dari Bank Lembaga/Instansi Lain
-                                return PartialView("_RekananDD_15", myData);
-                            //case 26: //26	Ijin sebagai Akuntan Publik
-                            //    return PartialView("_RekananDD_26", myData);
-                            //case 35: //35	Kartu Anggota Asosiasi
-                            //    return PartialView("_RekananDD_35", myData);
-                            //case 13: //13	Kartu Tanda Penduduk (KTP) Perorangan dan atau Persekutuan
-                            //    return PartialView("_RekananDD_13", myData);
                             case 25: //25	Perjanjian Kerjasama dengan Kantor Akuntan Asing
                                 return PartialView("_RekananDD_25", myData);
                             case 24: //24	Perjanjian Persekutuan
@@ -224,6 +216,18 @@ namespace MVCSmartClient01.Controllers
                                 return PartialView("_RekananDD_50", myData);
                             case 54: //31	Laporan Keuangan (minimal 2 tahun terakhir)
                                 return PartialView("_RekananDD_54", myData);
+                            case 1069:
+                                ViewBag.JudulNama = "Penilai Publik";
+                                return PartialView("_RekananDD_106", myData);
+                            case 1065:
+                                ViewBag.JudulNama = "Rekanan Bank";
+                                return PartialView("_RekananDD_106", myData);
+                            case 1066:
+                                ViewBag.JudulNama = "Rekanan Non Bank";
+                                return PartialView("_RekananDD_106", myData);
+                            case 1067:
+                                ViewBag.JudulNama = "Pengusul";
+                                return PartialView("_RekananDD_106", myData);
                             default:
                                 return PartialView("_RekananDocDetailByRek", myData);
                         }

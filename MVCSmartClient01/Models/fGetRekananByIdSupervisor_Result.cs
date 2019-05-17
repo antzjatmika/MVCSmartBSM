@@ -7,6 +7,8 @@ namespace MVCSmartClient01.Models
 {
     public partial class fGetRekananByIdSupervisor_Result
     {
+        public int VerifiedBySystem { get; set; }
+        public int VerifiedByAdmin { get; set; }
         public System.Guid IdRekanan { get; set; }
         public int IdRegion { get; set; }
         public string RegistrationNumber { get; set; }
@@ -22,7 +24,7 @@ namespace MVCSmartClient01.Models
         public string ZipCode { get; set; }
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
-        public string Phone3 { get; set; }
+        //public string Phone3 { get; set; }
         public string Fax1 { get; set; }
         public string Fax2 { get; set; }
         public string EmailAddress { get; set; }

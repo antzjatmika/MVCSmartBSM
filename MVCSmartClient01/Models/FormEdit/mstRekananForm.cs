@@ -116,7 +116,7 @@ namespace MVCSmartClient01.Models
         //}
 
         public string Phone2 { get; set; }
-        public string Phone3_1 { get; set; }
+        //public string Phone3_1 { get; set; }
         //{
         //    get
         //    {
@@ -137,7 +137,7 @@ namespace MVCSmartClient01.Models
         //    }
         //}
 
-        public string Phone3_2 { get; set; }
+        //public string Phone3_2 { get; set; }
         //{
         //    get
         //    {
@@ -158,7 +158,7 @@ namespace MVCSmartClient01.Models
         //    }
         //}
 
-        public string Phone3 { get; set; }
+        //public string Phone3 { get; set; }
         public string Fax1_1 { get; set; }
         //{
         //    get
@@ -245,6 +245,7 @@ namespace MVCSmartClient01.Models
 
         public string Fax2 { get; set; }
         public string EmailAddress { get; set; }
+        public string Website { get; set; }
         public string PenerbitRating { get; set; }
         public string NilaiRating { get; set; }
         public string CreatedUser { get; set; }

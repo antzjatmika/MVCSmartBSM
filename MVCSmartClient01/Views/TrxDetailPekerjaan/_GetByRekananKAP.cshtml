@@ -300,7 +300,7 @@ settings =>
     settings.Columns.Add(column =>
     {
         column.FieldName = "IdSegmentasi";
-        column.Caption = "Unit Kerja Bank Mandiri";
+        column.Caption = "Unit Kerja BSM";
         column.HeaderStyle.Font.Bold = true;
         column.ColumnType = MVCxGridViewColumnType.ComboBox;
         var comboBoxProperties = (DevExpress.Web.ASPxEditors.ComboBoxProperties)column.PropertiesEdit;
@@ -339,7 +339,7 @@ settings =>
     settings.Columns.Add(column =>
     {
         column.FieldName = "PICBank";
-        column.Caption = "PIC Bank Mandiri";
+        column.Caption = "PIC BSM";
         column.HeaderStyle.Font.Bold = true;
         column.Settings.AutoFilterCondition = AutoFilterCondition.Contains;
         column.Settings.ShowFilterRowMenu = DevExpress.Utils.DefaultBoolean.False;

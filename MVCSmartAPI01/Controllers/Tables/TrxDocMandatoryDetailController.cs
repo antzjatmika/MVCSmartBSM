@@ -14,14 +14,16 @@ namespace APIService.Controllers
         private MstRekananRep _repRekanan;
         private TrxDocMandatoryDetailRep _repDocDetail;
         private MstTypeOfDocumentRep _repTipeDoc;
+        private TrxDocMandatoryVerificationRep _repVerify;
         //Inject the DataAccessRepository using Construction Injection 
         public TrxDocMandatoryDetailController(IDataAccessRepository<trxDocMandatoryDetail, int> r, MstRekananRep repRekanan
-            , TrxDocMandatoryDetailRep repDocDetail, MstTypeOfDocumentRep repTipeDoc)
+            , TrxDocMandatoryDetailRep repDocDetail, MstTypeOfDocumentRep repTipeDoc, TrxDocMandatoryVerificationRep repVerify)
         {
             _repository = r;
             _repRekanan = repRekanan;
             _repDocDetail = repDocDetail;
             _repTipeDoc = repTipeDoc;
+            _repVerify = repVerify;
         }
         public IEnumerable<trxDocMandatoryDetail> Get()
         {
@@ -67,11 +69,26 @@ namespace APIService.Controllers
             var myTypeDocColls = _repTipeDoc.GetActive();
             DocumentByRekanan.TypeOfDocumentColls = myTypeDocColls;
 
-            //IEnumerable<fTotDocumentDetailByRek_Result> listTotalDoc;
-            //listTotalDoc = _repDocDetail.GetTotDocumentDetailByRek(idRekanan);
             DocumentByRekanan.TotDocDetailByRekanan = _repDocDetail.GetTotDocumentDetailByRek(idRekanan);
             return DocumentByRekanan;
         }
+        [HttpPost]
+        [Route("api/TrxDocMandatoryDetail/StoreVerificationAdmin")]
+        //[HttpPut]
+        public IHttpActionResult StoreVerificationAdmin(trxDocMandatoryVerification myData)
+        {
+            _repVerify.StoreWiCheck(myData);
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+        //[HttpPost]
+        //[Route("api/TrxDocMandatoryDetail/StoreVerificationAdmin")]
+        ////[HttpPut]
+        //public IHttpActionResult StoreVerificationAdmin(List<trxDocMandatoryVerification> myList)
+        //{
+        //    _repVerify.StoreWiCheck_List(myList);
+        //    return StatusCode(HttpStatusCode.NoContent);
+        //}
+
         [Route("api/TrxDocMandatoryDetail/GetTenagaAhliByRek/{idRekanan}")]
         public IEnumerable<trxDocMandatoryDetail> GetTenagaAhliByRek(System.Guid idRekanan)
         {

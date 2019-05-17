@@ -159,6 +159,16 @@ namespace MVCSmartClient01.Controllers
                             ViewBag.NomorDokumen = "Nomor Dokumen";
                             myData.ProcInfo = "Update: Struktur Organisasi Perusahaan";
                             return View("_AddEditDD_2", myData);
+                        case 60:
+                            ViewBag.JudulDetail = "Bukti Rekening BSM";
+                            ViewBag.NomorDokumen = "Nomor Rekening";
+                            myData.ProcInfo = "Update: Bukti Rekening BSM";
+                            return View("_AddEditDD_2", myData);
+                        case 61:
+                            ViewBag.JudulDetail = "Penghargaan Yang Diterima";
+                            ViewBag.NomorDokumen = "Judul Penghargaan";
+                            myData.ProcInfo = "Update: Penghargaan Yang Diterima";
+                            return View("_AddEditDD_2", myData);
                         case 21: //21	SK Pengangkatan PPAT
                             ViewBag.JudulDetail = "SK Pengangkatan PPAT";
                             ViewBag.NomorDokumen = "Nomor Dokumen";
@@ -175,9 +185,15 @@ namespace MVCSmartClient01.Controllers
                             myData.ProcInfo = "Update: Berita Acara Sumpah PPAT";
                             return View("_AddEditDD_2", myData);
 
-                        case 3: //3	Akta Pendirian dan Perubahan
-                            ViewBag.JudulDetail = "Akta Pendirian dan Perubahan";
-                            myData.ProcInfo = "Update: Akta Pendirian dan Perubahan";
+                        case 3: //3	Akta Pendirian
+                            ViewBag.JudulDetail = "Akta Pendirian";
+                            myData.ProcInfo = "Update: Akta Pendirian";
+                            ViewBag.JudulCatatan = "Penjelasan Akta";
+                            return View("_AddEditDD_3", myData);
+                        case 65: //3	Akta Perubahan
+                            ViewBag.JudulDetail = "Akta Perubahan";
+                            myData.ProcInfo = "Update: Akta Perubahan";
+                            ViewBag.JudulCatatan = "Inti Perubahan";
                             return View("_AddEditDD_3", myData);
                         case 5: //5	Izin Usaha/Operasional Dari Instansi yang Berwenang
                             ViewBag.JudulDetail = "Izin Usaha/Operasional Dari Instansi yang Berwenang";
@@ -185,11 +201,21 @@ namespace MVCSmartClient01.Controllers
                             return View("_AddEditDD_3", myData);
                         case 7: //3	Surat Tanda Daftar Perusahaan
                             ViewBag.JudulDetail = "Surat Tanda Daftar Perusahaan";
+                            ViewBag.JudulCatatan = "Catatan";
                             myData.ProcInfo = "Update: Surat Tanda Daftar Perusahaan";
                             return View("_AddEditDD_3", myData);
-                        case 56: //56	Pengesahan dari Akta Berwenang 
-                            ViewBag.JudulDetail = "Pengesahan dari Akta Berwenang";
-                            myData.ProcInfo = "Update: Pengesahan dari Akta Berwenang";
+                        case 75: //3	Berita Negara Republik Indonesia
+                            ViewBag.JudulDetail = "Berita Negara Republik Indonesia";
+                            ViewBag.JudulCatatan = "Catatan";
+                            myData.ProcInfo = "Update: Berita Negara Republik Indonesia";
+                            return View("_AddEditDD_3", myData);
+                        case 76: //3	Ijin Perubahan Nama dari OJK
+                            ViewBag.JudulDetail = "Ijin Perubahan Nama Dari OJK";
+                            myData.ProcInfo = "Update: Ijin Perubahan Nama Dari OJK";
+                            return View("_AddEditDD_3", myData);
+                        case 56: //56	Surat Ijin Otoritas Jasa Keuangan
+                            ViewBag.JudulDetail = "Surat Ijin Otoritas Jasa Keuangan";
+                            myData.ProcInfo = "Update: Surat Ijin Otoritas Jasa Keuangan";
                             ViewBag.JudulCatatan = "Catatan";
                             return View("_AddEditDD_3", myData);
 
@@ -234,15 +260,11 @@ namespace MVCSmartClient01.Controllers
                             myData.ProcInfo = "Update: Daftar Tenaga Pendukung";
                             return View("_AddEditDD_29", myData);
 
-                        case 15: //15	Dokumen Sebagai Rekanan dari Bank Lembaga/Instansi Lain
-                            myData.ProcInfo = "Update: Dokumen Sebagai Rekanan dari Bank Lembaga/Instansi Lain";
-                            return View("_AddEditDD_15", myData);
-                        //case 26: //26	Ijin sebagai Akuntan Publik
-                        //    return View("_AddEditDD_26", myData);
-                        //case 35: //35	Kartu Anggota Asosiasi
-                        //    return View("_AddEditDD_35", myData);
-                        //case 13: //13	Kartu Tanda Penduduk (KTP) Perorangan dan atau Persekutuan
-                        //    return View("_AddEditDD_13", myData);
+                        case 15: //15	Undang - Undang Gangguan
+                            ViewBag.JudulDetail = "Undang - Undang Gangguan";
+                            ViewBag.JudulCatatan = "Catatan";
+                            myData.ProcInfo = "Undang - Undang Gangguan";
+                            return View("_AddEditDD_3", myData);
                         case 25: //25	Perjanjian Kerjasama dengan Kantor Akuntan Asing
                             myData.ProcInfo = "Update: Perjanjian Kerjasama dengan Kantor Akuntan Asing";
                             return View("_AddEditDD_25", myData);
@@ -258,17 +280,37 @@ namespace MVCSmartClient01.Controllers
                             myData.ProcInfo = "Update: Surat Keterangan Domisili Perusahaan (SKDP)";
                             return View("_AddEditDD_16", myData);
 
-                        case 36: //36	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain
-                            myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain";
-                            return View("_AddEditDD_36", myData);
+                        case 1065: //1065	Daftar Rekanan Bank
+                            ViewBag.JudulDetail = "Daftar Rekanan Bank";
+                            ViewBag.JudulNama = "Rekanan Bank";
+                            myData.ProcInfo = "Update: Daftar Rekanan Bank";
+                            return View("_AddEditDD_30", myData);
+                        case 1066: //1066	Daftar Rekanan Non Bank
+                            ViewBag.JudulDetail = "Daftar Rekanan Non Bank";
+                            ViewBag.JudulNama = "Rekanan Non Bank";
+                            myData.ProcInfo = "Update: Daftar Rekanan Non Bank";
+                            return View("_AddEditDD_30", myData);
+                        case 1067: //1067	Daftar Pengusul
+                            ViewBag.JudulDetail = "Daftar Pengusul";
+                            ViewBag.JudulNama = "Nama Pengusul";
+                            myData.ProcInfo = "Update: Daftar Pengusul";
+                            return View("_AddEditDD_30", myData);
+                        case 1069: //1069	Daftar Penilai Publik
+                            ViewBag.JudulDetail = "Daftar Penilai Publik";
+                            ViewBag.JudulNama = "Penilai Publik";
+                            myData.ProcInfo = "Update: Daftar Penilai Publik";
+                            return View("_AddEditDD_30", myData);
+
                         case 31: //31	Daftar Pengalaman (minimal 2 tahun terakhir)
                             myData.ProcInfo = "Update: Daftar Pengalaman (minimal 2 tahun terakhir)";
                             return View("_AddEditDD_31", myData);
-
                         case 34: //34	Laporan Keuangan (2 tahun terakhir)
                             ViewBag.JudulDetail = "Laporan Keuangan (2 tahun terakhir)";
                             myData.ProcInfo = "Update: Laporan Keuangan (2 tahun terakhir)";
                             return View(myData);
+                        case 36: //36	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain
+                            myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain";
+                            return View("_AddEditDD_36", myData);
                         case 37: //37	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain
                             ViewBag.JudulDetail = "Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain";
                             myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain";
@@ -313,10 +355,14 @@ namespace MVCSmartClient01.Controllers
                             ViewBag.JudulDetail = "Surat Pernyataan Tidak Menjabat Rangkap di KAP/KJPP lain";
                             myData.ProcInfo = "Update: Surat Pernyataan Tidak Menjabat Rangkap di KAP/KJPP lain";
                             return View("_AddEditDD_41", myData);
-                        case 58: //58	Bukti Penggunaan Produk Bank Mandiri
-                            ViewBag.JudulDetail = "Bukti Penggunaan Produk Bank Mandiri";
+                        case 57: //
+                            ViewBag.JudulDetail = "Informasi Kepemilikan Saham Ultimate Shareholder di Perusahaan Lain (oleh Owner)";
+                            myData.ProcInfo = "Update: Informasi Kepemilikan Saham Ultimate Shareholder di Perusahaan Lain (oleh Owner)";
+                            return View("_AddEditDD_57", myData);
+                        case 58: //58	Bukti Penggunaan Produk BSM
+                            ViewBag.JudulDetail = "Bukti Penggunaan Produk BSM";
                             ViewBag.NomorDokumen = "Nomor Dokumen";
-                            myData.ProcInfo = "Update: Bukti Penggunaan Produk Bank Mandiri";
+                            myData.ProcInfo = "Update: Bukti Penggunaan Produk BSM";
                             return View("_AddEditDD_2", myData);
                         case 59: //59	Surat Pernyataan Tidak Pernah Melanggar POJK no.73/POJK.05/2016
                             ViewBag.JudulDetail = "Surat Pernyataan Tidak Pernah Melanggar POJK no.73/POJK.05/2016";
@@ -401,9 +447,9 @@ namespace MVCSmartClient01.Controllers
                         myData.ProcInfo = "Update: Struktur Organisasi Perusahaan";
                         return View("_AddEditDD_2", myData);
                     case 60:
-                        ViewBag.JudulDetail = "Bukti Rekening Bank Mandiri";
+                        ViewBag.JudulDetail = "Bukti Rekening BSM";
                         ViewBag.NomorDokumen = "Nomor Rekening";
-                        myData.ProcInfo = "Update: Bukti Rekening Bank Mandiri";
+                        myData.ProcInfo = "Update: Bukti Rekening BSM";
                         return View("_AddEditDD_2", myData);
                     case 61:
                         ViewBag.JudulDetail = "Penghargaan Yang Diterima";
@@ -426,9 +472,14 @@ namespace MVCSmartClient01.Controllers
                         myData.ProcInfo = "Update: Berita Acara Sumpah PPAT";
                         return View("_AddEditDD_2", myData);
 
-                    case 3: //3	Akta Pendirian dan Perubahan
-                        ViewBag.JudulDetail = "Akta Pendirian dan Perubahan";
-                        myData.ProcInfo = "Update: Akta Pendirian dan Perubahan";
+                    case 3: //3	Akta Pendirian
+                        ViewBag.JudulDetail = "Akta Pendirian";
+                        myData.ProcInfo = "Update: Akta Pendirian";
+                        ViewBag.JudulCatatan = "Penjelasan Akta";
+                        return View("_AddEditDD_3", myData);
+                    case 65: //3	Akta Perubahan
+                        ViewBag.JudulDetail = "Akta Perubahan";
+                        myData.ProcInfo = "Update: Akta Perubahan";
                         ViewBag.JudulCatatan = "Inti Perubahan";
                         return View("_AddEditDD_3", myData);
                     case 5: //5	Izin Usaha/Operasional Dari Instansi yang Berwenang
@@ -437,11 +488,21 @@ namespace MVCSmartClient01.Controllers
                         return View("_AddEditDD_3", myData);
                     case 7: //3	Surat Tanda Daftar Perusahaan
                         ViewBag.JudulDetail = "Surat Tanda Daftar Perusahaan";
+                        ViewBag.JudulCatatan = "Catatan";
                         myData.ProcInfo = "Update: Surat Tanda Daftar Perusahaan";
                         return View("_AddEditDD_3", myData);
-                    case 56: //5	Izin Usaha/Operasional Dari Instansi yang Berwenang
-                        ViewBag.JudulDetail = "Pengesahan dari Akta Berwenang";
-                        myData.ProcInfo = "Update: Pengesahan dari Akta Berwenang";
+                    case 75: //3	Surat Tanda Daftar Perusahaan
+                        ViewBag.JudulDetail = "Berita Negara Republik Indonesia";
+                        ViewBag.JudulCatatan = "Catatan";
+                        myData.ProcInfo = "Update: Berita Negara Republik Indonesia";
+                        return View("_AddEditDD_3", myData);
+                    case 76: //3	Ijin Perubahan Nama dari OJK
+                        ViewBag.JudulDetail = "Ijin Perubahan Nama Dari OJK";
+                        myData.ProcInfo = "Update: Ijin Perubahan Nama Dari OJK";
+                        return View("_AddEditDD_3", myData);
+                    case 56: //5	Surat Ijin Otoritas Jasa Keuangan
+                        ViewBag.JudulDetail = "Surat Ijin Otoritas Jasa Keuangan";
+                        myData.ProcInfo = "Update: Surat Ijin Otoritas Jasa Keuangan";
                         ViewBag.JudulCatatan = "Catatan";
                         return View("_AddEditDD_3", myData);
 
@@ -486,15 +547,11 @@ namespace MVCSmartClient01.Controllers
                         myData.ProcInfo = "Update: Daftar Tenaga Pendukung";
                         return View("_AddEditDD_29", myData);
 
-                    case 15: //15	Dokumen Sebagai Rekanan dari Bank Lembaga/Instansi Lain
-                        myData.ProcInfo = "Update: Dokumen Sebagai Rekanan dari Bank Lembaga/Instansi Lain";
-                        return View("_AddEditDD_15", myData);
-                    //case 26: //26	Ijin sebagai Akuntan Publik
-                    //    return View("_AddEditDD_26", myData);
-                    //case 35: //35	Kartu Anggota Asosiasi
-                    //    return View("_AddEditDD_35", myData);
-                    //case 13: //13	Kartu Tanda Penduduk (KTP) Perorangan dan atau Persekutuan
-                    //    return View("_AddEditDD_13", myData);
+                    case 15: //15	Undang - Undang Gangguan
+                        ViewBag.JudulDetail = "Undang - Undang Gangguan";
+                        ViewBag.JudulCatatan = "Catatan";
+                        myData.ProcInfo = "Undang - Undang Gangguan";
+                        return View("_AddEditDD_3", myData);
                     case 25: //25	Perjanjian Kerjasama dengan Kantor Akuntan Asing
                         myData.ProcInfo = "Update: Perjanjian Kerjasama dengan Kantor Akuntan Asing";
                         return View("_AddEditDD_25", myData);
@@ -510,17 +567,37 @@ namespace MVCSmartClient01.Controllers
                         myData.ProcInfo = "Update: Surat Keterangan Domisili Perusahaan (SKDP)";
                         return View("_AddEditDD_16", myData);
 
-                    case 36: //36	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain
-                        myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain";
-                        return View("_AddEditDD_36", myData);
+                    case 1065: //1065	Daftar Rekanan Bank
+                        ViewBag.JudulDetail = "Daftar Rekanan Bank";
+                        ViewBag.JudulNama = "Rekanan Bank";
+                        myData.ProcInfo = "Update: Daftar Rekanan Bank";
+                        return View("_AddEditDD_30", myData);
+                    case 1066: //1066	Daftar Rekanan Non Bank
+                        ViewBag.JudulDetail = "Daftar Rekanan Non Bank";
+                        ViewBag.JudulNama = "Rekanan Non Bank";
+                        myData.ProcInfo = "Update: Daftar Rekanan Non Bank";
+                        return View("_AddEditDD_30", myData);
+                    case 1067: //1067	Daftar Pengusul
+                        ViewBag.JudulDetail = "Daftar Pengusul";
+                        ViewBag.JudulNama = "Nama Pengusul";
+                        myData.ProcInfo = "Update: Daftar Pengusul";
+                        return View("_AddEditDD_30", myData);
+                    case 1069: //1069	Daftar Penilai Publik
+                        ViewBag.JudulDetail = "Daftar Penilai Publik";
+                        ViewBag.JudulNama = "Penilai Publik";
+                        myData.ProcInfo = "Update: Daftar Penilai Publik";
+                        return View("_AddEditDD_30", myData);
+
                     case 31: //31	Daftar Pengalaman (minimal 2 tahun terakhir)
                         myData.ProcInfo = "Update: Daftar Pengalaman (minimal 2 tahun terakhir)";
                         return View("_AddEditDD_31", myData);
-
                     case 34: //34	Laporan Keuangan (2 tahun terakhir)
                         ViewBag.JudulDetail = "Laporan Keuangan (2 tahun terakhir)";
                         myData.ProcInfo = "Update: Laporan Keuangan (2 tahun terakhir)";
                         return View(myData);
+                    case 36: //36	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain
+                        myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KAP lain";
+                        return View("_AddEditDD_36", myData);
                     case 37: //37	Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain
                         ViewBag.JudulDetail = "Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain";
                         myData.ProcInfo = "Update: Surat Pernyataan Tidak Ada Tenaga Ahli yang rangkap pekerjaan di KJPP lain";
@@ -569,10 +646,10 @@ namespace MVCSmartClient01.Controllers
                         ViewBag.JudulDetail = "Informasi Kepemilikan Saham Ultimate Shareholder di Perusahaan Lain (oleh Owner)";
                         myData.ProcInfo = "Update: Informasi Kepemilikan Saham Ultimate Shareholder di Perusahaan Lain (oleh Owner)";
                         return View("_AddEditDD_57", myData);
-                    case 58: //58	Bukti Penggunaan Produk Bank Mandiri
-                        ViewBag.JudulDetail = "Bukti Penggunaan Produk Bank Mandiri";
+                    case 58: //58	Bukti Penggunaan Produk BSM
+                        ViewBag.JudulDetail = "Bukti Penggunaan Produk BSM";
                         ViewBag.NomorDokumen = "Nomor Dokumen";
-                        myData.ProcInfo = "Update: Bukti Penggunaan Produk Bank Mandiri";
+                        myData.ProcInfo = "Update: Bukti Penggunaan Produk BSM";
                         return View("_AddEditDD_2", myData);
                     case 59: //59	Surat Pernyataan Tidak Pernah Melanggar POJK no.73/POJK.05/2016
                         ViewBag.JudulDetail = "Surat Pernyataan Tidak Pernah Melanggar POJK no.73/POJK.05/2016";
@@ -857,7 +934,16 @@ namespace MVCSmartClient01.Controllers
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<trxRekananDocumentMulti>(responseData);
-                return View(myData);
+                if (tokenContainer.RoleName.ToString() == "PCPKAR")
+                {
+                    //MstRekanan/RekananDetailedInfo?IdRekanan=2e70c9a3-36c7-4f5c-b2f8-a78c414d598f&IdTypeOfRekanan=4&RegistrationNumber=ASJ123
+                    return RedirectToAction("RekananDetailedInfo", "MstRekanan"
+                        , new { IdRekanan = tokenContainer.IdRekananContact.ToString(), IdTypeOfRekanan = (int)tokenContainer.IdTypeOfRekanan, RegistrationNumber = tokenContainer.Keterangan });
+                }
+                else
+                {
+                    return View(myData);
+                }
             }
             return View("Error");
         }
@@ -873,6 +959,77 @@ namespace MVCSmartClient01.Controllers
             return View("Error");
         }
 
+        public ActionResult _GetByRekananTab_Admin()
+        {
+            HttpResponseMessage responseMessage = client.GetAsync(url + "/GetTotDocumentDetailByRek/" + tokenContainer.IdRekananContact.ToString()).Result;
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var myData = JsonConvert.DeserializeObject<trxRekananDocumentMulti>(responseData);
+                return PartialView("GetByRekananTab_Admin", myData);
+            }
+            return View("Error");
+        }
+        [HttpPost, ValidateInput(false)]
+        public async Task<ActionResult> UpdateLineVerified(fTotDocumentDetailByRek_Result myVerificationData)
+        {
+            trxDocMandatoryVerification mySingle = new trxDocMandatoryVerification();
+            mySingle.IdRekanan = (System.Guid)tokenContainer.IdRekananContact;
+            mySingle.IdTypeOfDocument = myVerificationData.IdTypeOfDocument;
+            mySingle.IsVerified = myVerificationData.IsVerified;
+            mySingle.Catatan = myVerificationData.Catatan;
+            mySingle.CreatedUser = tokenContainer.UserId.ToString();
+            mySingle.CreatedDate = DateTime.Now;
+
+            HttpResponseMessage responseMessage2 = client.PostAsJsonAsync(string.Format("{0}/StoreVerificationAdmin", url), mySingle).Result;
+            if (responseMessage2.IsSuccessStatusCode)
+            {
+                //49e48288-247a-4173-adb8-18602e1169a2
+                HttpResponseMessage responseMessage = client.GetAsync(url + "/GetTotDocumentDetailByRek/" + tokenContainer.IdRekananContact.ToString()).Result;
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                    var myData = JsonConvert.DeserializeObject<trxRekananDocumentMulti>(responseData);
+                    return PartialView("GetByRekananTab_Admin", myData);
+                }
+            }
+            return RedirectToAction("Error");
+        }
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult BatchUpdatePartial(MVCxGridViewBatchUpdateValues<fTotDocumentDetailByRek_Result, int> batchValues)
+        {
+            List<trxDocMandatoryVerification> myList = new List<trxDocMandatoryVerification>();
+            foreach (var item in batchValues.Update)
+            {
+                if (batchValues.IsValid(item))
+                {
+                    trxDocMandatoryVerification mySingle = new trxDocMandatoryVerification();
+                    mySingle.IdRekanan = (System.Guid)tokenContainer.IdRekananContact;
+                    mySingle.IdTypeOfDocument = item.IdTypeOfDocument;
+                    mySingle.IsVerified = item.IsVerified;
+                    mySingle.Catatan = item.Catatan;
+                    mySingle.CreatedUser = tokenContainer.UserId.ToString();
+                    mySingle.CreatedDate = DateTime.Now;
+                    myList.Add(mySingle);
+                }
+                else
+                    batchValues.SetErrorText(item, "Correct validation errors");
+            }
+            HttpResponseMessage responseMessage2 = client.PostAsJsonAsync(string.Format("{0}/StoreVerificationAdmin", url), myList).Result;
+            if (responseMessage2.IsSuccessStatusCode)
+            {
+                //49e48288-247a-4173-adb8-18602e1169a2
+                HttpResponseMessage responseMessage = client.GetAsync(url + "/GetTotDocumentDetailByRek/" + tokenContainer.IdRekananContact.ToString()).Result;
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                    var myData = JsonConvert.DeserializeObject<trxRekananDocumentMulti>(responseData);
+                    return PartialView("GetByRekananTab_Admin", myData);
+                }
+            }
+            return View("Error");
+        }
     }
 
     public static class Helper

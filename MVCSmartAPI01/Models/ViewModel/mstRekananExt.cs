@@ -28,9 +28,9 @@ namespace MVCSmartAPI01.Models
         public string ZipCode { get; set; }
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
-        public string Phone3 { get; set; }
         public string Fax1 { get; set; }
         public string Fax2 { get; set; }
+        public string Website { get; set; }
         public string EmailAddress { get; set; }
         public string CreatedUser { get; set; }
         public System.DateTime CreatedDate { get; set; }

@@ -17,5 +17,7 @@ namespace MVCSmartClient01.Models
         public int IdTypeOfDocument { get; set; }
         public Nullable<int> TotDoc { get; set; }
         public int docSeq { get; set; }
+        public bool IsVerified { get; set; }
+        public string Catatan { get; set; }
     }
 }

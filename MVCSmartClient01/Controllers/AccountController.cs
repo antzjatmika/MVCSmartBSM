@@ -164,6 +164,46 @@ namespace MVCSmartClient01.Controllers
 
             return View(model);
         }
+        //REGISTER CALON REKANAN LEWAT KIOKS
+        public ActionResult RegisterByKiosk()
+        {
+            var myTypeOfRekananColls = DataMasterProvider.Instance.TypeOfRekananColls;
+            var model = new RegisterBindingModel();
+            model.TypeOfRekananColls = myTypeOfRekananColls.Where(x => x.IdTypeOfRekanan <= 7 || x.IdTypeOfRekanan == 11).ToList();
+            return View(model);
+        }
+        public ActionResult AfterRegister()
+        {
+            return View("AfterRegister");
+        }
+        //REGISTER CALON REKANAN LEWAT KIOKS
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterByKiosk(RegisterBindingModel model)
+        {
+            string strBarePassword = GenerateKataKunci();
+            string strPassKey = string.Concat(strBarePassword, "@Pcp");
+            model.NomorNPWP = Guid.NewGuid().ToString();
+            model.Password = strPassKey;
+            model.ConfirmPassword = strPassKey;
+            model.BarePassword = MaskPasskey(strBarePassword, true);
+            model.IsActive = 2;
+            var response = await loginClient.RegisterByAdmin(model);
+            if (response.StatusIsSuccessful)
+            {
+                //return RedirectToAction("Index", "Home");
+                return View("AfterRegister");
+            }
+
+            AddResponseErrorsToModelState(response);
+
+            var myTypeOfRekananColls = DataMasterProvider.Instance.TypeOfRekananColls;
+            model.TypeOfRekananColls = myTypeOfRekananColls.Where(x => x.IdTypeOfRekanan <= 7 || x.IdTypeOfRekanan == 11).ToList();
+
+            //return View(model);
+            //return View("RegisterByKiosk");
+            return View("AfterRegister");
+        }
 
         //[HttpPost]
         ////[ValidateAntiForgeryToken]

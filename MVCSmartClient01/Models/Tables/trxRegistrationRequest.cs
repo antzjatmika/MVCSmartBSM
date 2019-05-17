@@ -16,11 +16,16 @@ namespace MVCSmartClient01.Models
     {
         public int IdRegRequest { get; set; }
         public string NamaLengkap { get; set; }
-        public string NomorKTP { get; set; }
-        public string NomorNPWP { get; set; }
+        public string AlamatLengkap { get; set; }
         public string AlamatEmail { get; set; }
+        public int IdTypeOfRekanan { get; set; }
+        public System.Guid ImageBaseName { get; set; }
+        public string UserName { get; set; }
+        public string UserPassKey { get; set; }
         public System.DateTime CreatedDate { get; set; }
-        public int IsFollowedUp { get; set; }
-        public System.DateTime FollowedUpDate { get; set; }
+        public byte IsActive { get; set; }
+        public Nullable<int> DokTotal { get; set; }
+        public int DokInput { get; set; }
+        public int Kelengkapan { get; set; }
     }
 }

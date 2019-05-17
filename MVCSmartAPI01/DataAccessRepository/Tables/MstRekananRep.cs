@@ -20,7 +20,7 @@ namespace MVCSmartAPI01.DataAccessRepository
         //Get all Data
         public IEnumerable<mstRekanan> Get()
         {
-            return ctx.mstRekanans.ToList();
+            return ctx.mstRekanan.ToList();
         }
         //Get Specific Data based on Id
         public IEnumerable<fGetRekananByIdSupervisor_Result> GetBySupervisorId(int supervisorId)
@@ -144,7 +144,7 @@ namespace MVCSmartAPI01.DataAccessRepository
 
         public mstRekanan Get(System.Guid id)
         {
-            return ctx.mstRekanans.Find(id);
+            return ctx.mstRekanan.Find(id);
         }
 
         //Create a new Data
@@ -152,7 +152,7 @@ namespace MVCSmartAPI01.DataAccessRepository
         {
             try
             {
-                ctx.mstRekanans.Add(entity);
+                ctx.mstRekanan.Add(entity);
                 ctx.SaveChanges();
             }
             catch (DbEntityValidationException ex)
@@ -169,7 +169,7 @@ namespace MVCSmartAPI01.DataAccessRepository
         //Update Exisiting Data with Note and LMDate
         public void Put(System.Guid id, mstRekanan entity)
         {
-            var myData = ctx.mstRekanans.Find(id);
+            var myData = ctx.mstRekanan.Find(id);
             if (myData != null)
             {
                 myData.IdRegion = entity.IdRegion;
@@ -186,21 +186,28 @@ namespace MVCSmartAPI01.DataAccessRepository
                 myData.ZipCode = entity.ZipCode;
                 myData.Phone1 = entity.Phone1;
                 myData.Phone2 = entity.Phone2;
-                myData.Phone3 = entity.Phone3;
                 myData.Fax1 = entity.Fax1;
                 myData.Fax2 = entity.Fax2;
+                myData.Website = entity.Website;
                 myData.EmailAddress = entity.EmailAddress;
                 myData.PenerbitRating = entity.PenerbitRating;
                 myData.NilaiRating = entity.NilaiRating;
                 myData.IsActive = entity.IsActive;
                 myData.Note = entity.Note;
                 myData.LMDate = entity.LMDate;
-                ctx.SaveChanges();
+                try
+                {
+                    ctx.SaveChanges();
+                }
+                catch(Exception ex)
+                {
+                    string strMessage = ex.Message;
+                }
             }
         }
         public void UpdateNote(System.Guid id, string Note)
         {
-            var myData = ctx.mstRekanans.Find(id);
+            var myData = ctx.mstRekanan.Find(id);
             if (myData != null)
             {
                 myData.Note = Note;
@@ -211,10 +218,10 @@ namespace MVCSmartAPI01.DataAccessRepository
         //Delete Data based on Id
         public void Delete(System.Guid id)
         {
-            var myData = ctx.mstRekanans.Find(id);
+            var myData = ctx.mstRekanan.Find(id);
             if (myData != null)
             {
-                ctx.mstRekanans.Remove(myData);
+                ctx.mstRekanan.Remove(myData);
                 ctx.SaveChanges();
             }
         }
@@ -223,7 +230,7 @@ namespace MVCSmartAPI01.DataAccessRepository
             string strInfo = string.Empty;
             string strNamaRekanan = string.Empty;
             var myRekanan = from mgm in ctx.trxManagement
-                            join rek in ctx.mstRekanans on mgm.IdRekanan equals rek.IdRekanan
+                            join rek in ctx.mstRekanan on mgm.IdRekanan equals rek.IdRekanan
                             where mgm.NomorNPWP == strNomorNPWP
                             select rek;
             try

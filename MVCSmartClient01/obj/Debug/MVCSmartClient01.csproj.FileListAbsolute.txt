@@ -12,8 +12,6 @@ C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Scripts\ap
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\log4net.config
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Scripts\SmartApps.js
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Web.config
-C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Web.Debug.config
-C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Web.Release.config
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Views\TrxNotificationHeader\Create.cshtml
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Views\TrxNotificationHeader\Delete.cshtml
 C:\Project\SMART_BSM\Code\MVCSmart01\MVCSmartBSM\MVCSmartClient01\bin\Views\TrxNotificationHeader\Edit.cshtml

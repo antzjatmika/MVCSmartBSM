@@ -16,5 +16,7 @@ namespace MVCSmartAPI01.Models
         public int IdTypeOfDocument { get; set; }
         public int TotDoc { get; set; }
         public int docSeq { get; set; }
+        public bool IsVerified { get; set; }
+        public string Catatan { get; set; }
     }
 }

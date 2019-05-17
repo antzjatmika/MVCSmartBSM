@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,27 @@ namespace MVCSmartAPI01.DataAccessRepository
         public IEnumerable<trxRegistrationRequest> Get()
         {
             return ctx.trxRegistrationRequest.ToList();
+        }
+        public IEnumerable<vwRegistrationRequest> GetView()
+        {
+            return ctx.vwRegistrationRequest.ToList();
+        }
+        public IEnumerable<vwRegistrationRequest> GetViewIsActive(Byte IsAcive)
+        {
+            return ctx.vwRegistrationRequest.Where(x => x.IsActive.Equals(IsAcive)).ToList();
+        }
+        public IEnumerable<vwUserAdminPCP> GetViewUserAdmin()
+        {
+            return ctx.vwUserAdminPCP.ToList();
+        }
+        public void SetPasswordByUserName(string myUserName, string myBarePassword)
+        {
+            trxRegistrationRequest myData = ctx.trxRegistrationRequest.Where(x => x.UserName.Equals(myUserName)).First();
+            if (myData != null)
+            {
+                myData.UserPassKey = myBarePassword;
+                ctx.SaveChanges();
+            }
         }
         //Get Specific Data based on Id
         public trxRegistrationRequest Get(int id)
@@ -38,11 +60,6 @@ namespace MVCSmartAPI01.DataAccessRepository
             {
                 myData.NamaLengkap = entity.NamaLengkap;
                 myData.AlamatLengkap = entity.AlamatLengkap;
-                myData.AlamatEmail = entity.AlamatEmail;
-                myData.IdTypeOfRekanan = entity.IdTypeOfRekanan;
-                myData.ImageBaseName = entity.ImageBaseName;
-                myData.UserName = entity.UserName;
-                myData.UserPassKey = entity.UserPassKey;
 
                 ctx.SaveChanges();
             }

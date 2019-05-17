@@ -52,18 +52,18 @@ namespace APIService.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
         [HttpGet]
-        [Route("api/TrxKonsolidasi/GetKonsoByPeriode/{IdRekanan}/{intPeriode}")]
-        public IEnumerable<fKonsoByPeriode_Result> GetKonsoByPeriode(Guid IdRekanan, int intPeriode)
+        [Route("api/TrxKonsolidasi/GetKonsoByPeriode/{IdRekanan}/{TahunBulan}")]
+        public IEnumerable<fKonsoByPeriode_Result> GetKonsoByPeriode(Guid IdRekanan, int TahunBulan)
         {
             IEnumerable<fKonsoByPeriode_Result> PKonsoColls;
-            PKonsoColls = _repPNilai.GetKonsoByPeriode(IdRekanan, intPeriode);
+            PKonsoColls = _repPNilai.GetKonsoByPeriode(IdRekanan, TahunBulan);
             return PKonsoColls;
         }
         [HttpGet]
-        [Route("api/TrxKonsolidasi/GetKonsoResumeByPeriode/{IdRekanan}/{intPeriodeAwal}/{intPeriodeAkhir}/{intTipeUraian}")]
-        public IEnumerable<fKonsoResumeByPeriode_Result> GetKonsoResumeByPeriode(Guid IdRekanan, int intPeriodeAwal, int intPeriodeAkhir, int intTipeUraian)
+        [Route("api/TrxKonsolidasi/GetKonsoResumeByPeriode/{IdRekanan}/{TahunBulan}/{intTipeUraian}")]
+        public IEnumerable<fKonsoResumeByPeriode_Result> GetKonsoResumeByPeriode(Guid IdRekanan, int TahunBulan, int intTipeUraian)
         {
-            IEnumerable<fKonsoResumeByPeriode_Result> PKonsoResumeColls = _repPNilai.GetKonsoResumeByPeriode(IdRekanan, intPeriodeAwal, intPeriodeAkhir, intTipeUraian);
+            IEnumerable<fKonsoResumeByPeriode_Result> PKonsoResumeColls = _repPNilai.GetKonsoResumeByPeriode(IdRekanan, TahunBulan, intTipeUraian);
             return PKonsoResumeColls;
         }
         [HttpGet]
@@ -101,5 +101,29 @@ namespace APIService.Controllers
             IEnumerable<fResumeRoaByPeriode_Result> ResumeColls = _repPNilai.GetResumeRoaByRekPeriode(IdRekanan, Periode);
             return ResumeColls;
         }
+        [HttpGet]
+        [Route("api/TrxKonsolidasi/GetKonsoPairByParam/{IdRekanan}/{Periode}")]
+        public IEnumerable<fKonsoPairByParam_Result> GetKonsoPairByParam(Guid IdRekanan, int Periode)
+        {
+            IEnumerable<fKonsoPairByParam_Result> ResumeColls = _repPNilai.GetKonsoPairByParam(IdRekanan, Periode);
+            return ResumeColls;
+        }
+        [HttpPut]
+        [Route("api/TrxKonsolidasi/UpdateKonsolidasiPair")]
+        public IHttpActionResult UpdateKonsolidasiPair(fKonsoPairByParam_Result myData)
+        {
+            //UPDATE DATA CURRENT YEAR
+            trxKonsolidasi myDataCur = _repository.Get(myData.IdCur);
+            myDataCur.Nilai = myData.NilaiCur;
+            myDataCur.Keterangan = myData.Keterangan;
+            _repository.Put(myData.IdCur, myDataCur);
+            //UPDATE DATA PREVIOUS YEAR
+            trxKonsolidasi myDataPrev = _repository.Get(myData.IdPrev);
+            myDataPrev.Nilai = myData.NilaiPrev;
+            _repository.Put(myData.IdPrev, myDataPrev);
+
+            return Ok(myDataCur);
+        }
+
     }
 }

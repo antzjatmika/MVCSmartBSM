@@ -15,6 +15,7 @@ namespace MVCSmartAPI01.Models
     public partial class mstProdukAsuransi
     {
         public int IdMstProdukAsuransi { get; set; }
+        public System.Guid IdRekanan { get; set; }
         public string NamaProduk { get; set; }
         public string NoIzinProduk { get; set; }
         public Nullable<System.DateTime> TanggalIzin { get; set; }

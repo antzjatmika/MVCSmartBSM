@@ -46,7 +46,7 @@ namespace MVCSmartClient01.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
-
+        public string BarePassword { get; set; }
         //[Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
@@ -58,6 +58,7 @@ namespace MVCSmartClient01.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
         public int IdTypeOfRekanan { get; set; }
+        public byte IsActive { get; set; }
         public IEnumerable<mstTypeOfRekanan> TypeOfRekananColls { get; set; }
 
     }

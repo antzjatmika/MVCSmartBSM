@@ -582,14 +582,14 @@ namespace MVCSmartClient01.Controllers
             settings.Columns.Add(column =>
             {
                 column.FieldName = "UnitKerja";
-                column.Caption = "Unit Kerja Bank Mandiri";
+                column.Caption = "Unit Kerja BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });
             settings.Columns.Add(column =>
             {
                 column.FieldName = "PICBank";
-                column.Caption = "PIC Bank Mandiri";
+                column.Caption = "PIC BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });
@@ -1019,14 +1019,14 @@ namespace MVCSmartClient01.Controllers
             settings.Columns.Add(column =>
             {
                 column.FieldName = "UnitKerjaBank";
-                column.Caption = "Unit Kerja Bank Mandiri";
+                column.Caption = "Unit Kerja BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });
             settings.Columns.Add(column =>
             {
                 column.FieldName = "PICBank";
-                column.Caption = "PIC Bank Mandiri";
+                column.Caption = "PIC BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });
@@ -1146,14 +1146,14 @@ namespace MVCSmartClient01.Controllers
             settings.Columns.Add(column =>
             {
                 column.FieldName = "UnitKerja";
-                column.Caption = "Unit Kerja Bank Mandiri";
+                column.Caption = "Unit Kerja BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });
             settings.Columns.Add(column =>
             {
                 column.FieldName = "PICBank";
-                column.Caption = "PIC Bank Mandiri";
+                column.Caption = "PIC BSM";
                 column.HeaderStyle.Font.Bold = true;
                 column.ExportWidth = 100;
             });

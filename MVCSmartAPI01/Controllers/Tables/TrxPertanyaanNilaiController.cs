@@ -60,10 +60,17 @@ namespace APIService.Controllers
             return PNilaiColls;
         }
         [HttpGet]
-        [Route("api/TrxPertanyaanNilai/GetNilaiAkhir/{IdRekanan}")]
-        public IEnumerable<vwPertanyaanNilaiAkhir> GetNilaiAkhir(Guid IdRekanan)
+        [Route("api/TrxPertanyaanNilai/GetNilaiAkhir/{IdRekanan}/{TahunBulan}")]
+        public IEnumerable<vwPertanyaanNilaiAkhir> GetNilaiAkhir(Guid IdRekanan, int TahunBulan)
         {
-            IEnumerable<vwPertanyaanNilaiAkhir> PNilaiColls = _repPNilai.GetNilaiAkhir(IdRekanan);
+            IEnumerable<vwPertanyaanNilaiAkhir> PNilaiColls = _repPNilai.GetNilaiAkhir(IdRekanan, TahunBulan);
+            return PNilaiColls;
+        }
+        [HttpGet]
+        [Route("api/TrxPertanyaanNilai/GetNilaiByParam/{IdRekanan}/{Periode}/{IdTypeOfGroup}/{IdPenilai}")]
+        public IEnumerable<fGetPertanyaanNilaiByParam_Result> GetNilaiByParam(Guid IdRekanan, int Periode, int IdTypeOfGroup, int IdPenilai)
+        {
+            IEnumerable<fGetPertanyaanNilaiByParam_Result> PNilaiColls = _repPNilai.GetNilaiByParam(IdRekanan, Periode, IdTypeOfGroup, IdPenilai);
             return PNilaiColls;
         }
     }

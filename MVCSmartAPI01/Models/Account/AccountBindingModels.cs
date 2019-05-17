@@ -39,12 +39,16 @@ namespace MVCSmartAPI01.Models
         [Display(Name = "Nama Lengkap Rekanan")]
         public string NamaRekanan { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Nomor NPWP")]
         public string NomorNPWP { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        public string BarePassword { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -57,6 +61,7 @@ namespace MVCSmartAPI01.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
         public int IdTypeOfRekanan { get; set; }
+        public byte IsActive { get; set; }
         public IEnumerable<mstTypeOfRekanan> TypeOfRekananColls { get; set; }
     }
 

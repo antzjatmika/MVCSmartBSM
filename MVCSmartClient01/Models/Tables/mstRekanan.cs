@@ -32,6 +32,7 @@ namespace MVCSmartClient01.Models
         public string Phone3 { get; set; }
         public string Fax1 { get; set; }
         public string Fax2 { get; set; }
+        public string Website { get; set; }
         public string EmailAddress { get; set; }
         public string PenerbitRating { get; set; }
         public string NilaiRating { get; set; }

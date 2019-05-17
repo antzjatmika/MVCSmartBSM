@@ -10,18 +10,23 @@ namespace APIService.Controllers
     public class MstProdukAsuransiController : ApiController
     {
         private IDataAccessRepository<mstProdukAsuransi, int> _repository;
-        private MstProdukAsuransiRep _repAsisten = new MstProdukAsuransiRep();
+        private MstProdukAsuransiRep _repProduk = new MstProdukAsuransiRep();
         //Inject the DataAccessRepository using Construction Injection 
-        public MstProdukAsuransiController(IDataAccessRepository<mstProdukAsuransi, int> r, MstProdukAsuransiRep repAsisten)
+        public MstProdukAsuransiController(IDataAccessRepository<mstProdukAsuransi, int> r, MstProdukAsuransiRep repProduk)
         {
             _repository = r;
-            _repAsisten = repAsisten;
+            _repProduk = repProduk;
         }
         public IEnumerable<mstProdukAsuransi> Get()
         {
             return _repository.Get();
         }
-
+        [HttpGet]
+        [Route("api/MstProdukAsuransi/GetByRekanan/{IdRekanan}")]
+        public IEnumerable<mstProdukAsuransi> GetByRekanan(System.Guid IdRekanan)
+        {
+            return _repProduk.GetByRekanan(IdRekanan);
+        }
         [ResponseType(typeof(mstProdukAsuransi))]
         public IHttpActionResult Get(int id)
         {

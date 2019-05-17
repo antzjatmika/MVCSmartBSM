@@ -73,10 +73,16 @@ namespace MVCSmartAPI01.DataAccessRepository
             myData = ctx.vwPertanyaanNilai.Where(x => x.IdTypeOfGroup.Equals(IdTypeOfGroup) && x.IdPenilai.Equals(IdPenilai) && x.IdRekanan.Equals(IdRekanan)).ToList();
             return myData;
         }
-        public List<vwPertanyaanNilaiAkhir> GetNilaiAkhir(Guid IdRekanan)
+        public List<vwPertanyaanNilaiAkhir> GetNilaiAkhir(Guid IdRekanan, int TahunBulan)
         {
             List<vwPertanyaanNilaiAkhir> myData = new List<vwPertanyaanNilaiAkhir>();
-            myData = ctx.vwPertanyaanNilaiAkhir.Where(x => x.IdRekanan.Equals(IdRekanan)).ToList();
+            myData = ctx.vwPertanyaanNilaiAkhir.Where(x => x.IdRekanan.Equals(IdRekanan) && x.TahunBulan.Equals(TahunBulan)).ToList();
+            return myData;
+        }
+        public List<fGetPertanyaanNilaiByParam_Result> GetNilaiByParam( Guid IdRekanan, int Periode, int IdTypeOfGroup, int IdPenilai)
+        {
+            List<fGetPertanyaanNilaiByParam_Result> myData = new List<fGetPertanyaanNilaiByParam_Result>();
+            myData = ctx.fGetPertanyaanNilaiByParam(IdRekanan, Periode, IdTypeOfGroup, IdPenilai).ToList();
             return myData;
         }
 

@@ -302,6 +302,7 @@
     <Compile Include="Controllers\ImportXLSHelper.cs" />
     <Compile Include="Controllers\MstKategoriResikoController.cs" />
     <Compile Include="Controllers\MstProdukAsuransiController.cs" />
+    <Compile Include="Controllers\TrxPeriodeScoringController.cs" />
     <Compile Include="Controllers\TrxKonsolidasiController.cs" />
     <Compile Include="Controllers\TrxPertanyaanNilaiController.cs" />
     <Compile Include="Controllers\TrxManagementP2PKController.cs" />
@@ -417,8 +418,10 @@
     <Compile Include="Models\Reports\trxDetailPekerjaanHeader.cs" />
     <Compile Include="Models\fGetRekananByIdSupervisor_Result.cs" />
     <Compile Include="Models\SimpleRef.cs" />
+    <Compile Include="Models\Tables\trxDocMandatoryVerification.cs" />
     <Compile Include="Models\Tables\mstKategoriResiko.cs" />
     <Compile Include="Models\Tables\mstProdukAsuransi.cs" />
+    <Compile Include="Models\Tables\trxPeriodeScoring.cs" />
     <Compile Include="Models\Tables\trxKonsolidasi.cs" />
     <Compile Include="Models\Tables\mstPengumuman.cs" />
     <Compile Include="Models\Tables\trxPertanyaanNilai.cs" />
@@ -500,6 +503,8 @@
     <Compile Include="Models\Tables\trxTenagaAhli.cs" />
     <Compile Include="Models\Tables\trxTenagaAhli_ARC.cs" />
     <Compile Include="Models\Tables\trxTenagaPendukung.cs" />
+    <Compile Include="Models\ViewModel\fPeriodeScoringByRekanan_Result.cs" />
+    <Compile Include="Models\ViewModel\fKonsoPairByParam_Result.cs" />
     <Compile Include="Models\ViewModel\fResumeRoaByPeriode_Result.cs" />
     <Compile Include="Models\ViewModel\scoringResumeMulti.cs" />
     <Compile Include="Models\ViewModel\fScoringResumeByRek_Result.cs" />
@@ -529,9 +534,11 @@
     <Compile Include="Models\ViewModel\trxDetailPekerjaanSingle.cs" />
     <Compile Include="Models\ViewModel\trxDetailPekerjaanMulti.cs" />
     <Compile Include="Models\ViewModel\TrxDMDTenagaAhliTetap.cs" />
+    <Compile Include="Models\ViewModel\trxRegistrationRequestMulti.cs" />
     <Compile Include="Models\ViewModel\trxRekananDocumentMulti.cs" />
     <Compile Include="Models\ViewModel\fInfoLastModifiedByRek.cs" />
     <Compile Include="Models\ViewModel\PertanyaanNilaiMulti.cs" />
+    <Compile Include="Models\ViewModel\fGetPertanyaanNilaiByParam_Result.cs" />
     <Compile Include="Models\ViewModel\vwPertanyaanNilaiAkhir.cs" />
     <Compile Include="Models\ViewModel\vwPertanyaanNilai.cs" />
     <Compile Include="Models\ViewModel\vwNotarisTabular.cs" />
@@ -599,6 +606,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Pengumuman.css" />
+    <Content Include="Content\RegisterKiosk.css" />
+    <Content Include="Content\select2.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\SmartApps.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1171,6 +1180,17 @@
     <Content Include="Views\TrxKonsolidasi\_GetResumeRoaByRekPeriode.cshtml" />
     <Content Include="Views\MstProdukAsuransi\Index.cshtml" />
     <Content Include="Views\MstProdukAsuransi\_Index.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\PeriodeScoringByRek.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\_PeriodeScoringByRek.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\DetailScoringByPeriode.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\_DetailScoringByPeriode.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\_GetNilaiAkhir.cshtml" />
+    <Content Include="Views\TrxKonsolidasi\_GetKonsoPairByParam.cshtml" />
+    <Content Include="Views\TrxPeriodeScoring\DetailScoringByPeriodeRek.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\_AddEditDD_30.cshtml" />
+    <Content Include="Views\TrxRekananDocument\_RekananDD_106.cshtml" />
+    <Content Include="Views\TrxDocMandatoryDetail\GetByRekananTab_Admin.cshtml" />
+    <Content Include="Views\TrxRegistrationRequest\_Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

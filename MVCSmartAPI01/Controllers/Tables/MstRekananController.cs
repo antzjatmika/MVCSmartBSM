@@ -20,6 +20,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace APIService.Controllers
 {
@@ -368,72 +369,38 @@ namespace APIService.Controllers
         [System.Web.Http.AcceptVerbs("GET", "POST")]
         [System.Web.Http.HttpGet]
         [Route("api/MstRekanan/RegisterCalonRekanan")]
-        public async Task<IHttpActionResult> RegisterCalonRekanan(RegisterBindingModel model)
+        public string RegisterCalonRekanan(RegisterBindingModel model)
         {
-            string strNamaRekananFound = _repRekanan.CheckRekananByNPWP(model.NomorNPWP);
-            if (strNamaRekananFound == "")
+            AspNetUser myAspNetUser = _repContact.GetAspNetUserByEmail(model.Email);
+            Guid myIdRekanan = new Guid(model.NomorNPWP);
+            Guid myUserId = new Guid(myAspNetUser.Id);
+
+            string strReturn = "Executed OK";
+
+            String myIdRekananS = Guid.NewGuid().ToString();
+            String myUserIdS = Guid.NewGuid().ToString();
+
+            try
             {
-                AspNetUser myAspNetUser = _repContact.GetAspNetUserByEmail(model.Email);
-
-                Guid myIdRekanan = Guid.NewGuid();
-                //insert into MstRekanan (get IdRekanan)
-                mstRekanan rekananBaru = new mstRekanan();
-                rekananBaru.IdRekanan = myIdRekanan;
-                rekananBaru.IdRegion = -1;
-                rekananBaru.RegistrationNumber = "NEW000";
-                rekananBaru.ClassOfRekanan = 0;
-                rekananBaru.IdTypeOfRekanan = model.IdTypeOfRekanan;
-                rekananBaru.IdTypeOfBadanUsaha = -1;
-                rekananBaru.Name = model.NamaRekanan;
-                rekananBaru.Address = "alamt lengkap rekanan";
-                rekananBaru.Kota = "";
-                rekananBaru.Phone1 = "000";
-                rekananBaru.EmailAddress = model.Email;
-                rekananBaru.LMDate = DateTime.Today;
-                rekananBaru.CreatedUser = "admin";
-                rekananBaru.CreatedDate = DateTime.Today;
-                rekananBaru.IsActive = 0;
-                try
+                using (var context = new DB_SMARTEntities1())
                 {
-                    _repRekanan.Post(rekananBaru);
+                    var parIdTypeOfRekanan = new SqlParameter("@IdTypeOfRekanan", model.IdTypeOfRekanan);
+                    var parIdRekanan = new SqlParameter("@IdRekanan", myIdRekanan);
+                    var parNamaRekanan = new SqlParameter("@NamaRekanan", model.NamaRekanan);
+                    var parAlamatEmail = new SqlParameter("@AlamatEmail", model.Email);
+                    var parUserId = new SqlParameter("@UserId", myUserId);
+                    var parBarePasskey = new SqlParameter("@BarePasskey", model.BarePassword);
+                    var parIsActive = new SqlParameter("@IsActive", model.IsActive);
+                    var result = context.Database.ExecuteSqlCommand("EXEC spRegisterCalonRekanan " +
+                        "@IdTypeOfRekanan,@IdRekanan,@NamaRekanan,@AlamatEmail,@UserId,@BarePasskey,@IsActive"
+                        , parIdTypeOfRekanan, parIdRekanan, parNamaRekanan, parAlamatEmail, parUserId, parBarePasskey, parIsActive);
                 }
-                catch (Exception ex)
-                {
-                    string strErr = ex.Message;
-                }
-
-                //INSERT MSTCONTACT
-                mstContact contactBaru = new mstContact();
-                contactBaru.UserId = myAspNetUser.Id;
-                contactBaru.IdRekanan = myIdRekanan;
-                contactBaru.Name = "Contact Person";
-                contactBaru.NomorKTP = "000";
-                contactBaru.Email1 = model.Email;
-                contactBaru.Handphone1 = "000";
-                contactBaru.Telephone1 = "000";
-                contactBaru.Fax1 = "000";
-                contactBaru.CreatedUser = "admin";
-                contactBaru.CreatedDate = DateTime.Today;
-                contactBaru.IsActive = true;
-
-                _repContact.Post(contactBaru);
-
-                //insert into MstEmailPool
-                mstEmailPool emailPoolBaru = new mstEmailPool();
-                emailPoolBaru.IdRekanan = myIdRekanan;
-                emailPoolBaru.JudulEmail = "Informasi Login";
-                emailPoolBaru.IsiEmail = string.Format("Kepada Calon Rekanan, <br> Berikut ini adakan informasi akun :<br>Alamat Email : {0}<br>User Name : {1}" +
-                    "<br>Password : {2}", model.Email, model.Email, model.Password);
-                emailPoolBaru.EmailTo = model.Email;
-                emailPoolBaru.EmailFrom = "pcpadmin@mandiri.co.id";
-                emailPoolBaru.SentStatus = false;
-                emailPoolBaru.CreatedDate = DateTime.Today;
-                emailPoolBaru.CreatedUser = "admin";
-
-                _repEmailPool.Post(emailPoolBaru);
             }
-
-            return Ok();
+            catch (Exception ex)
+            {
+                strReturn = ex.Message;
+            }
+            return strReturn;
         }
 
         [Route("api/MstRekanan/GetPengumumanByTypeOfRekanan/{IdTypeOfRekanan}")]

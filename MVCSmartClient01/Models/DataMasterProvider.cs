@@ -51,6 +51,17 @@ namespace MVCSmartClient01.Models
         {
             get { return _TingkatResikoColls; }
         }
+        public IEnumerable<SimpleRef> StatusRekananColls
+        {
+            get
+            {
+                List<SimpleRef> StatusRekanan = new List<SimpleRef>() { 
+                    new SimpleRef { RefId = 1, RefDescription = "Aktif" }
+                    , new SimpleRef { RefId = 2, RefDescription = "Calon" }
+                    , new SimpleRef { RefId = 0, RefDescription = "Non Aktif" } };
+                return StatusRekanan;
+            }
+        }
         public IEnumerable<SimpleRef> JenisPermohonanColls
         {
             get {

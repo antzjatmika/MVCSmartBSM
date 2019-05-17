@@ -47,59 +47,79 @@ namespace MVCSmartClient01.Controllers
             }
             return View("Error");
         }
-        public async Task<ActionResult> GetKonsoByPeriode(int intPeriode)
+        public async Task<ActionResult> GetKonsoByPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoByPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), intPeriode));
+            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoByPeriode/{1}/{2}", url, IdRekanan, TahunBulan));
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fKonsoByPeriode_Result>>(responseData);
                 ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.IntPeriode = intPeriode;
+                ViewBag.TahunBulan = TahunBulan;
                 return View("GetKonsoByPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> _GetKonsoByPeriode(int intPeriode)
+        public async Task<ActionResult> _GetKonsoByPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoByPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), intPeriode));
+            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoByPeriode/{1}/{2}", url, IdRekanan, TahunBulan));
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fKonsoByPeriode_Result>>(responseData);
                 ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.IntPeriode = intPeriode;
+                ViewBag.TahunBulan = TahunBulan;
                 return PartialView("_GetKonsoByPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> GetKonsoResumeByPeriode(int PeriodeAwal, int PeriodeAkhir, int TipeUraian)
+        public async Task<ActionResult> GetKonsoResumeByPeriode(Guid IdRekanan, int TahunBulan, int TipeUraian)
         {
-            Guid IdRekanan = new Guid();
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoResumeByPeriode/{1}/{2}/{3}/{4}", url, IdRekanan, PeriodeAwal, PeriodeAkhir, TipeUraian));
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetKonsoResumeByPeriode/{1}/{2}/{3}", url, IdRekanan, TahunBulan, TipeUraian)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fKonsoResumeByPeriode_Result>>(responseData);
-                ViewBag.PeriodeAwal = PeriodeAwal;
-                ViewBag.PeriodeAkhir = PeriodeAkhir;
+                ViewBag.TahunBulan = TahunBulan;
                 ViewBag.TipeUraian = TipeUraian;
 
                 return View("GetKonsoResumeByPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> _GetKonsoResumeByPeriode(int PeriodeAwal, int PeriodeAkhir, int TipeUraian)
+        [HttpPost]
+        public async Task<ActionResult> UpdateKonsolidasiPair(int IdCur, fKonsoPairByParam_Result Emp)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetKonsoResumeByPeriode/{1}/{2}/{3}/{4}", url, tokenContainer.IdRekananContact.ToString(), PeriodeAwal, PeriodeAkhir, TipeUraian));
+            HttpResponseMessage responseMessage = await client.PutAsJsonAsync(url + "/UpdateKonsolidasiPair", Emp);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                //return RedirectToAction("GetKonsoPairByParam", new { IdRekanan = tokenContainer.IdRekananContact, TahunBulan = Emp.TahunBulanCurOri });
+                HttpResponseMessage responseMessage1 = client.GetAsync(String.Format("{0}/GetKonsoPairByParam/{1}/{2}", url, tokenContainer.IdRekananContact
+                    , Emp.TahunBulanCurOri)).Result;
+                if (responseMessage1.IsSuccessStatusCode)
+                {
+                    var responseData = responseMessage1.Content.ReadAsStringAsync().Result;
+                    var myData = JsonConvert.DeserializeObject<List<fKonsoPairByParam_Result>>(responseData);
+                    ViewBag.IdRekanan = tokenContainer.IdRekananContact;
+                    ViewBag.TahunBulan = Emp.TahunBulanCurOri;
+                    ViewBag.IsEditable = true;
+                    return PartialView("_GetKonsoPairByParam", myData);
+                }
+            }
+            //return RedirectToAction("Error");
+            return View("Error");
+        }
+        public async Task<ActionResult> _GetKonsoResumeByPeriode(Guid IdRekanan, int TahunBulan, int TipeUraian)
+        {
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetKonsoResumeByPeriode/{1}/{2}/{3}", url, IdRekanan, TahunBulan, TipeUraian)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fKonsoResumeByPeriode_Result>>(responseData);
-                ViewBag.PeriodeAwal = PeriodeAwal;
-                ViewBag.PeriodeAkhir = PeriodeAkhir;
+                ViewBag.TahunBulan = TahunBulan;
                 ViewBag.TipeUraian = TipeUraian;
-
+                ViewBag.PeriodeAkhir = (TahunBulan > 0) ? TahunBulan.ToString() : "";
+                ViewBag.PeriodeAwal = (TahunBulan > 0) ? (TahunBulan - 100).ToString() : "";
                 return PartialView("_GetKonsoResumeByPeriode", myData);
             }
             return View("Error");
@@ -186,55 +206,82 @@ namespace MVCSmartClient01.Controllers
             }
             return View("Error");
         }
-        public async Task<ActionResult> GetScoringMultiByRekPeriode(int Periode)
+        public async Task<ActionResult> GetScoringMultiByRekPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetScoringMultiByRekPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), Periode));
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetScoringMultiByRekPeriode/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<scoringResumeMulti>(responseData);
-                ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.Periode = Periode;
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.Periode = TahunBulan;
                 return View("GetScoringMultiByRekPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> _GetScoringMultiByRekPeriode(int Periode)
+        public async Task<ActionResult> _GetScoringMultiByRekPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetScoringMultiByRekPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), Periode));
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetScoringMultiByRekPeriode/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<scoringResumeMulti>(responseData);
-                ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.Periode = Periode;
-                return PartialView("GetScoringMultiByRekPeriode", myData);
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.Periode = TahunBulan;
+                return PartialView("_GetScoringMultiByRekPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> GetResumeRoaByRekPeriode(int Periode)
+        public async Task<ActionResult> GetResumeRoaByRekPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetResumeRoaByRekPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), Periode));
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetResumeRoaByRekPeriode/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fResumeRoaByPeriode_Result>>(responseData);
-                ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.Periode = Periode;
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.TahunBulan = TahunBulan;
                 return View("GetResumeRoaByRekPeriode", myData);
             }
             return View("Error");
         }
-        public async Task<ActionResult> _GetResumeRoaByRekPeriode(int Periode)
+        public async Task<ActionResult> _GetResumeRoaByRekPeriode(Guid IdRekanan, int TahunBulan)
         {
-            HttpResponseMessage responseMessage = await client.GetAsync(String.Format("{0}/GetResumeRoaByRekPeriode/{1}/{2}", url, tokenContainer.IdRekananContact.ToString(), Periode));
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetResumeRoaByRekPeriode/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
             if (responseMessage.IsSuccessStatusCode)
             {
                 var responseData = responseMessage.Content.ReadAsStringAsync().Result;
                 var myData = JsonConvert.DeserializeObject<List<fResumeRoaByPeriode_Result>>(responseData);
-                ViewBag.IdRekanan = tokenContainer.IdRekananContact.ToString();
-                ViewBag.Periode = Periode;
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.TahunBulan = TahunBulan;
                 return PartialView("_GetResumeRoaByRekPeriode", myData);
+            }
+            return View("Error");
+        }
+        public async Task<ActionResult> GetKonsoPairByParam(Guid IdRekanan, int TahunBulan)
+        {
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetKonsoPairByParam/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var myData = JsonConvert.DeserializeObject<List<fKonsoPairByParam_Result>>(responseData);
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.TahunBulan = TahunBulan;
+                return View("_GetKonsoPairByParam", myData);
+            }
+            return View("Error");
+        }
+        public async Task<ActionResult> _GetKonsoPairByParam(Guid IdRekanan, int TahunBulan, bool IsEditable = true)
+        {
+            HttpResponseMessage responseMessage = client.GetAsync(String.Format("{0}/GetKonsoPairByParam/{1}/{2}", url, IdRekanan, TahunBulan)).Result;
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var responseData = responseMessage.Content.ReadAsStringAsync().Result;
+                var myData = JsonConvert.DeserializeObject<List<fKonsoPairByParam_Result>>(responseData);
+                ViewBag.IdRekanan = IdRekanan;
+                ViewBag.TahunBulan = TahunBulan;
+                ViewBag.IsEditable = IsEditable;
+                return PartialView("_GetKonsoPairByParam", myData);
             }
             return View("Error");
         }

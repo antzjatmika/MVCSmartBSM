@@ -18,6 +18,7 @@ namespace MVCSmartClient01.Models
         public int IdTypeOfGroup { get; set; }
         public int IdPenilai { get; set; }
         public System.Guid IdRekanan { get; set; }
+        public int TahunBulan { get; set; }
         public int SeqPertanyaan { get; set; }
         public string Deskripsi { get; set; }
         public int Bobot { get; set; }

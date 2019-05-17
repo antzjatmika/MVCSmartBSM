@@ -344,7 +344,7 @@ namespace LocalAccountsApp.Controllers
             { 
             }
             return Ok();
-        }  
+        }
 
         // POST api/Account/Register
         [AllowAnonymous]
@@ -357,18 +357,16 @@ namespace LocalAccountsApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-            string strUserName = string.Empty;
-            string strPassword = string.Empty;
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.NomorNPWP, Email = model.Email };
 
+            //username adalah email
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
             try
             {
-                //var myRoleResult = await UserManager.AddToRoleAsync(user.Id, "2DCEBCF8-B103-439E-9E89-6220B5AA3D5E");
                 var myRoleResult = await UserManager.AddToRoleAsync(user.Id, "Rekanan");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string strErr = ex.Message;
             }
@@ -377,7 +375,6 @@ namespace LocalAccountsApp.Controllers
                 return GetErrorResult(result);
             }
 
-            //return Request.CreateResponse(HttpStatusCode.Created, new { UserId = user.Id });
             return Ok(user.Id.ToString());
         }
 
