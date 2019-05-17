@@ -1489,8 +1489,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>DEL "$(SolutionDir)\MVCSmartClient01\Properties\licenses.licx"
-COPY "$(SolutionDir)\MVCSmartClient01\Properties\MAP.licx" "$(SolutionDir)\MVCSmartClient01\Properties\licenses.licx"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
