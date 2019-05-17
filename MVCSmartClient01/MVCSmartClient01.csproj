@@ -735,8 +735,6 @@
     <Content Include="Views\HomeRekanan\Index_Tab.cshtml" />
     <Content Include="Views\HomeRekanan\_Home_Rekanan.cshtml" />
     <Content Include="Views\HomeRekanan\Index_SideMenu.cshtml" />
-    <Content Include="Views\ATest1\Index.cshtml" />
-    <Content Include="Views\ATest1\CategoryResults.cshtml" />
     <Content Include="Views\Home\Index - Copy.cshtml" />
     <Content Include="Views\Shared\_SideMenu.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
